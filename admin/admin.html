@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פאנל ניהול - הוספת מוצרים</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f8ff; /* כחול בהיר */
+            direction: rtl;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #003366; /* כחול כהה */
+            border-bottom: 2px solid #FFD700; /* זהב */
+            padding-bottom: 10px;
+        }
+        .admin-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        /* טופס הוספה */
+        #addProductForm {
+            display: grid;
+            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #c0daf5;
+            border-radius: 8px;
+        }
+        #addProductForm input, #addProductForm select {
+            padding: 10px;
+            border: 1px solid #c0daf5;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        #addProductForm button {
+            grid-column: 1 / -1; /* תופס את כל הרוחב */
+            background: #FFD700; /* זהב */
+            color: #003366; /* כחול כהה */
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        #addProductForm button:hover {
+            background-color: #00509e;
+            color: #fff;
+        }
+        /* טבלת מוצרים */
+        #productsTable {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        #productsTable th, #productsTable td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: right;
+        }
+        #productsTable th {
+            background-color: #00509e; /* כחול ביניים */
+            color: white;
+            font-weight: bold;
+        }
+        .delete-btn, .edit-btn {
+            padding: 5px 10px;
+            margin: 0 5px;
+            cursor: pointer;
+            border-radius: 3px;
+            font-size: 0.9em;
+            border: none;
+        }
+        .delete-btn {
+            background-color: #dc3545; /* אדום */
+            color: white;
+        }
+        .edit-btn {
+            background-color: #FFD700; /* זהב */
+            color: #003366;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="admin-container">
+        <h1>פאנל ניהול - גמ"ח חסדי מאיר</h1>
+        <p>כאן ניתן להוסיף, לערוך ולמחוק מוצרים. לאחר ביצוע השינויים, יש לשמור את קובץ ה-JSON המעודכן ולהעלות אותו מחדש ל-Vercel כדי לעדכן את האתר החי.</p>
+        
+        <h2>הוספת / עריכת מוצר</h2>
+        <form id="addProductForm">
+            <input type="hidden" id="productId" value=""> 
+
+            <input type="text" id="productName" placeholder="שם המוצר" required>
+            
+            <select id="productCategory" required>
+                <option value="" disabled selected>בחר קטגוריה</option>
+                <option value="ציוד כללי">ציוד כללי</option>
+                <option value="כלי הגשה">כלי הגשה</option>
+                <option value="ביגוד חינה">ביגוד חינה</option>
+                <option value="קישוטים">קישוטים</option>
+                <option value="אחר">אחר</option>
+            </select>
+            
+            <input type="number" id="productPrice" placeholder="מחיר השאלה (₪)" required min="0">
+            
+            <label for="productImage" style="grid-column: 1 / -1; font-weight: bold; color: #b03a5b; margin-top: 10px;">
+                שם קובץ התמונה :
+            </label>
+            <input type="text" id="productImage" 
+                placeholder="לדוגמה: smalat_hina.jpg" 
+                style="grid-column: 1 / -1; border-color: #b03a5b;">
+            
+            <p style="grid-column: 1 / -1; font-size: 0.9em; color: #555; margin-top: -10px;">
+                ***שים לב: הקובץ חייב להיות קיים בתיקיית images/products/. לאחר העדכון, יש ליצור קשר עם המנהל לעדכון התמונה בשרת.***
+            </p>
+
+            <button type="submit" id="submitButton">הוסף מוצר</button>
+        </form>
+
+        <h2>מוצרים קיימים</h2>
+        <table id="productsTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>שם</th>
+                    <th>קטגוריה</th>
+                    <th>מחיר (₪)</th>
+                    <th>תמונה</th>
+                    <th>פעולות</th>
+                </tr>
+            </thead>
+            <tbody id="productsTableBody">
+                </tbody>
+        </table>
+        
+        <button id="downloadJson" style="margin-top: 20px; background: #003366; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">הורד קובץ JSON מעודכן</button>
+
+    </div>
+
+    <script src="admin.js"></script> 
+</body>
+</html>

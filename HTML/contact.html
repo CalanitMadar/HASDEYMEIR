@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>יצירת קשר - גמ"ח אירועים</title>
+    
+    <style>
+        /* ------------------------------------------- */
+        /* CSS גלובלי ושל Header/Footer - כחול וזהב */
+        /* ------------------------------------------- */
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f8ff; /* רקע בהיר המתאים לכחול */
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            color: #333;
+        }
+        
+        header, footer {
+            background: #c0daf5; /* כחול כהה */
+            color: #FFFFFF;
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between; /* מרווח שווה בין האלמנטים */
+            align-items: center;
+            padding: 1rem 2rem;
+            flex-wrap: wrap; 
+            position: sticky;  /* הפך להדר דביק */
+            top: 0;    
+            z-index: 1000;
+        }
+
+        /* לוגו - הגדרת גודל בסיס רספונסיבי */
+        #responsive-logo {
+            max-width: 120px;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        #responsive-logo:hover {
+            transform: scale(1.05);
+        }
+
+        /* ניווט - קישורים וצבעי זהב */
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: #3b392c; /* צבע טקסט זהב */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: #FFFFFF; /* טקסט לבן במעבר עכבר */
+            background-color: #00509e; /* כחול ביניים ברקע */
+            transform: scale(1.1);
+        }
+
+        /* סרגל חיפוש - מיקום רספונסיבי ונקי */
+        .search-bar {
+            display: flex;
+            position: relative;
+            width: 250px;
+        }
+
+        .search-bar input {
+            padding: 8px 15px;
+            padding-left: 45px; /* מרווח משמאל לאייקון */
+            width: 100%;
+            border: 1px solid #00509e;
+            border-radius: 20px;
+            font-size: 14px;
+            direction: rtl;
+            box-sizing: border-box;
+        }
+
+        #search-button {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            padding: 8px 10px;
+            cursor: pointer;
+            z-index: 10;
+            transition: transform 0.2s ease;
+        }
+
+        #search-button:hover {
+            background: none;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        #search-icon {
+            width: 20px;
+            height: 20px;
+            display: block;
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease-in-out;
+            display: inline-block;
+        }
+
+        footer a:hover {
+            color: #FFFFFF;
+            transform: scale(1.05);
+        }
+
+        /* ------------------------------------------- */
+        /* CSS ספציפי לדף יצירת קשר (Contact Page) */
+        /* ------------------------------------------- */
+        .contact-section {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 30px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .contact-section h2, .contact-section h3 {
+            color: #00509e;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-details {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border-radius: 12px;
+            background: #f0f8ff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            flex-basis: 30%;
+            min-width: 200px;
+            margin: 10px;
+            box-sizing: border-box;
+            border: 1px solid #c0daf5;
+        }
+
+        .contact-item a {
+            color: #00509e;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-item .contact-note {
+            color: #00509e;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #c0daf5;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 16px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #00509e;
+            outline: none;
+        }
+
+        .contact-form button {
+            background: #FFD700;
+            color: #003366;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .contact-form button:hover {
+            background: #00509e;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .map-container {
+            overflow: hidden;
+            padding-bottom: 56.25%; 
+            position: relative;
+            height: 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-top: 30px;
+        }
+
+        .map-container iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            border: 0;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .logo {
+                order: 1;
+                margin-bottom: 15px;
+            }
+
+            nav {
+                order: 2;
+                margin-bottom: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .search-bar {
+                order: 3;
+                width: 100%;
+                margin: 0;
+                padding: 0 20px;
+            }
+
+            .search-bar input {
+                width: 100%;
+            }
+
+            #responsive-logo {
+                max-width: 100px;
+            }
+            
+            .contact-details {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .contact-item {
+                flex-basis: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <img id="responsive-logo" src="../images/logo.png" alt="לוגו האתר"> 
+        </a>
+        
+        <nav>
+            <a href="index.html">בית</a>
+            <a href="about.html">אודות</a>
+            <a href="gallery.html">גלריה</a>
+            <a href="contact.html">יצירת קשר</a>
+        </nav>
+        
+        <div class="search-bar"> 
+             <input type="text" id="search-input" placeholder="חיפוש מוצר...">
+             <button type="button" id="search-button">
+                 <img id="search-icon" src="../images/icons/search.png" alt="חיפוש">
+             </button>
+        </div>
+    </header>
+
+    <main class="contact-section">
+        <h2>נשמח לשמוע מכם!</h2>
+        <p style="text-align: center; color: #555;">לכל שאלה, בקשה או תיאום איסוף ציוד, אתם מוזמנים ליצור איתנו קשר.</p>
+
+        <div class="contact-details">
+            <div class="contact-item">
+                <img src="../images/icons/location.png" alt="מיקום" class="contact-icon"> 
+                <h3>כתובת</h3>
+                <p>מצליח מזוז 8, באר שבע</p>
+                <p class="contact-note">***שימו לב <br/> ניתן לקחת את האביזרים בתאום מראש בלבד***</p>
+            </div>
+            <div class="contact-item">
+                <img src="../images/icons/phone.png" alt="טלפון" class="contact-icon"> 
+                <h3>טלפון</h3>
+                <p><a href="tel:0556856292">055-685-6292</a></p>
+            </div>
+            <div class="contact-item">
+                <img src="../images/icons/email.png" alt="דואל" class="contact-icon"> 
+                <h3>דוא"ל</h3>
+                <p><a href="mailto:Kerenb46@gmail.com">Kerenb46@gmail.com</a></p>
+            </div>
+        </div>
+        
+        <hr>
+
+        <h3>שעות פעילות</h3>
+        <div class="hours-of-operation" style="text-align: center;">
+            <p>ימים א'-ה': 10:00 - 18:00</p>
+            <p>יום ו': 10:00 - 13:00</p>
+            <p>שבת: סגור</p>
+        </div>
+
+        <hr>
+
+        <!-- <h2>שלחו לנו הודעה</h2>
+        <form class="contact-form" action="#" method="post">
+            <input type="text" name="name" placeholder="שם מלא" required>
+            <input type="email" name="email" placeholder='דוא"ל' required>
+            <input type="text" name="subject" placeholder="נושא">
+            <textarea name="message" placeholder="הודעה..." required></textarea>
+            <button type="submit">שלח</button>
+        </form> -->
+
+        <h2>מיקום על המפה</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.248316132223!2d34.7820463!3d31.2582736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502422c5e533c39%3A0x8e8b8b8b8b8b8b8b!2z15jXktek16Qg16bXqdeRIDEwLCDXktek16Qg15jXktek16Q!5e0!3m2!1siw!2sil!4v1627916500000!5m2!1siw!2sil" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>
+            © כל הזכויות שמורות. <a href="https://www.calanitwebcode.com/" target="_blank">האתר אופיין, עוצב ונבנה על ידי כלנית מדר</a>
+            <br>📍 כתובת: מצליח מזוז 8, באר שבע | ☎️ 055-685-6292
+        </p>
+    </footer>
+
+</body>
+</html>

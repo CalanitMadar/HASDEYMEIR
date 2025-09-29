@@ -1,0 +1,9 @@
+[
+    {
+        "id": 1,
+        "name": "סלסלת צדפה",
+        "category": "כלי הגשה",
+        "price": 15,
+        "image": "../images/products/tzdafa.jpg"
+    }
+]

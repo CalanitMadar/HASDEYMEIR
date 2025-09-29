@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אודות - חסדי מאיר</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    
+    <style>
+        /* ------------------------------------------- */
+        /* CSS ספציפי לדף אודות (About Page) */
+        /* ------------------------------------------- */
+
+        /* קונטיינר מרכזי */
+        .about-section {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 30px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            /* הוספתי display: flex ו-flex-direction: column כדי לסדר את האלמנטים */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* ממורכז אופקית */
+        }
+
+        .about-section h2 {
+            color: #003366; /* כחול כהה לכותרת ראשית */
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 2.2em;
+            border-bottom: 3px solid #FFD700; /* קו הפרדה זהוב */
+            padding-bottom: 10px;
+            display: inline-block;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* פסקה פותחת מודגשת */
+        .intro-paragraph {
+            text-align: center;
+            font-size: 1.2em;
+            color: #00509e; /* כחול ביניים */
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+
+        /* מבנה הסיפור */
+        .story-container {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            line-height: 1.8;
+            color: #444;
+            width: 100%; /* שינוי: כדי שיתפוס את כל רוחב הקונטיינר */
+        }
+
+        .story-point {
+            background: #f0f8ff; /* רקע בהיר (כחול בהיר מאוד) */
+            padding: 20px;
+            border-radius: 10px;
+            border-right: 5px solid #00509e; /* פס כחול בימין להדגשה */
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .story-point h3 {
+            color: #FFD700; /* כותרת זהב */
+            font-size: 1.4em;
+            margin-top: 0;
+            border-bottom: 1px dashed #c0daf5;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* הדגשת נשמה ומטרה */
+        .leiluy-nishmat {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            border: 2px dashed #00509e;
+            border-radius: 10px;
+            background: #e6f7ff;
+            width: 100%; /* שינוי: כדי שיתפוס את כל רוחב הקונטיינר */
+        }
+
+        .leiluy-nishmat strong {
+            color: #003366;
+            font-size: 1.3em;
+        }
+        
+        /* עיצוב כפתור החזרה החדש */
+        .back-to-home {
+            display: block; /* כדי שיתפוס שורה משלו */
+            width: 200px;
+            text-align: center;
+            margin: 40px auto 10px auto; /* ממורכז ועם מרווח מלמעלה */
+            
+            /* עיצוב כפתור הזהב */
+            background-color: #FFD700; 
+            color: #003366;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .back-to-home:hover {
+            background-color: #00509e;
+            color: #FFFFFF;
+            transform: scale(1.05);
+        }
+
+        /* רספונסיביות */
+        @media (max-width: 600px) {
+            .about-section {
+                padding: 15px;
+                margin: 20px auto;
+            }
+            .about-section h2 {
+                font-size: 1.8em;
+            }
+            .intro-paragraph {
+                font-size: 1.1em;
+            }
+            .back-to-home {
+                width: 90%; /* רספונסיביות לכפתור */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div data-include-html="../components/header.html"></div> 
+
+    <main class="about-section">
+        <h2>אודות גמ"ח חסדי מאיר - לזכרו של מאיר ז"ל</h2>
+        
+        <p class="intro-paragraph">
+            ברוכים הבאים לגמ"ח "חסדי מאיר", שהוקם מתוך שליחות ורצון להאיר את העולם בחסד, ולהנציח את נשמתו הטהורה של אהובנו **מאיר בן חסיבה ז"ל**. 🕊️
+        </p>
+
+        <div class="story-container">
+            <div class="story-point">
+                <h3>המייסד וההשראה</h3>
+                <p>
+                    גמ"ח זה אינו רק מחסן ציוד, אלא פרויקט חי של חסד, שהחל לאחר פטירתו הטראגית של מאיר ז"ל. משפחתו וחבריו ביקשו דרך להמשיך את דרכו הטובה, דרך שהיא כולה נתינה לקהילה. הרצון היה ליצור משהו מוחשי שיעניק **שמחה ונוחות** לרגעים המיוחדים בחיים, תוך שילוב עקרון ה"חסד" בעשייה יומיומית.
+                </p>
+            </div>
+            
+            <div class="story-point">
+                <h3>החזון שלנו: אירועים לכל כיס</h3>
+                <p>
+                    החזון של "חסדי מאיר" הוא פשוט: לאפשר לכל משפחה לערוך אירועים משמחים, **מברית ועד חתונה**, מבלי לשאת בעול כלכלי כבד. אנו מאמינים כי החסד האמיתי הוא להקל על האחר. לשם כך, אנו מעמידים לרשות הקהילה מגוון רחב של **מוצרי אירועים איכותיים** – שולחנות, כסאות, כלי הגשה, ציוד חימום ועוד – הזמינים להשאלה.
+                </p>
+            </div>
+            
+            <div class="story-point">
+                <h3>שיטת הפעולה: השאלה בסכום סמלי</h3>
+                <p>
+                    כדי להבטיח את המשך פעילות הגמ"ח ואת תחזוקת הציוד ברמה גבוהה, אנו גובים **סכום סמלי בלבד** עבור ההשאלה. תשלום זה משמש אך ורק לכיסוי הוצאות שוטפות, תיקונים, והרחבת מלאי הציוד. כל שקל חוזר לקהילה ומאפשר לעוד משפחה לחגוג בשמחה ובקלות דעת.
+                </p>
+            </div>
+        </div>
+
+        <div class="leiluy-nishmat">
+            "וְצֶדֶק לְעוֹלָם תִּזְכֹּר" (תהילים קיב:ו)
+            <p>
+                כל אירוע שנערך, כל חיוך וכל רגע של שמחה שמתאפשר בזכות הציוד שלנו, נזקף **לעילוי נשמת מאיר בן חסיבה ז"ל**. הנתינה שלכם היא ההמשך של חייו. תודה שאתם שותפים לחסד הגדול הזה.
+            </p>
+            <strong>
+                בזכותכם, החסד ממשיך להתגלגל. 🙏
+            </strong>
+        </div>
+        
+        <a href="index.html" class="back-to-home">חזרה לדף הבית</a>
+
+    </main>
+
+    <div data-include-html="../components/footer.html"></div>
+    
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("data-include-html");
+                if (file) {
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                            elmnt.removeAttribute("data-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    return;
+                }
+            }
+        };
+        includeHTML();
+    </script>
+    
+</body>
+</html>

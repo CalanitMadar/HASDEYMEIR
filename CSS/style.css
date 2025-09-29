@@ -1,0 +1,223 @@
+/* הגדרות גלובליות ורקעים - כחול בהיר וניגודיות */
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f8ff; /* רקע בהיר המתאים לכחול */
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    color: #333;
+}
+
+/* Header ו-Footer - רקע כחול כהה */
+header, footer {
+    background: #c0daf5; /* כחול כהה */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* ------------------------------------------- */
+/* עיצוב Header - סידור לוגו, ניווט וחיפוש */
+/* ------------------------------------------- */
+
+header {
+    display: flex;
+    justify-content: space-between; /* מרווח שווה בין האלמנטים */
+    align-items: center;
+    padding: 1rem 2rem;
+    flex-wrap: wrap; 
+    position: sticky;  
+    top: 0;    
+    z-index: 1000;
+}
+
+/* לוגו - הגדרת גודל בסיס רספונסיבי */
+#responsive-logo {
+    max-width: 120px; /* הגודל המרבי הקבוע של הלוגו */
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+#responsive-logo:hover {
+    transform: scale(1.05);
+}
+
+/* הסרת הקוד הישן של .logo img אם היה קיים */
+.logo img {
+    /* נשלט כעת ע"י #responsive-logo */
+    max-width: 100%; /* כלל בסיס חשוב */
+    height: auto;
+}
+
+
+/* ניווט - קישורים וצבעי זהב */
+nav {
+    display: flex;
+    gap: 25px; /* מרווח גדול יותר בין הקישורים */
+}
+
+nav a {
+    color: #3b392c; /* צבע טקסט זהב */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: #FFFFFF; /* טקסט לבן במעבר עכבר */
+    background-color: #00509e; /* כחול ביניים ברקע */
+    transform: scale(1.1);
+}
+
+/* הסרת .header-title כי הוחלף ע"י nav */
+
+
+/* ------------------------------------------- */
+/* סרגל חיפוש - מיקום רספונסיבי ונקי */
+/* ------------------------------------------- */
+
+.search-bar {
+    display: flex;
+    position: relative; /* הופך את האלמנט לאב יחסי למיקום הכפתור */
+    width: 250px; /* קובע רוחב קבוע לסרגל החיפוש במסכים גדולים */
+}
+
+/* תיבת הקלט */
+.search-bar input {
+    padding: 8px 15px; /* מרווח פנימי רגיל */
+    padding-left: 45px; /* מרווח משמאל כדי לפנות מקום לאייקון! */
+    width: 100%;
+    border: 1px solid #00509e; /* גבול כחול ביניים */
+    border-radius: 20px;
+    font-size: 14px;
+    direction: rtl;
+    box-sizing: border-box; /* מבטיח שה-padding לא יוסיף לרוחב הכללי */
+}
+
+/* כפתור/אייקון החיפוש - ממוקם בתוך תיבת הקלט */
+#search-button {
+    position: absolute; /* מיקום מוחלט ביחס ל-search-bar */
+    left: 0; /* ממקם אותו בצד שמאל */
+    top: 50%;
+    transform: translateY(-50%); /* ממורכז אנכית */
+    
+    background: none; /* **מבטל את הרקע הכחול המקורי** */
+    border: none;
+    padding: 8px 10px; /* מרווח פנימי קטן לאזור הלחיץ */
+    cursor: pointer;
+    z-index: 10; /* מבטיח שהוא מעל תיבת הקלט */
+    transition: transform 0.2s ease;
+}
+
+/* ביטול שינוי הרקע במעבר עכבר (hover) */
+#search-button:hover {
+    background: none; /* ודא שאין רקע במעבר עכבר */
+    transform: translateY(-50%) scale(1.1); /* הוספנו אפקט קטן לאייקון עצמו */
+}
+
+
+/* התמונה של האייקון בתוך הכפתור */
+#search-icon {
+    width: 20px; /* גודל האייקון - ניתן לשנות */
+    height: 20px;
+    display: block;
+}
+
+/* ------------------------------------------- */
+/* עיצוב גריד וכרטיסי מוצר */
+/* ------------------------------------------- */
+
+#products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* צל עדין יותר */
+    padding: 15px;
+    text-align: center;
+    border-top: 5px solid #00509e; /* קו כחול עליון להתאמה */
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    color: #00509e; /* כחול ביניים לכותרות המוצרים */
+}
+
+.product-card p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* ------------------------------------------- */
+/* עיצוב Footer - קישורים */
+/* ------------------------------------------- */
+
+footer a {
+    color: #FFD700; /* קישור בצבע זהב */
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+    display: inline-block;
+}
+
+footer a:hover {
+    color: #FFFFFF; /* לבן במעבר עכבר */
+    transform: scale(1.05);
+}
+
+/* ------------------------------------------- */
+/* רספונסיביות - מסכים קטנים */
+/* ------------------------------------------- */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* מסדר את האלמנטים אחד מתחת לשני */
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .logo {
+        order: 1; /* לוגו ראשון */
+        margin-bottom: 15px;
+    }
+    
+    nav {
+        order: 2; /* ניווט שני */
+        margin-bottom: 15px;
+        flex-wrap: wrap;
+        justify-content: center; /* ממקם את הקישורים במרכז */
+    }
+
+    .search-bar {
+        order: 3;
+        width: 100%; /* תופס את כל הרוחב */
+        margin: 0; 
+        padding: 0 20px; /* הוספת מרווחים בצדדים למראה נקי */
+    }
+    
+    /* Input תופס 100% מהרוחב שהוגדר ל-search-bar */
+    .search-bar input {
+        width: 100%;
+    }
+    
+    #responsive-logo {
+        max-width: 100px; /* מקטין מעט את הלוגו במסכים קטנים */
+    }
+}
