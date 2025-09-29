@@ -150,7 +150,7 @@ nav a:hover {
 .product-image-wrapper {
     /* הגובה הקבוע שרצוי שכל התמונות יתפסו */
     height: 180px; /* דוגמה לגובה. שנה לפי הצורך שלך! */
-    width: 100%;
+    width: 200px;
     overflow: hidden; /* חותך חלקים מהתמונה שחורגים מהגובה */
     margin-bottom: 10px;
     
