@@ -17,24 +17,30 @@ header, footer {
 }
 
 /* ------------------------------------------- */
-/* עיצוב Header - סידור לוגו, ניווט וחיפוש */
+/* עיצוב Header - סידור לוגו, ניווט וחיפוש (דסקטופ) */
 /* ------------------------------------------- */
 
 header {
     display: flex;
-    justify-content: space-between; /* מרווח שווה בין האלמנטים */
+    justify-content: space-between; /* מרווח בין האלמנטים */
+    align-items: center; /* ממורכז אנכית */
     padding: 1rem 2rem;
     flex-wrap: wrap; 
-    position: sticky;  
-    top: 0;    
+    position: sticky; 
+    top: 0; 
     z-index: 1000;
-    flex-direction: column; 
-    align-items: flex-start; /* מיישר את הפריטים לימין (ב-RTL) */
+    /* ודא שהוא בשורה בדסקטופ */
+    flex-direction: row; 
+}
+
+/* קונטיינר עטיפה ללוגו והמבורגר - מוסתר בדסקטופ */
+.header-top-row {
+    display: none; 
 }
 
 /* לוגו - הגדרת גודל בסיס רספונסיבי */
 #responsive-logo {
-    max-width: 120px; /* הגודל המרבי הקבוע של הלוגו */
+    max-width: 120px;
     height: auto;
     display: block;
     transition: transform 0.3s ease;
@@ -44,22 +50,20 @@ header {
     transform: scale(1.05);
 }
 
-/* הסרת הקוד הישן של .logo img אם היה קיים */
 .logo img {
-    /* נשלט כעת ע"י #responsive-logo */
-    max-width: 100%; /* כלל בסיס חשוב */
+    max-width: 100%;
     height: auto;
 }
 
 
-/* ניווט - קישורים וצבעי זהב */
+/* ניווט - קישורים */
 nav {
     display: flex;
-    gap: 25px; /* מרווח גדול יותר בין הקישורים */
+    gap: 25px;
 }
 
 nav a {
-    color: #3b392c; /* צבע טקסט זהב */
+    color: #3b392c;
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1em;
@@ -70,71 +74,64 @@ nav a {
 }
 
 nav a:hover {
-    color: #FFFFFF; /* טקסט לבן במעבר עכבר */
-    background-color: #00509e; /* כחול ביניים ברקע */
+    color: #FFFFFF;
+    background-color: #00509e;
     transform: scale(1.1);
 }
 
-/* הסרת .header-title כי הוחלף ע"י nav */
-
-
 /* ------------------------------------------- */
-/* סרגל חיפוש - מיקום רספונסיבי ונקי */
+/* סרגל חיפוש - דסקטופ */
 /* ------------------------------------------- */
 
 .search-bar {
     display: flex;
-    position: relative; /* הופך את האלמנט לאב יחסי למיקום הכפתור */
-    width: 250px; /* קובע רוחב קבוע לסרגל החיפוש במסכים גדולים */
+    position: relative;
+    width: 250px; /* רוחב קבוע בדסקטופ */
 }
 
 /* תיבת הקלט */
 .search-bar input {
-    padding: 8px 15px; /* מרווח פנימי רגיל */
-    padding-left: 45px; /* מרווח משמאל כדי לפנות מקום לאייקון! */
+    padding: 8px 15px;
+    padding-left: 45px; 
     width: 100%;
-    border: 1px solid #00509e; /* גבול כחול ביניים */
+    border: 1px solid #00509e;
     border-radius: 20px;
     font-size: 14px;
     direction: rtl;
-    box-sizing: border-box; /* מבטיח שה-padding לא יוסיף לרוחב הכללי */
+    box-sizing: border-box;
 }
 
-/* כפתור/אייקון החיפוש - ממוקם בתוך תיבת הקלט */
+/* כפתור/אייקון החיפוש - ממוקם על הגבול השמאלי */
 #search-button {
-    position: absolute; /* מיקום מוחלט ביחס ל-search-bar */
-    left: 0; /* ממקם אותו בצד שמאל */
+    position: absolute;
+    left: 0; 
     top: 50%;
-    transform: translateY(-50%); /* ממורכז אנכית */
+    transform: translateY(-50%);
     
-    background: none; /* **מבטל את הרקע הכחול המקורי** */
+    background: none;
     border: none;
-    padding: 8px 10px; /* מרווח פנימי קטן לאזור הלחיץ */
+    padding: 8px 10px;
     cursor: pointer;
-    z-index: 10; /* מבטיח שהוא מעל תיבת הקלט */
+    z-index: 10;
     transition: transform 0.2s ease;
 }
 
-/* ביטול שינוי הרקע במעבר עכבר (hover) */
 #search-button:hover {
-    background: none; /* ודא שאין רקע במעבר עכבר */
-    transform: translateY(-50%) scale(1.1); /* הוספנו אפקט קטן לאייקון עצמו */
+    background: none;
+    transform: translateY(-50%) scale(1.1);
 }
 
-
-/* התמונה של האייקון בתוך הכפתור */
 #search-icon {
-    width: 20px; /* גודל האייקון - ניתן לשנות */
+    width: 20px;
     height: 20px;
     display: block;
 }
 
 /* ------------------------------------------- */
-/* עיצוב גריד וכרטיסי מוצר */
+/* עיצוב גריד וכרטיסי מוצר (דסקטופ) */
 /* ------------------------------------------- */
 
 #products-container {
-    /* ההגדרות הללו מבטיחות שהכרטיסים יופיעו בשורה */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
@@ -148,12 +145,9 @@ nav a:hover {
     padding: 15px;
     text-align: center;
     border-top: 5px solid #00509e; 
-    /* אין הגדרת רוחב לכרטיס עצמו, ה-Grid קובע זאת */
 }
 
-/* 1. Wrapper לתמונה - מגדיר גובה קבוע ורוחב 100% */
 .product-image-wrapper {
-    /* גובה קבוע לכל התמונות */
     height: 180px; 
     width: 100%; 
     overflow: hidden; 
@@ -162,28 +156,13 @@ nav a:hover {
     border-radius: 8px;
 }
 
-
-/* 2. התאמת התמונה בתוך ה-Wrapper */
 .product-image-wrapper img {
     width: 100%;
     height: 100%;
-    
-    /* הכלל הקריטי: מבטיח שהתמונה מכסה את כל השטח באופן אחיד */
     object-fit: cover; 
-    
-    /* ממורכז את החיתוך */
     object-position: center; 
-    
     border-radius: 0; 
 }
-
-/* הכלל המקורי הזה מיותר ועלול לגרום לסתירות, לכן הסרנו אותו או ביטלנו את תכולתו: */
-/* .product-card img {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-} */
-
 
 .product-card h3 {
     margin: 10px 0 5px;
@@ -201,7 +180,7 @@ nav a:hover {
 /* ------------------------------------------- */
 
 footer a {
-    color: #FFD700; /* קישור בצבע זהב */
+    color: #FFD700;
     text-decoration: none;
     font-weight: bold;
     transition: transform 0.3s ease-in-out;
@@ -209,53 +188,16 @@ footer a {
 }
 
 footer a:hover {
-    color: #FFFFFF; /* לבן במעבר עכבר */
+    color: #FFFFFF;
     transform: scale(1.05);
 }
 
 /* ------------------------------------------- */
-/* רספונסיביות - מסכים קטנים */
-/* ------------------------------------------- */
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column; /* מסדר את האלמנטים אחד מתחת לשני */
-        text-align: center;
-        padding: 1rem;
-    }
-
-    .logo {
-        order: 1; /* לוגו ראשון */
-        margin-bottom: 15px;
-    }
-    
-    nav {
-        order: 2; /* ניווט שני */
-        margin-bottom: 15px;
-        flex-wrap: wrap;
-        justify-content: center; /* ממקם את הקישורים במרכז */
-    }
-
-    .search-bar {
-        order: 3;
-        width: 100%; /* תופס את כל הרוחב */
-        margin: 0; 
-        padding: 0 20px; /* הוספת מרווחים בצדדים למראה נקי */
-    }
-    
-   
-    
-    #responsive-logo {
-        max-width: 100px; /* מקטין מעט את הלוגו במסכים קטנים */
-    }
-}
-
-/* ------------------------------------------- */
-/* כפתור המבורגר - הגדרות בסיס */
+/* כפתור המבורגר - מוסתר בדסקטופ */
 /* ------------------------------------------- */
 
 #hamburger-menu {
-    display: block;
+    display: none; 
     width: 30px;
     height: 30px;
     position: relative;
@@ -263,38 +205,54 @@ footer a:hover {
     background: none;
     border: none;
     padding: 0;
-    z-index: 1001; /* מעל כל דבר אחר */
+    z-index: 1001; 
 }
 
 #hamburger-menu span {
     display: block;
     width: 100%;
     height: 3px;
-    background-color: #3b392c; /* צבע הקישורים/לוגו שלך */
+    background-color: #3b392c;
     border-radius: 3px;
     margin-bottom: 5px;
     transition: all 0.3s ease-in-out;
 }
 
 /* ------------------------------------------- */
-/* רספונסיביות - כללים ספציפיים למובייל */
+/* רספונסיביות - מסכים קטנים (עד 768px) */
 /* ------------------------------------------- */
 
 @media (max-width: 768px) {
     
-    /* הופך את כפתור ההמבורגר לגלוי */
-    #hamburger-menu {
-        display: block;
-        order: 1; /* ממוקם ליד הלוגו */
+    /* הופך את ההאדר לעמודה במובייל */
+    header {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 1rem;
     }
 
-    /* מסתיר את תפריט הניווט */
+    /* מציג את קונטיינר הלוגו/המבורגר ומארגן אותם בשורה אחת */
+    .header-top-row {
+        display: flex; /* מציג את ה-div רק במובייל */
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        margin-bottom: 15px;
+        order: 1; 
+    }
+    
+    /* הופך את כפתור ההמבורגר לגלוי רק במובייל */
+    #hamburger-menu {
+        display: block;
+    }
+
+    /* הניווט הראשי */
     nav {
-        order: 2;
+        order: 3; 
         flex-direction: column;
-        background: #c0daf5; /* רקע כחול כהה לתפריט */
+        background: #c0daf5;
         position: absolute;
-        top: 100%; /* מתחיל מתחת להאדר */
+        top: 100%;
         right: 0;
         width: 100%;
         max-height: 0; /* מוסתר כברירת מחדל */
@@ -306,7 +264,7 @@ footer a:hover {
 
     /* פתיחת התפריט ע"י קלאס JS */
     nav.open {
-        max-height: 300px; /* גובה מספיק להכיל את כל הקישורים */
+        max-height: 300px; 
         padding: 10px 0;
     }
     
@@ -319,56 +277,36 @@ footer a:hover {
         color: #3b392c;
     }
 
-    nav a:hover {
-        background-color: #00509e;
-        color: #FFFFFF;
-    }
-
-    /* ארגון מחדש של ההאדר */
-    header {
-        flex-direction: row; /* מחזיר לשורה אחת */
-        justify-content: space-between; /* מרווח בין לוגו להמבורגר */
-    }
-    
-    /* הסתרת ניווט וחיפוש שאינם רצויים בתוך ההאדר הראשי */
-    .search-bar {
-        width: 100%; 
-        order: 3; 
-        padding: 0 10px; /* מרווח מהצדדים */
-        box-sizing: border-box; 
-    }
-    
-    /* שיפור תצוגת המוצרים */
-    #products-container {
-        /* מבטיח שיהיה לפחות כרטיס אחד בשורה, וברוחב סביר */
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        justify-content: center;
-    }
-
-    /* ממורכז את הכרטיס אם נשאר לבד בשורה */
-    .product-card {
-        margin-left: auto;
-        margin-right: auto;
-    }
-    
     /* שינוי ההמבורגר למצב סגור X */
     #hamburger-menu.open span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
     #hamburger-menu.open span:nth-child(2) {
-        opacity: 0; /* הקו האמצעי נעלם */
+        opacity: 0;
     }
     #hamburger-menu.open span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
     }
-}
-
-/* קונטיינר ללוגו והמבורגר כדי לשמור אותם בשורה אחת */
-    .header-top-row {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        align-items: center;
-        margin-bottom: 10px; /* מרווח לפני סרגל החיפוש */
-        order: 1;
+    
+    /* סרגל החיפוש */
+    .search-bar {
+        order: 2; /* סרגל החיפוש מגיע שני */
+        width: 100%; 
+        padding: 0 10px; 
+        box-sizing: border-box; 
+        margin-bottom: 15px;
     }
+    
+    .search-bar input {
+        width: 100%;
+    }
+    
+    /* רספונסיביות כרטיסי המוצר */
+    #products-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    
+    #responsive-logo {
+        max-width: 100px;
+    }
+}
