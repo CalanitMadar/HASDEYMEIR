@@ -49,11 +49,13 @@ document.addEventListener('DOMContentLoaded', () => {
             // הנתיב שנטען מתוך ה-JSON, אם ריק נשתמש בתמונת ברירת המחדל
             const imageUrl = product.image && product.image.trim() !== '' ? product.image : defaultImage;
 
-            card.innerHTML = `
+           // קטע יצירת הכרטיס ב-products.js
+        card.innerHTML = `
+            <div class="product-image-wrapper"> 
                 <img src="${imageUrl}" alt="${product.name}">
-                <h3>${product.name}</h3>
-                <p>קטגוריה: ${product.category}</p>
-                <p>מחיר השאלה: ${product.price} ₪</p>
+            </div>
+            <h3>${product.name}</h3>
+            <p>קטגוריה: ${product.category}</p>
             `;
             productsContainer.appendChild(card);
         });
