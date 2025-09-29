@@ -56,9 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             <h3>${product.name}</h3>
             <p>קטגוריה: ${product.category}</p>
+            
+            <p class="product-price">מחיר: ${product.price} ₪</p> 
+            
             `;
             productsContainer.appendChild(card);
         });
+                
     }
 
     // ----------------------------------------------------
