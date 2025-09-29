@@ -5,5 +5,12 @@
         "category": "כלי הגשה",
         "price": 15,
         "image": "../images/products/tzdafa.jpg"
+    },
+     {
+        "id": 2,
+        "name": "מטריה",
+        "category": "כללי",
+        "price": 15,
+        "image": "../images/products/mitria.jpg"
     }
 ]
