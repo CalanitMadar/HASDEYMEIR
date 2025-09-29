@@ -15,36 +15,34 @@
         .about-section {
             max-width: 900px;
             margin: 30px auto;
-            padding: 30px;
+            padding: 40px; /* הגדלתי מעט את הריווח בדסקטופ */
             background: #fff;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            /* הוספתי display: flex ו-flex-direction: column כדי לסדר את האלמנטים */
             display: flex;
             flex-direction: column;
-            align-items: center; /* ממורכז אופקית */
+            align-items: center;
         }
 
         .about-section h2 {
-            color: #003366; /* כחול כהה לכותרת ראשית */
+            color: #003366;
             text-align: center;
             margin-bottom: 25px;
-            font-size: 2.2em;
-            border-bottom: 3px solid #FFD700; /* קו הפרדה זהוב */
+            font-size: 2.5em; /* הגדלתי מעט */
+            border-bottom: 3px solid #FFD700;
             padding-bottom: 10px;
             display: inline-block;
             width: auto;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         /* פסקה פותחת מודגשת */
         .intro-paragraph {
             text-align: center;
-            font-size: 1.2em;
-            color: #00509e; /* כחול ביניים */
+            font-size: 1.25em; /* הדגשתי מעט */
+            color: #00509e;
             margin-bottom: 40px;
             font-weight: bold;
+            padding: 0 10px; /* הוספת ריווח קטן בצדדים למניעת הדבקות */
         }
 
         /* מבנה הסיפור */
@@ -54,22 +52,23 @@
             gap: 25px;
             line-height: 1.8;
             color: #444;
-            width: 100%; /* שינוי: כדי שיתפוס את כל רוחב הקונטיינר */
+            width: 100%;
+            padding: 0 10px;
         }
 
         .story-point {
-            background: #f0f8ff; /* רקע בהיר (כחול בהיר מאוד) */
+            background: #f0f8ff;
             padding: 20px;
             border-radius: 10px;
-            border-right: 5px solid #00509e; /* פס כחול בימין להדגשה */
+            border-right: 5px solid #00509e;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
         .story-point h3 {
-            color: #FFD700; /* כותרת זהב */
+            color: #00509e; /* שינוי: כותרת כחולה עם קו זהב */
             font-size: 1.4em;
             margin-top: 0;
-            border-bottom: 1px dashed #c0daf5;
+            border-bottom: 2px solid #FFD700;
             padding-bottom: 5px;
             margin-bottom: 10px;
         }
@@ -78,34 +77,36 @@
         .leiluy-nishmat {
             text-align: center;
             margin-top: 40px;
-            padding: 20px;
+            padding: 25px;
             border: 2px dashed #00509e;
             border-radius: 10px;
             background: #e6f7ff;
-            width: 100%; /* שינוי: כדי שיתפוס את כל רוחב הקונטיינר */
+            width: 100%;
+            box-sizing: border-box; /* חשוב לשמירה על הרוחב */
         }
 
         .leiluy-nishmat strong {
             color: #003366;
             font-size: 1.3em;
+            display: block;
+            margin-top: 10px;
         }
         
-        /* עיצוב כפתור החזרה החדש */
+        /* עיצוב כפתור החזרה */
         .back-to-home {
-            display: block; /* כדי שיתפוס שורה משלו */
-            width: 200px;
+            display: block;
+            width: 220px; /* הגדלתי מעט */
             text-align: center;
-            margin: 40px auto 10px auto; /* ממורכז ועם מרווח מלמעלה */
-            
-            /* עיצוב כפתור הזהב */
+            margin: 40px auto 10px auto; 
             background-color: #FFD700; 
             color: #003366;
-            padding: 12px 25px;
-            border-radius: 25px;
+            padding: 15px 30px; /* הגדלתי את הריווח הפנימי */
+            border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
             font-size: 1.1em;
             transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 3px 5px rgba(0, 51, 102, 0.2); /* הוספתי צל קטן */
         }
 
         .back-to-home:hover {
@@ -114,20 +115,67 @@
             transform: scale(1.05);
         }
 
-        /* רספונסיביות */
-        @media (max-width: 600px) {
+        /* ------------------------------------------- */
+        /* רספונסיביות לטאבלט (עד 900px) */
+        /* ------------------------------------------- */
+        @media (max-width: 900px) {
             .about-section {
-                padding: 15px;
+                max-width: 95%; /* שימוש ברוחב יחסי במקום קבוע */
+                padding: 30px 20px;
                 margin: 20px auto;
             }
+            
+            .about-section h2 {
+                font-size: 2.2em;
+            }
+        }
+
+        /* ------------------------------------------- */
+        /* רספונסיביות למובייל (עד 600px) */
+        /* ------------------------------------------- */
+        @media (max-width: 600px) {
+            .about-section {
+                padding: 20px 10px; /* צמצום ריווח פנימי במובייל */
+                margin: 15px auto;
+            }
+            
             .about-section h2 {
                 font-size: 1.8em;
+                width: 90%; /* הכותרת תתפוס יותר רוחב */
             }
+            
             .intro-paragraph {
                 font-size: 1.1em;
+                margin-bottom: 30px;
             }
+
+            .story-container {
+                gap: 15px; /* צמצום ריווח בין הסיפורים */
+                padding: 0;
+            }
+            
+            .story-point {
+                padding: 15px; /* צמצום ריווח פנימי בבלוק הסיפור */
+            }
+            
+            .story-point h3 {
+                font-size: 1.3em;
+            }
+            
+            .leiluy-nishmat {
+                padding: 20px 10px;
+                margin-top: 30px;
+            }
+            
+            .leiluy-nishmat p, .leiluy-nishmat strong {
+                font-size: 1em;
+            }
+
             .back-to-home {
-                width: 90%; /* רספונסיביות לכפתור */
+                width: 90%; 
+                padding: 12px 20px;
+                font-size: 1em;
+                margin-top: 30px;
             }
         }
     </style>

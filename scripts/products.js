@@ -1,4 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger-menu');
+    const nav = document.getElementById('main-nav');
+
+
+    if (hamburger && nav) {
+        hamburger.addEventListener('click', () => {
+            // הוספת/הסרת הקלאס 'open' הן מהכפתור והן מהתפריט
+            hamburger.classList.toggle('open');
+            nav.classList.toggle('open');
+        });
+    }
+
+    // ----------------------------------------------------
     const productsContainer = document.getElementById('products-container');
     const searchInput = document.getElementById('search-input');
     
