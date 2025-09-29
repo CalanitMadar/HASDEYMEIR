@@ -131,8 +131,12 @@ nav a:hover {
 /* ------------------------------------------- */
 /* עיצוב גריד וכרטיסי מוצר */
 /* ------------------------------------------- */
+/* ------------------------------------------- */
+/* עיצוב גריד וכרטיסי מוצר */
+/* ------------------------------------------- */
 
 #products-container {
+    /* ההגדרות הללו מבטיחות שהכרטיסים יופיעו בשורה */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
@@ -142,49 +146,53 @@ nav a:hover {
 .product-card {
     background: #fff;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* צל עדין יותר */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); 
     padding: 15px;
     text-align: center;
-    border-top: 5px solid #00509e; /* קו כחול עליון להתאמה */
+    border-top: 5px solid #00509e; 
+    /* אין הגדרת רוחב לכרטיס עצמו, ה-Grid קובע זאת */
 }
+
+/* 1. Wrapper לתמונה - מגדיר גובה קבוע ורוחב 100% */
 .product-image-wrapper {
-    /* הגובה הקבוע שרצוי שכל התמונות יתפסו */
-    height: 180px; /* דוגמה לגובה. שנה לפי הצורך שלך! */
-    width: 200px;
-    overflow: hidden; /* חותך חלקים מהתמונה שחורגים מהגובה */
-    margin-bottom: 10px;
+    /* גובה קבוע לכל התמונות */
+    height: 180px; 
+    /* !!! התיקון הקריטי: הרוחב חייב להיות 100% מרוחב הכרטיס !!! */
+    width: 100%; 
     
-    /* חשוב: הגדרת מיקום יחסי למיקום התמונה בפנים (אופציונלי) */
+    overflow: hidden; 
+    margin-bottom: 10px;
     position: relative; 
-    border-radius: 8px; /* התאמה לפי הכרטיס */
+    border-radius: 8px;
 }
 
 
 /* 2. התאמת התמונה בתוך ה-Wrapper */
 .product-image-wrapper img {
-    /* מבטל את העיצוב הקיים של .product-card img אם הוא סותר */
     width: 100%;
     height: 100%;
     
-    /* הכלל הקריטי: מבטיח שהתמונה מכסה את כל שטח ה-Wrapper */
+    /* הכלל הקריטי: מבטיח שהתמונה מכסה את כל השטח באופן אחיד */
     object-fit: cover; 
     
-    /* ממורכז את התמונה */
+    /* ממורכז את החיתוך */
     object-position: center; 
     
-    /* מבטל את הגבולות (border-radius) שהוגדרו קודם כדי שלא יהיה כפול */
     border-radius: 0; 
 }
-.product-card img {
+
+/* הכלל המקורי הזה מיותר ועלול לגרום לסתירות, לכן הסרנו אותו או ביטלנו את תכולתו: */
+/* .product-card img {
     max-width: 100%;
     border-radius: 10px;
     margin-bottom: 10px;
-}
+} */
+
 
 .product-card h3 {
     margin: 10px 0 5px;
     font-size: 18px;
-    color: #00509e; /* כחול ביניים לכותרות המוצרים */
+    color: #00509e;
 }
 
 .product-card p {
