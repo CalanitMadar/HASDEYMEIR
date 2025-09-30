@@ -40,5 +40,12 @@
         "category": "אביזרים",
         "price": 15,
         "image": "../images/products/pamotim.jpg"
+    },
+     {
+        "id": 7,
+        "name": "עיצוב שולחן",
+        "category": "אביזרים",
+        "price": 15,
+        "image": "../images/products/moznaim.jpg"
     }
 ]
