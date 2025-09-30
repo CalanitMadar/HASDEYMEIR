@@ -15,9 +15,16 @@
     },
      {
         "id": 3,
-        "name": "מטריה",
+        "name": "שמלת ערב",
         "category": "שמלות ערב",
         "price": 15,
         "image": "../images/products/dress1.jpg"
+    },
+     {
+        "id": 4,
+        "name": "כפתן גברים",
+        "category": "בגדים",
+        "price": 15,
+        "image": "../images/products/ciftan_man.jpg"
     }
 ]
