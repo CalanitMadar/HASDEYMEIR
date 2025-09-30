@@ -33,5 +33,12 @@
         "category": "בגדים",
         "price": 15,
         "image": "../images/products/ciftan_women.jpg"
+    },
+     {
+        "id": 6,
+        "name": "עיצוב שולחן",
+        "category": "אביזרים",
+        "price": 15,
+        "image": "../images/products/pamotim.jpg"
     }
 ]
