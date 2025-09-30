@@ -26,5 +26,12 @@
         "category": "בגדים",
         "price": 15,
         "image": "../images/products/ciftan_man.jpg"
+    },
+     {
+        "id": 5,
+        "name": "כפתן נשים",
+        "category": "בגדים",
+        "price": 15,
+        "image": "../images/products/ciftan_women.jpg"
     }
 ]
