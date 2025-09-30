@@ -47,5 +47,12 @@
         "category": "אביזרים",
         "price": 15,
         "image": "../images/products/moznaim.jpg"
+    },
+     {
+        "id": 8,
+        "name": "שמלה",
+        "category": "בגדים",
+        "price": 15,
+        "image": "../images/products/dress_girl.jpg"
     }
 ]
