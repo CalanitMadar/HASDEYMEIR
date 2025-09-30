@@ -12,5 +12,12 @@
         "category": "כללי",
         "price": 15,
         "image": "../images/products/umbrella.jpg"
+    },
+     {
+        "id": 3,
+        "name": "מטריה",
+        "category": "שמלות ערב",
+        "price": 15,
+        "image": "../images/products/dress1.jpg"
     }
 ]
