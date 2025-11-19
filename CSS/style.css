@@ -309,4 +309,222 @@ footer a:hover {
     #responsive-logo {
         max-width: 100px;
     }
+
+
+
+    /* ------------------------------------------- */
+    /* עיצוב קטע הזיכרון למאיר ז"ל */
+    /* ------------------------------------------- */
+
+    .memorial-section {
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+
+    .memorial-container {
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+        background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0 8px 30px rgba(0, 80, 158, 0.15);
+        border: 2px solid #c0daf5;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .memorial-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 5px;
+        background: linear-gradient(90deg, #FFD700 0%, #00509e 50%, #FFD700 100%);
+    }
+
+    .memorial-image {
+        flex: 0 0 300px;
+        text-align: center;
+    }
+
+    .memorial-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0, 51, 102, 0.3);
+        border: 4px solid #FFD700;
+        transition: transform 0.3s ease;
+    }
+
+    .memorial-image img:hover {
+        transform: scale(1.02);
+    }
+
+    .image-caption {
+        margin-top: 15px;
+        font-size: 1.1em;
+        color: #003366;
+        font-weight: bold;
+        padding: 10px;
+        background: #e6f7ff;
+        border-radius: 8px;
+        border-right: 4px solid #00509e;
+    }
+
+    .memorial-text {
+        flex: 1;
+        color: #444;
+        line-height: 1.9;
+    }
+
+    .memorial-title {
+        color: #00509e;
+        font-size: 1.8em;
+        margin-top: 0;
+        margin-bottom: 25px;
+        text-align: center;
+        border-bottom: 3px solid #FFD700;
+        padding-bottom: 15px;
+    }
+
+    .memorial-text p {
+        margin-bottom: 20px;
+        text-align: justify;
+        font-size: 1.05em;
+    }
+
+    .memorial-closing {
+        font-size: 1.15em;
+        color: #00509e;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 30px;
+        padding: 20px;
+        background: #e6f7ff;
+        border-radius: 10px;
+        border: 2px dashed #00509e;
+    }
+
+    .memorial-closing strong {
+        color: #003366;
+        font-size: 1.2em;
+    }
+
+    .memorial-dedication {
+        text-align: center;
+        font-size: 1.3em;
+        color: #003366;
+        font-weight: bold;
+        margin-top: 25px;
+        padding: 15px;
+        background: linear-gradient(135deg, #FFD700 0%, #FFF4CC 100%);
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 51, 102, 0.2);
+    }
+
+    /* ------------------------------------------- */
+    /* כותרת המוצרים */
+    /* ------------------------------------------- */
+
+    .products-header {
+        max-width: 1200px;
+        margin: 60px auto 30px;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .products-header h2 {
+        color: #00509e;
+        font-size: 2.5em;
+        margin-bottom: 10px;
+        border-bottom: 4px solid #FFD700;
+        display: inline-block;
+        padding-bottom: 10px;
+    }
+
+    .products-header p {
+        color: #666;
+        font-size: 1.2em;
+        margin-top: 15px;
+    }
+
+    /* ------------------------------------------- */
+    /* רספונסיביות לטאבלט */
+    /* ------------------------------------------- */
+
+    @media (max-width: 900px) {
+        .memorial-container {
+            gap: 30px;
+            padding: 30px;
+        }
+        
+        .memorial-image {
+            flex: 0 0 250px;
+        }
+        
+        .memorial-title {
+            font-size: 1.6em;
+        }
+        
+        .products-header h2 {
+            font-size: 2.2em;
+        }
+    }
+
+    /* ------------------------------------------- */
+    /* רספונסיביות למובייל */
+    /* ------------------------------------------- */
+
+    @media (max-width: 768px) {
+        .memorial-section {
+            margin: 20px auto;
+        }
+        
+        .memorial-container {
+            flex-direction: column;
+            gap: 25px;
+            padding: 25px 15px;
+        }
+        
+        .memorial-image {
+            flex: none;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        
+        .memorial-title {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+        }
+        
+        .memorial-text p {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+        
+        .memorial-closing {
+            font-size: 1.05em;
+            padding: 15px;
+        }
+        
+        .memorial-dedication {
+            font-size: 1.15em;
+        }
+        
+        .products-header {
+            margin: 40px auto 20px;
+        }
+        
+        .products-header h2 {
+            font-size: 1.8em;
+        }
+        
+        .products-header p {
+            font-size: 1em;
+        }
+    }
 }
