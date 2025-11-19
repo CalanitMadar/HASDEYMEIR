@@ -4,17 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>גלריית מוצרים | חסדי מאיר</title>
+    
     <style>
         /* ---------------------------------------------------- */
-        /* כאן יישבו כל כללי ה-CSS שהגדרנו קודם לדף הגלריה: */
-        /* סגנון body, .page-center-wrapper, .container, h1, p, .icon, .admin-link, */
-        /* .product-gallery, .gallery-item, .gallery-item:hover וכו'. */
-        /* נשתמש באותם כללים בדיוק שכתבנו בתגובה הקודמת לעיצוב הגלריה. */
+        /* סגנון כללי */
         /* ---------------------------------------------------- */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff; /* כחול בהיר */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            direction: rtl;
+            min-height: 100vh;
+        }
+
+        /* עטיפה ראשית - מרכוז דף "בבנייה" */
+        .page-center-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 20px 0; /* מרווח למטה כדי לפנות מקום לגלריה */
+            min-height: 50vh; 
+        }
+
+        /* מכולה ראשית (הבלוק הלבן) */
+        .container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 80, 158, 0.2); 
+            max-width: 600px;
+            width: 90%;
+            border-top: 8px solid #00509e; 
+        }
+
+        /* כותרת */
+        h1 {
+            color: #00509e; 
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            animation: pulse 1.5s infinite alternate; 
+        }
+
+        /* טקסט */
+        p {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .icon {
+            font-size: 4em;
+            color: #c0daf5; 
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* קישור לדף הבית */
+        .admin-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #ffffff;
+            background-color: #00509e;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+        .admin-link:hover {
+            background-color: #003366;
+        }
         
-        /* דוגמה קצרה לכללי הגלריה החשובים: */
+        /* ---------------------------------------------------- */
+        /* עיצוב גלריית המוצרים (החלק הדינמי) */
+        /* ---------------------------------------------------- */
+
+        .gallery-header {
+            max-width: 900px;
+            margin: 40px auto 30px;
+            padding: 0 20px;
+        }
+
+        .gallery-header h2 {
+            color: #00509e;
+            font-size: 2em;
+            border-bottom: 3px solid #FFD700;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+        
         .product-gallery {
             display: grid;
+            /* גריד רספונסיבי: 2-3 עמודות */
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
             gap: 20px;
             max-width: 1100px;
@@ -30,31 +116,72 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
             border-bottom: 5px solid #c0daf5;
+            text-align: right; /* יישור הטקסט בתוך הכרטיס */
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 25px rgba(0, 80, 158, 0.3);
+            border-bottom-color: #00509e;
         }
 
         .gallery-item img {
             width: 100%;
-            height: 200px; 
-            object-fit: cover; 
+            height: 200px; /* גובה קבוע לתמונה */
+            object-fit: cover; /* חותך את התמונה אך שומר על כיסוי מלא */
             display: block;
         }
         
         .item-info {
             padding: 15px 10px;
         }
+
+        .item-info h3 {
+            margin: 0;
+            color: #00509e;
+            font-size: 1.15em;
+            margin-bottom: 5px;
+        }
+        
+        .item-info p {
+            margin: 5px 0;
+            font-size: 0.95em;
+        }
+
+        /* אנימציה */
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.05); }
+        }
+        
+        /* רספונסיביות */
+        @media (max-width: 600px) {
+            h1 { font-size: 2em; }
+            .page-center-wrapper { padding: 30px 10px; }
+            .product-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+            .gallery-item img {
+                height: 150px;
+            }
+        }
     </style>
 </head>
 <body>
-
-    <header>
-        </header>
-
 
     <div class="page-center-wrapper">
         <div class="container">
             <span class="icon">🏗️</span> 
             <h1>הגלריה בשיפוץ!</h1>
-            <p>... אנו עובדים במרץ ...</p>
+            
+            <p>
+                אנו עובדים במרץ על עדכון ושיפור גלריית המוצרים של חסדי מאיר.
+                <br>
+                בקרוב מאוד תחשפו לקטלוג החדש והמלא שלנו.
+                <br>
+                תודה על הסבלנות!
+            </p>
+            
             <a href="../index.html" class="admin-link">חזרה לדף הבית</a>
         </div>
     </div>
@@ -68,10 +195,103 @@
             </div>
     </section>
     
-    <footer>
-        </footer>
+    <script>
+        const productsData = [
+            {
+                "id": 1,
+                "name": "סלסלת צדפה",
+                "category": "כלי הגשה",
+                "price": 15,
+                "image": "../images/products/tzdafa.jpg"
+            },
+            {
+                "id": 2,
+                "name": "מטריה",
+                "category": "כללי",
+                "price": 15,
+                "image": "../images/products/umbrella.jpg"
+            },
+            {
+                "id": 3,
+                "name": "שמלת ערב",
+                "category": "שמלות ערב",
+                "price": 15,
+                "image": "../images/products/dress1.jpg"
+            },
+            {
+                "id": 4,
+                "name": "כפתן גברים",
+                "category": "בגדים",
+                "price": 15,
+                "image": "../images/products/ciftan_man.jpg"
+            },
+            {
+                "id": 5,
+                "name": "כפתן נשים",
+                "category": "בגדים",
+                "price": 15,
+                "image": "../images/products/ciftan_women.jpg"
+            },
+            {
+                "id": 6,
+                "name": "עיצוב שולחן (פמוטים)",
+                "category": "אביזרים",
+                "price": 15,
+                "image": "../images/products/pamotim.jpg"
+            },
+            {
+                "id": 7,
+                "name": "עיצוב שולחן (מאזניים)",
+                "category": "אביזרים",
+                "price": 15,
+                "image": "../images/products/moznaim.jpg"
+            },
+            {
+                "id": 8,
+                "name": "שמלת ילדה",
+                "category": "בגדים",
+                "price": 15,
+                "image": "../images/products/dress_girl.jpg"
+            }
+        ];
 
-    <script src="../scripts/gallery.js"></script> 
+        const defaultImage = "../images/default.png"; // נתיב לתמונת ברירת המחדל
 
+        function displayProducts(productsToDisplay) {
+            const container = document.getElementById('gallery-products-container');
+            if (!container) return; // יציאה אם האלמנט לא קיים
+            
+            container.innerHTML = '';
+            
+            if (productsToDisplay.length === 0) {
+                container.innerHTML = '<p style="text-align: center; color: #b03a5b; font-size: 1.2em;">לא נמצאו מוצרים.</p>';
+                return;
+            }
+
+            productsToDisplay.forEach(product => {
+                const card = document.createElement('div');
+                card.className = "gallery-item"; 
+
+                // הנתיב: אם ריק, משתמשים בברירת מחדל
+                const imageUrl = product.image && product.image.trim() !== '' ? product.image : defaultImage;
+
+                card.innerHTML = `
+                    <img src="${imageUrl}" alt="${product.name}" onerror="this.onerror=null; this.src='${defaultImage}'">
+                    <div class="item-info">
+                        <h3>${product.name}</h3>
+                        <p><strong>קטגוריה:</strong> ${product.category}</p>
+                        <p class="product-price"><strong>תרומה מומלצת:</strong> ${product.price} ₪</p> 
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // טוען את המוצרים ברגע שהדף נטען במלואו
+        document.addEventListener('DOMContentLoaded', () => {
+            // טוען את המערך המוכן (במקום fetch לקובץ חיצוני)
+            displayProducts(productsData); 
+        });
+    </script> 
 </body>
 </html>
