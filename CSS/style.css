@@ -333,6 +333,7 @@ footer a:hover {
         border: 2px solid #c0daf5;
         position: relative;
         overflow: hidden;
+        min-height: 500px; /* גובה מינימלי כדי להבטיח שהכל בשורה */
     }
 
     .memorial-container::before {
@@ -346,83 +347,97 @@ footer a:hover {
     }
 
     .memorial-image {
-        flex: 0 0 300px;
+        flex: 0 0 320px; /* הגדלתי מעט את רוחב התמונה */
         text-align: center;
+        position: sticky;
+        top: 20px; /* תישאר במקום בגלילה */
     }
 
     .memorial-image img {
         width: 100%;
-        height: auto;
+        height: 420px; /* גובה קבוע */
+        object-fit: cover; /* חיתוך התמונה */
+        object-position: center top; /* התמקדות בחלק העליון של התמונה */
         border-radius: 15px;
         box-shadow: 0 5px 20px rgba(0, 51, 102, 0.3);
         border: 4px solid #FFD700;
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .memorial-image img:hover {
-        transform: scale(1.02);
+        transform: scale(1.03);
+        box-shadow: 0 8px 30px rgba(0, 51, 102, 0.4);
     }
 
     .image-caption {
         margin-top: 15px;
-        font-size: 1.1em;
+        font-size: 1.05em;
         color: #003366;
         font-weight: bold;
-        padding: 10px;
+        padding: 12px;
         background: #e6f7ff;
         border-radius: 8px;
         border-right: 4px solid #00509e;
+        box-shadow: 0 2px 5px rgba(0, 80, 158, 0.1);
     }
 
     .memorial-text {
         flex: 1;
         color: #444;
-        line-height: 1.9;
+        line-height: 1.85;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
 
     .memorial-title {
         color: #00509e;
-        font-size: 1.8em;
+        font-size: 1.65em; /* גודל נעים יותר */
         margin-top: 0;
         margin-bottom: 25px;
         text-align: center;
         border-bottom: 3px solid #FFD700;
-        padding-bottom: 15px;
+        padding-bottom: 12px;
+        text-shadow: 1px 1px 2px rgba(0, 80, 158, 0.1);
     }
 
     .memorial-text p {
-        margin-bottom: 20px;
+        margin-bottom: 18px;
         text-align: justify;
-        font-size: 1.05em;
+        font-size: 1.02em; /* גודל טקסט נעים לקריאה */
+        line-height: 1.8;
+        color: #333;
     }
 
     .memorial-closing {
-        font-size: 1.15em;
+        font-size: 1.12em;
         color: #00509e;
         font-weight: 600;
         text-align: center;
-        margin-top: 30px;
-        padding: 20px;
-        background: #e6f7ff;
-        border-radius: 10px;
+        margin-top: 25px;
+        padding: 18px 20px;
+        background: linear-gradient(135deg, #e6f7ff 0%, #f0f8ff 100%);
+        border-radius: 12px;
         border: 2px dashed #00509e;
+        box-shadow: 0 3px 10px rgba(0, 80, 158, 0.1);
     }
 
     .memorial-closing strong {
         color: #003366;
-        font-size: 1.2em;
+        font-size: 1.15em;
     }
 
     .memorial-dedication {
         text-align: center;
-        font-size: 1.3em;
+        font-size: 1.25em;
         color: #003366;
         font-weight: bold;
-        margin-top: 25px;
-        padding: 15px;
+        margin-top: 20px;
+        padding: 15px 20px;
         background: linear-gradient(135deg, #FFD700 0%, #FFF4CC 100%);
-        border-radius: 10px;
-        box-shadow: 0 3px 10px rgba(0, 51, 102, 0.2);
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+        border: 2px solid #FFD700;
     }
 
     /* ------------------------------------------- */
@@ -459,14 +474,24 @@ footer a:hover {
         .memorial-container {
             gap: 30px;
             padding: 30px;
+            min-height: auto;
         }
         
         .memorial-image {
-            flex: 0 0 250px;
+            flex: 0 0 280px;
+            position: static;
+        }
+        
+        .memorial-image img {
+            height: 380px;
         }
         
         .memorial-title {
-            font-size: 1.6em;
+            font-size: 1.5em;
+        }
+        
+        .memorial-text p {
+            font-size: 0.98em;
         }
         
         .products-header h2 {
@@ -484,35 +509,43 @@ footer a:hover {
         }
         
         .memorial-container {
-            flex-direction: column;
+            flex-direction: column; /* רק במובייל עובר לעמודה */
             gap: 25px;
             padding: 25px 15px;
+            min-height: auto;
         }
         
         .memorial-image {
             flex: none;
             width: 100%;
-            max-width: 300px;
+            max-width: 320px;
             margin: 0 auto;
+            position: static;
+        }
+        
+        .memorial-image img {
+            height: 350px;
         }
         
         .memorial-title {
-            font-size: 1.4em;
+            font-size: 1.35em;
             margin-bottom: 20px;
         }
         
         .memorial-text p {
-            font-size: 1em;
+            font-size: 0.95em;
             margin-bottom: 15px;
+            line-height: 1.7;
         }
         
         .memorial-closing {
-            font-size: 1.05em;
+            font-size: 1em;
             padding: 15px;
         }
         
         .memorial-dedication {
-            font-size: 1.15em;
+            font-size: 1.1em;
+            padding: 12px 15px;
         }
         
         .products-header {
