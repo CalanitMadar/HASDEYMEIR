@@ -55,4 +55,44 @@
         "price": 15,
         "image": "../images/products/dress_girl.jpg"
     }
+    ,
+     {
+        "id": 9,
+        "name": "טרבוש",
+        "category": "בגדים",
+        "price": 15,
+        "image": "../images/products/tarbush.jpg"
+    }
+    ,
+    {
+        "id": 10,
+        "name": "מפה צבע אפור",
+        "category": "בגדים",
+        "price": 15,
+        "image": "../images/products/map1.jpg"
+    }
+        ,
+    {
+        "id": 11,
+        "name": "מפה צבע בז׳",
+        "category": "בגדים",
+        "price": 15,
+        "image": "../images/products/map2.jpg"
+    }
+        ,
+    {
+        "id": 12,
+        "name": "מפה צבע לבן",
+        "category": "בגדים",
+        "price": 15,
+        "image": "../images/products/map3.jpg"
+    }
+        ,
+    {
+        "id": 13,
+        "name": "מפה צבע בז׳",
+        "category": "בגדים",
+        "price": 15,
+        "image": "../images/products/map4.jpg"
+    }
 ]
