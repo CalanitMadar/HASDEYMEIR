@@ -60,7 +60,7 @@
         "id": 9,
         "name": "טרבוש",
         "category": "בגדים",
-        "price": 15,
+        "price": 3,
         "image": "../images/products/tarbush.jpg"
     }
     ,
@@ -206,5 +206,13 @@
         "category": "בגדים",
         "price": 0,
         "image": "../images/products/ברית10.jpg"
+    }
+        ,
+    {
+        "id": 28,
+        "name": "מגש נחושת",
+        "category": "בגדים",
+        "price": 0,
+        "image": "../images/products/מגש-נחושת.jpg.jpg"
     }
 ]
