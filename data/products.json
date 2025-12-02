@@ -265,10 +265,34 @@
     }
         ,
     {
-        "id": 33,
-        "name": "פמוט נחושת גדול",
+        "id": 34,
+        "name": "עיגול עלים",
         "category": "בגדים",
-        "price": 0,
-        "image": "../images/products/פמוט-נחושת-גדול.jpg"
+        "price": 5,
+        "image": "../images/products/עיגול-עלים.jpg"
+    }
+        ,
+    {
+        "id": 35,
+        "name": "עיגול עלים",
+        "category": "בגדים",
+        "price": 5,
+        "image": "../images/products/עיגול-עלים.jpg"
+    }
+        ,
+    {
+        "id": 36,
+        "name": "מטפחת ריקוד",
+        "category": "בגדים",
+        "price": 2,
+        "image": "../images/products/מטבחת ריקוד1.jpg"
+    }
+            ,
+    {
+        "id": 37,
+        "name": "מטפחת ריקוד",
+        "category": "בגדים",
+        "price": 2,
+        "image": "../images/products/מטפחת ריקוד2.jpg"
     }
 ]
