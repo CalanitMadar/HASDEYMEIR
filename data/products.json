@@ -3,7 +3,7 @@
         "id": 1,
         "name": "סלסלת צדפה",
         "category": "כלי הגשה",
-        "price": 15,
+        "price": 30,
         "image": "../images/products/tzdafa.jpg"
     },
      {
@@ -214,5 +214,45 @@
         "category": "בגדים",
         "price": 0,
         "image": "../images/products/מגש-נחושת.jpg.jpg"
+    }
+        ,
+    {
+        "id": 29,
+        "name": "קערת חינה",
+        "category": "בגדים",
+        "price": 0,
+        "image": "../images/products/קערת-חינה.jpg.jpg"
+    }
+        ,
+    {
+        "id": 30,
+        "name": "קשת פרחים",
+        "category": "בגדים",
+        "price": 10,
+        "image": "../images/products/קשת-פרחים.jpg.jpg"
+    }
+        ,
+    {
+        "id": 31,
+        "name": "מגש נחושת",
+        "category": "בגדים",
+        "price": 0,
+        "image": "../images/products/מגש-נחושת.jpg"
+    }
+        ,
+    {
+        "id": 32,
+        "name": "פרחים לעיצוב",
+        "category": "בגדים",
+        "price": 0,
+        "image": "../images/products/פרחים.jpg"
+    }
+        ,
+    {
+        "id": 33,
+        "name": "מגש נחושת",
+        "category": "בגדים",
+        "price": 0,
+        "image": "../images/products/מגש-נחושת.jpg"
     }
 ]
