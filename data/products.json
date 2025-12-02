@@ -213,7 +213,7 @@
         "name": "מגש נחושת",
         "category": "בגדים",
         "price": 0,
-        "image": "../images/products/מגש-נחושת.jpg.jpg"
+        "image": "../images/products/מגש-נחושת.jpg"
     }
         ,
     {
@@ -221,7 +221,7 @@
         "name": "קערת חינה",
         "category": "בגדים",
         "price": 0,
-        "image": "../images/products/קערת-חינה.jpg.jpg"
+        "image": "../images/products/קערת-חינה.jpg"
     }
         ,
     {
@@ -229,7 +229,7 @@
         "name": "קשת פרחים",
         "category": "בגדים",
         "price": 10,
-        "image": "../images/products/קשת-פרחים.jpg.jpg"
+        "image": "../images/products/קשת-פרחים.jpg"
     }
         ,
     {
@@ -250,9 +250,17 @@
         ,
     {
         "id": 33,
-        "name": "מגש נחושת",
+        "name": "כיסוי לכיסא לבן/ שחור",
         "category": "בגדים",
         "price": 0,
-        "image": "../images/products/מגש-נחושת.jpg"
+        "image": "../images/products/כיסוי-לכיסא.jpg"
+    }
+        ,
+    {
+        "id": 33,
+        "name": "פמוט נחושת קטן",
+        "category": "בגדים",
+        "price": 0,
+        "image": "../images/products/פמוט-נחושת-קטן.jpg"
     }
 ]
