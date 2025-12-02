@@ -263,4 +263,12 @@
         "price": 0,
         "image": "../images/products/פמוט-נחושת-קטן.jpg"
     }
+        ,
+    {
+        "id": 33,
+        "name": "פמוט נחושת גדול",
+        "category": "בגדים",
+        "price": 0,
+        "image": "../images/products/פמוט-נחושת-גדול.jpg"
+    }
 ]
