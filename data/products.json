@@ -95,12 +95,116 @@
         "price": 5,
         "image": "../images/products/map4.jpg"
     }
-            ,
+        ,
     {
         "id": 14,
         "name": "שמלות חינה מפוארות",
         "category": "בגדים",
-        "price": 5,
+        "price": 30,
         "image": "../images/products/שמלות-חינה-מפוארות.jpg"
+    }
+        ,
+    {
+        "id": 15,
+        "name": "עציץ ירוק",
+        "category": "בגדים",
+        "price": 4,
+        "image": "../images/products/עציץ-ירוק.jpg"
+    }
+        ,
+    {
+        "id": 16,
+        "name": "מגש זהב פלסטיק",
+        "category": "בגדים",
+        "price": 2,
+        "image": "../images/products/מגש-זהב-פלסטיק.jpg"
+    }
+        ,
+    {
+        "id": 17,
+        "name": "בגד לברית",
+        "category": "בגדים",
+        "price": 0,
+        "image": "../images/products/בגד-לברית.jpg"
+    }
+        ,
+    {
+        "id": 18,
+        "name": "בגד לברית",
+        "category": "בגדים",
+        "price": 0,
+        "image": "../images/products/ברית1.jpg"
+    }
+        ,
+    {
+        "id": 19,
+        "name": "בגד לברית",
+        "category": "בגדים",
+        "price": 0,
+        "image": "../images/products/ברית2.jpg"
+    }
+        ,
+    {
+        "id": 20,
+        "name": "בגד לברית",
+        "category": "בגדים",
+        "price": 0,
+        "image": "../images/products/ברית3.jpg"
+    }
+        ,
+    {
+        "id": 21,
+        "name": "בגד לברית",
+        "category": "בגדים",
+        "price": 0,
+        "image": "../images/products/ברית4.jpg"
+    }
+        ,
+    {
+        "id": 22,
+        "name": "בגד לברית",
+        "category": "בגדים",
+        "price": 0,
+        "image": "../images/products/ברית5.jpg"
+    }
+        ,
+    {
+        "id": 23,
+        "name": "בגד לברית",
+        "category": "בגדים",
+        "price": 0,
+        "image": "../images/products/ברית6.jpg"
+    }
+        ,
+    {
+        "id": 24,
+        "name": "בגד לברית",
+        "category": "בגדים",
+        "price": 0,
+        "image": "../images/products/ברית7.jpg"
+    }
+        ,
+    {
+        "id": 25,
+        "name": "בגד לברית",
+        "category": "בגדים",
+        "price": 0,
+        "image": "../images/products/ברית8.jpg"
+    }
+        ,
+    {
+        "id": 26,
+        "name": "בגד לברית",
+        "category": "בגדים",
+        "price": 0,
+        "image": "../images/products/ברית9.jpg"
+    }
+        ,
+    {
+        "id": 27,
+        "name": "בגד לברית",
+        "category": "בגדים",
+        "price": 0,
+        "image": "../images/products/ברית10.jpg"
     }
 ]
