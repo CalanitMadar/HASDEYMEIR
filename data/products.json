@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "סלסלת צדפה",
-        "category": "כלי הגשה",
+        "category": "כלי הגשה קטן 20 שח או גדול 30 שח",
         "price": 30,
         "image": "../images/products/tzdafa.jpg"
     },
@@ -10,35 +10,35 @@
         "id": 2,
         "name": "מטריה",
         "category": "כללי",
-        "price": 15,
+        "price": 5,
         "image": "../images/products/umbrella.jpg"
     },
      {
         "id": 3,
         "name": "שמלת ערב",
-        "category": "שמלות ערב",
-        "price": 15,
+        "category": "שמלות ערב 20 עד 30 שח",
+        "price": 30,
         "image": "../images/products/dress1.jpg"
     },
      {
         "id": 4,
         "name": "כפתן גברים",
         "category": "בגדים",
-        "price": 15,
+        "price": 8,
         "image": "../images/products/ciftan_man.jpg"
     },
      {
         "id": 5,
         "name": "כפתן נשים",
         "category": "בגדים",
-        "price": 15,
+        "price": 8,
         "image": "../images/products/ciftan_women.jpg"
     },
      {
         "id": 6,
-        "name": "עיצוב שולחן",
+        "name": "פמוט גדול",
         "category": "אביזרים",
-        "price": 15,
+        "price": 8,
         "image": "../images/products/pamotim.jpg"
     },
      {
@@ -50,7 +50,7 @@
     },
      {
         "id": 8,
-        "name": "שמלה",
+        "name": "שמלה לקטנטנות",
         "category": "בגדים",
         "price": 15,
         "image": "../images/products/dress_girl.jpg"
@@ -59,7 +59,7 @@
      {
         "id": 9,
         "name": "טרבוש",
-        "category": "בגדים",
+        "category": "חינה",
         "price": 3,
         "image": "../images/products/tarbush.jpg"
     }
@@ -98,9 +98,9 @@
         ,
     {
         "id": 14,
-        "name": "שמלות חינה מפוארות",
-        "category": "בגדים",
-        "price": 30,
+        "name": "מגוון כפתנים",
+        "category": "חינה",
+        "price": 8,
         "image": "../images/products/שמלות-חינה-מפוארות.jpg"
     }
         ,
@@ -210,22 +210,14 @@
         ,
     {
         "id": 28,
-        "name": "מגש נחושת",
-        "category": "בגדים",
-        "price": 0,
-        "image": "../images/products/מגש-נחושת.jpg"
-    }
-        ,
-    {
-        "id": 29,
         "name": "קערת חינה",
         "category": "בגדים",
-        "price": 0,
+        "price": 5,
         "image": "../images/products/קערת-חינה.jpg"
     }
         ,
     {
-        "id": 30,
+        "id": 29,
         "name": "קשת פרחים",
         "category": "בגדים",
         "price": 10,
@@ -233,7 +225,7 @@
     }
         ,
     {
-        "id": 31,
+        "id": 30,
         "name": "מגש נחושת",
         "category": "בגדים",
         "price": 0,
@@ -241,31 +233,39 @@
     }
         ,
     {
-        "id": 32,
-        "name": "פרחים לעיצוב",
-        "category": "בגדים",
-        "price": 0,
+        "id": 31,
+        "name": "כדורי פרחים",
+        "category": "עיצוב",
+        "price": 8,
         "image": "../images/products/פרחים.jpg"
     }
         ,
     {
-        "id": 33,
-        "name": "כיסוי לכיסא לבן/ שחור",
+        "id": 32,
+        "name": "כיסוי לכיסא לבן",
         "category": "בגדים",
-        "price": 0,
+        "price": 2,
         "image": "../images/products/כיסוי-לכיסא.jpg"
     }
-        ,
+    ,
     {
         "id": 33,
-        "name": "פמוט נחושת קטן",
+        "name": "כיסוי לכיסא שחור",
         "category": "בגדים",
-        "price": 0,
-        "image": "../images/products/פמוט-נחושת-קטן.jpg"
+        "price": 2,
+        "image": "../images/products/כיסוי-כיסא-שחור.jpg"
     }
         ,
     {
         "id": 34,
+        "name": "פמוט נחושת קטן",
+        "category": "עיצוב",
+        "price": 5,
+        "image": "../images/products/פמוט-נחושת-קטן.jpg"
+    }
+        ,
+    {
+        "id": 35,
         "name": "עיגול עלים",
         "category": "בגדים",
         "price": 5,
@@ -273,7 +273,7 @@
     }
         ,
     {
-        "id": 35,
+        "id": 36,
         "name": "מטפחת ריקוד",
         "category": "בגדים",
         "price": 2,
@@ -281,7 +281,7 @@
     }
         ,
     {
-        "id": 36,
+        "id": 37,
         "name": "מטפחת ריקוד",
         "category": "בגדים",
         "price": 2,
@@ -289,15 +289,15 @@
     }
         ,
     {
-        "id": 37,
+        "id": 38,
         "name": "כפתן כלה",
         "category": "בגדים",
-        "price": 2,
+        "price": 10,
         "image": "../images/products/כפתן-כלה.jpg"
     }
         ,
     {
-        "id": 38,
+        "id": 39,
         "name": "סלסלה קטנה",
         "category": "בגדים",
         "price": 5,
@@ -305,7 +305,7 @@
     }
         ,
     {
-        "id": 39,
+        "id": 40,
         "name": "סלסלה גדולה / מפוארת",
         "category": "בגדים",
         "price": 10,
@@ -313,7 +313,7 @@
     }
         ,
     {
-        "id": 40,
+        "id": 41,
         "name": "אגרטל",
         "category": "בגדים",
         "price": 4,
@@ -321,7 +321,7 @@
     }
         ,
     {
-        "id": 41,
+        "id": 42,
         "name": "דלי קרח",
         "category": "בגדים",
         "price": 4,
@@ -329,26 +329,26 @@
     }
         ,
     {
-        "id": 42,
+        "id": 43,
         "name": "מבחר מפות",
         "category": "בגדים",
-        "price": 4,
+        "price": 5,
         "image": "../images/products/מבחר מפות.jpg"
     }
         ,
     {
-        "id": 43,
+        "id": 44,
         "name": "סלסלה לעיצוב שולחן",
         "category": "בגדים",
-        "price": 4,
+        "price": 5,
         "image": "../images/products/סלסלה לעיצוב שולחן.jpg"
     }
         ,
     {
-        "id": 44,
+        "id": 45,
         "name": "כפתן לחתן",
         "category": "בגדים",
-        "price": 4,
+        "price": 10,
         "image": "../images/products/כפתן-לחתן.jpg"
     }
 ]
