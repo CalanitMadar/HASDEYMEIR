@@ -6,9 +6,6 @@ body {
     padding: 0;
     direction: rtl;
     color: #333;
-    /* *** תיקון רספונסיביות גלובלי *** */
-    overflow-x: hidden; /* מונע גלילה אופקית לא רצויה בגוף העמוד כולו */
-    /* ***************************** */
 }
 
 /* Header ו-Footer - רקע כחול כהה */
@@ -135,23 +132,15 @@ nav a:hover {
 /* ------------------------------------------- */
 
 #products-container {
-    display: flex; 
-    flex-wrap: wrap; 
-    flex-direction: column;
-    gap: 0;
-    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    /* ************* עדכון: רוחב מקסימלי, מרכוז ומרווח 70px ************* */
     max-width: 1200px;
     margin: 0 auto; 
     padding: 20px 70px; 
     box-sizing: border-box;
-}
-
-.category-group {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 20px;
-    width: 100%;
-    margin-bottom: 40px;
+    /* ***************************************************************** */
 }
 
 .product-card {
@@ -175,12 +164,12 @@ nav a:hover {
 .product-image-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: contain; /* שמירה על פרופורציות התמונה */
     object-position: center; 
     border-radius: 0; 
 }
 
-.product-card h4 {
+.product-card h3 {
     margin: 10px 0 5px;
     font-size: 18px;
     color: #00509e;
@@ -189,12 +178,6 @@ nav a:hover {
 .product-card p {
     margin: 5px 0;
     font-size: 14px;
-}
-
-.product-category-name {
-    font-size: 0.9em;
-    color: #777;
-    margin: 5px 0;
 }
 
 /* ------------------------------------------- */
@@ -241,21 +224,126 @@ footer a:hover {
 }
 
 /* ------------------------------------------- */
-/* עיצוב קטע הזיכרון למאיר ז"ל - קיים */
+/* רספונסיביות - מסכים קטנים (עד 768px) - קוד זה עבר שינוי! */
+/* ------------------------------------------- */
+
+/* סרגל החיפוש והניווט משתנה למוביל - הקוד המקורי שלך */
+
+@media (max-width: 768px) {
+    
+    /* הופך את ההאדר לעמודה במובייל */
+    header {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 1rem;
+    }
+
+    /* מציג את קונטיינר הלוגו/המבורגר ומארגן אותם בשורה אחת */
+    .header-top-row {
+        display: flex; /* מציג את ה-div רק במובייל */
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        margin-bottom: 15px;
+        order: 1; 
+    }
+    
+    /* הופך את כפתור ההמבורגר לגלוי רק במובייל */
+    #hamburger-menu {
+        display: block;
+    }
+
+    /* הניווט הראשי */
+    nav {
+        order: 3; 
+        flex-direction: column;
+        background: #c0daf5;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        max-height: 0; /* מוסתר כברירת מחדל */
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+        padding: 0;
+        z-index: 999;
+    }
+
+    /* פתיחת התפריט ע"י קלאס JS */
+    nav.open {
+        max-height: 300px; 
+        padding: 10px 0;
+    }
+    
+    nav a {
+        display: block;
+        padding: 10px 20px;
+        text-align: center;
+        width: auto;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        color: #3b392c;
+    }
+
+    /* שינוי ההמבורגר למצב סגור X */
+    #hamburger-menu.open span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    #hamburger-menu.open span:nth-child(2) {
+        opacity: 0;
+    }
+    #hamburger-menu.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+    
+    /* סרגל החיפוש */
+    .search-bar {
+        order: 2; /* סרגל החיפוש מגיע שני */
+        width: 100%; 
+        padding: 0 10px; 
+        box-sizing: border-box; 
+        margin-bottom: 15px;
+    }
+    
+    .search-bar input {
+        width: 100%;
+    }
+    
+    /* רספונסיביות כרטיסי המוצר */
+    #products-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        /* ************* עדכון: מרווח קטן יותר במובייל ************* */
+        padding: 20px 15px; 
+        /* ********************************************************* */
+    }
+    
+    #responsive-logo {
+        max-width: 100px;
+    }
+
+}
+/* סוף קטע המובייל המקורי */
+
+
+/* ------------------------------------------- */
+/* עיצוב קטע הזיכרון למאיר ז"ל - עודכן כאן! */
 /* ------------------------------------------- */
 
 .memorial-section {
     max-width: 1200px;
     margin: 40px auto;
+    /* ************* עדכון: מרווח 70px מהצדדים בדסקטופ ************* */
     padding: 0 70px; 
     box-sizing: border-box;
+    /* ********************************************************* */
 }
 
 .memorial-container {
     display: flex;
+    /* ************* עדכון: הופך את הסדר (תמונה מימין, טקסט משמאל) ************* */
     flex-direction: row-reverse; 
+    /* ******************************************************************* */
     gap: 30px;
-    align-items: stretch;
+    align-items: stretch; /* מותח את שני הצדדים לאותו גובה */
     background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
     border-radius: 20px;
     padding: 40px;
@@ -275,8 +363,9 @@ footer a:hover {
     background: linear-gradient(90deg, #FFD700 0%, #00509e 50%, #FFD700 100%);
 }
 
+/* התמונה - 50% מהרוחב */
 .memorial-image {
-    flex: 1; 
+    flex: 1; /* תופס חצי מהמקום */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -313,8 +402,9 @@ footer a:hover {
     text-align: center;
 }
 
+/* הטקסט - 50% מהרוחב */
 .memorial-text {
-    flex: 1; 
+    flex: 1; /* תופס חצי מהמקום */
     color: #444;
     line-height: 1.85;
     display: flex;
@@ -373,14 +463,16 @@ footer a:hover {
 }
 
 /* ------------------------------------------- */
-/* כותרת המוצרים - קיים */
+/* כותרת המוצרים - עודכן כאן! */
 /* ------------------------------------------- */
 
 .products-header {
     max-width: 1200px;
     margin: 60px auto 30px;
+    /* ************* עדכון: מרווח 70px מהצדדים בדסקטופ ************* */
     padding: 0 70px; 
     box-sizing: border-box;
+    /* ********************************************************* */
     text-align: center;
 }
 
@@ -400,111 +492,10 @@ footer a:hover {
 }
 
 /* ------------------------------------------- */
-/* סגנונות חדשים לסינון קטגוריות ומידע תרומות */
-/* ------------------------------------------- */
-
-.category-and-info-container {
-    display: flex;
-    flex-direction: row; /* הצבה רוחבית בדסקטופ כברירת מחדל */
-    gap: 40px;
-    padding: 20px 70px; /* מותאם למרווחים הקיימים */
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: flex-start;
-    box-sizing: border-box;
-}
-
-#category-filter-nav {
-    display: flex;
-    flex-direction: column; /* כפתורים זה מתחת לזה */
-    gap: 10px;
-    padding: 0;
-    border-left: 2px solid #eee; /* קו הפרדה אנכי */
-    padding-left: 20px;
-    width: 250px; /* רוחב קבוע לסרגל */
-    flex-shrink: 0; /* מונע התכווצות */
-}
-
-.category-button {
-    background-color: #f8f8f8;
-    color: #00509e;
-    border: 1px solid #ddd;
-    padding: 8px 15px;
-    cursor: pointer;
-    border-radius: 20px;
-    font-size: 1em;
-    transition: all 0.3s ease;
-    font-weight: bold;
-    white-space: nowrap;
-    text-align: right;
-    width: 100%;
-}
-
-.category-button:hover {
-    background-color: #eee;
-    border-color: #FFD700;
-    transform: translateY(-1px);
-}
-
-.category-button.active {
-    background-color: #00509e;
-    color: #fff;
-    border-color: #00509e;
-}
-
-/* כותרת הקטגוריה בתוך רשימת המוצרים */
-.category-header {
-    width: 100%;
-    text-align: right;
-    font-size: 1.8em;
-    color: #00509e;
-    margin: 40px 0 15px 0;
-    padding-bottom: 5px;
-    border-bottom: 3px solid #FFD700; /* דגש זהב */
-    direction: rtl;
-    font-weight: 700;
-}
-
-/* --- סגנונות למידע על תרומות --- */
-#donations-info {
-    flex: 1; /* תופס את שאר הרוחב הפנוי */
-    background-color: #fffde7; 
-    border: 1px solid #FFD700; 
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-#donations-info h3 {
-    color: #FF6F00; /* צבע כתום-זהוב לכותרת התרומות */
-    font-size: 1.4em;
-    margin-top: 0;
-    margin-bottom: 10px;
-    text-align: right;
-    direction: rtl;
-}
-
-#donations-info p {
-    margin-bottom: 8px;
-    line-height: 1.4;
-    text-align: right;
-    direction: rtl;
-    color: #333;
-}
-
-.contact-details {
-    margin-top: 15px;
-    padding-top: 10px;
-    border-top: 1px dashed #FFD700;
-}
-
-
-/* ------------------------------------------- */
-/* רספונסיביות לטאבלט ומובייל - עדכון קריטי לכפתורים! */
+/* רספונסיביות לטאבלט */
 /* ------------------------------------------- */
 
 @media (max-width: 900px) {
-    /* טאבלט */
     .memorial-container {
         gap: 25px;
         padding: 30px;
@@ -521,133 +512,22 @@ footer a:hover {
     .products-header h2 {
         font-size: 2.2em;
     }
-    
-    /* קטגוריות ותרומות בטאבלט עוברות לעמודה */
-    .category-and-info-container {
-        flex-direction: column;
-        gap: 25px;
-        padding: 20px 30px;
-    }
-
-    #category-filter-nav {
-        flex-direction: row; /* שורה של כפתורים */
-        flex-wrap: wrap; /* מאפשר גלישה לשורה הבאה בטאבלט (מעל 768px) */
-        width: 100%;
-        border-left: none;
-        border-bottom: 2px solid #eee; /* קו הפרדה תחתון */
-        padding-bottom: 15px;
-        padding-left: 0;
-    }
-
-    .category-button {
-        width: auto;
-    }
-    
-    #donations-info {
-        width: 100%;
-    }
-    
-    /* 3 כרטיסים בשורה בטאבלט */
-    .category-group {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    }
 }
 
+/* ------------------------------------------- */
+/* רספונסיביות למובייל - עדכון מרווחים! */
+/* ------------------------------------------- */
 
 @media (max-width: 768px) {
-    /* מובייל */
-    .header-top-row {
-        display: flex; 
-        justify-content: space-between;
-        width: 100%;
-        align-items: center;
-        margin-bottom: 15px;
-        order: 1; 
-    }
-    
-    /* רספונסיביות של ההאדר - קיים */
-    header {
-        flex-direction: column; 
-        align-items: center; 
-        padding: 1rem;
-    }
-
-    #hamburger-menu {
-        display: block;
-    }
-
-    nav {
-        order: 3; 
-        flex-direction: column;
-        background: #c0daf5;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 100%;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
-        padding: 0;
-        z-index: 999;
-    }
-
-    nav.open {
-        max-height: 300px; 
-        padding: 10px 0;
-    }
-    
-    nav a {
-        display: block;
-        padding: 10px 20px;
-        text-align: center;
-        width: auto;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        color: #3b392c;
-    }
-
-    #hamburger-menu.open span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-    #hamburger-menu.open span:nth-child(2) {
-        opacity: 0;
-    }
-    #hamburger-menu.open span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
-    
-    .search-bar {
-        order: 2; 
-        width: 100%; 
-        padding: 0 10px; 
-        box-sizing: border-box; 
-        margin-bottom: 15px;
-    }
-    
-    .search-bar input {
-        width: 100%;
-    }
-    
-    /* רספונסיביות כרטיסי המוצר */
-    #products-container {
-        padding: 20px 15px; 
-    }
-    
-    .category-group {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }
-    
-    #responsive-logo {
-        max-width: 100px;
-    }
-    
-    /* רספונסיביות לזיכרון ולכותרות - קיים */
     .memorial-section {
         margin: 20px auto;
+        /* ************* עדכון: מרווח קטן יותר במובייל ************* */
         padding: 0 15px; 
+        /* ********************************************************* */
     }
     
     .memorial-container {
-        flex-direction: column; 
+        flex-direction: column; /* רק במובייל עובר לעמודה (מקורי) */
         gap: 25px;
         padding: 25px 15px;
     }
@@ -683,7 +563,9 @@ footer a:hover {
     
     .products-header {
         margin: 40px auto 20px;
+        /* ************* עדכון: מרווח קטן יותר במובייל ************* */
         padding: 0 15px; 
+        /* ********************************************************* */
     }
     
     .products-header h2 {
@@ -692,47 +574,5 @@ footer a:hover {
     
     .products-header p {
         font-size: 1em;
-    }
-    
-    /* קטגוריות ותרומות במובייל - סרגל הקטגוריות מתחת למידע על תרומות */
-    .category-and-info-container {
-        padding: 20px 15px;
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    #donations-info {
-        order: 1; 
-    }
-    
-    #category-filter-nav {
-        order: 2;
-        flex-direction: row;
-        width: 100%;
-        border-bottom: 2px solid #eee;
-        padding-bottom: 10px;
-        
-        /* *** התיקון הקריטי: גלילה אופקית ורוחב מינימלי *** */
-        overflow-x: auto; 
-        white-space: nowrap; 
-        gap: 8px; 
-        padding-top: 5px;
-        
-        /* *** נוסף כברירת מחדל לשיפור הגלילה (אופציונלי אך מומלץ) *** */
-        -webkit-overflow-scrolling: touch; 
-    }
-    
-    .category-button {
-        width: auto;
-        flex-shrink: 0;
-        min-width: 80px; /* מוודא שיש רוחב מינימלי לכפתור */
-        /* *** שיפור ויזואלי להפרדה בתצוגת גלילה *** */
-        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
-    
-    .category-header {
-        font-size: 1.5em;
-        margin-top: 20px;
-        margin-bottom: 10px;
     }
 }
