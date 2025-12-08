@@ -2,353 +2,330 @@
     {
         "id": 1,
         "name": "סלסלת צדפה",
-        "category": "כלי הגשה קטן 20 שח או גדול 30 שח",
+        "category": "אירועים",
         "price": 30,
         "image": "../images/products/tzdafa.jpg"
     },
-     {
+    {
         "id": 2,
         "name": "מטריה",
-        "category": "כללי",
+        "category": "שונות",
         "price": 5,
         "image": "../images/products/umbrella.jpg"
     },
-     {
+    {
         "id": 3,
         "name": "שמלת ערב",
-        "category": "שמלות ערב 20 עד 30 שח",
+        "category": "אירועים",
         "price": 30,
         "image": "../images/products/dress1.jpg"
     },
-     {
+    {
         "id": 4,
         "name": "כפתן גברים",
-        "category": "בגדים",
+        "category": "אירועים",
         "price": 8,
         "image": "../images/products/ciftan_man.jpg"
     },
-     {
+    {
         "id": 5,
         "name": "כפתן נשים",
-        "category": "בגדים",
+        "category": "אירועים",
         "price": 8,
         "image": "../images/products/ciftan_women.jpg"
     },
-     {
+    {
         "id": 6,
         "name": "פמוט גדול",
-        "category": "אביזרים",
+        "category": "אירועים",
         "price": 8,
         "image": "../images/products/pamotim.jpg"
     },
-     {
+    {
         "id": 7,
         "name": "עיצוב שולחן",
-        "category": "אביזרים",
+        "category": "אירועים",
         "price": 15,
         "image": "../images/products/moznaim.jpg"
     },
-     {
+    {
         "id": 8,
         "name": "שמלה לקטנטנות",
-        "category": "בגדים",
+        "category": "אירועים",
         "price": 15,
         "image": "../images/products/dress_girl.jpg"
-    }
-    ,
-     {
+    },
+    {
         "id": 9,
         "name": "טרבוש",
         "category": "חינה",
         "price": 3,
         "image": "../images/products/tarbush.jpg"
-    }
-    ,
+    },
     {
         "id": 10,
         "name": "מפה צבע אפור",
-        "category": "בגדים",
+        "category": "אירועים",
         "price": 5,
         "image": "../images/products/map1.jpg"
-    }
-        ,
+    },
     {
         "id": 11,
         "name": "מפה צבע בז׳",
-        "category": "בגדים",
+        "category": "אירועים",
         "price": 5,
         "image": "../images/products/map2.jpg"
-    }
-        ,
+    },
     {
         "id": 12,
         "name": "מפה צבע לבן",
-        "category": "בגדים",
+        "category": "אירועים",
         "price": 5,
         "image": "../images/products/map3.jpg"
-    }
-        ,
+    },
     {
         "id": 13,
-        "name": "מפה צבע בז׳",
-        "category": "בגדים",
+        "name": "מפה צבע בז׳ (דוגמה אחרת)",
+        "category": "אירועים",
         "price": 5,
         "image": "../images/products/map4.jpg"
-    }
-        ,
+    },
     {
         "id": 14,
-        "name": "מגוון כפתנים",
+        "name": "מגוון כפתנים לחינה",
         "category": "חינה",
         "price": 8,
         "image": "../images/products/שמלות-חינה-מפוארות.jpg"
-    }
-        ,
+    },
     {
         "id": 15,
         "name": "עציץ ירוק",
-        "category": "בגדים",
+        "category": "אירועים",
         "price": 4,
         "image": "../images/products/עציץ-ירוק.jpg"
-    }
-        ,
+    },
     {
         "id": 16,
         "name": "מגש זהב פלסטיק",
-        "category": "בגדים",
+        "category": "אירועים",
         "price": 2,
         "image": "../images/products/מגש-זהב-פלסטיק.jpg"
-    }
-        ,
+    },
     {
         "id": 17,
-        "name": "בגד לברית",
-        "category": "בגדים",
+        "name": "בגד לברית (דגם 1)",
+        "category": "ברית",
         "price": 0,
         "image": "../images/products/בגד-לברית.jpg"
-    }
-        ,
+    },
     {
         "id": 18,
-        "name": "בגד לברית",
-        "category": "בגדים",
+        "name": "בגד לברית (דגם 2)",
+        "category": "ברית",
         "price": 0,
         "image": "../images/products/ברית1.jpg"
-    }
-        ,
+    },
     {
         "id": 19,
-        "name": "בגד לברית",
-        "category": "בגדים",
+        "name": "בגד לברית (דגם 3)",
+        "category": "ברית",
         "price": 0,
         "image": "../images/products/ברית2.jpg"
-    }
-        ,
+    },
     {
         "id": 20,
-        "name": "בגד לברית",
-        "category": "בגדים",
+        "name": "בגד לברית (דגם 4)",
+        "category": "ברית",
         "price": 0,
         "image": "../images/products/ברית3.jpg"
-    }
-        ,
+    },
     {
         "id": 21,
-        "name": "בגד לברית",
-        "category": "בגדים",
+        "name": "בגד לברית (דגם 5)",
+        "category": "ברית",
         "price": 0,
         "image": "../images/products/ברית4.jpg"
-    }
-        ,
+    },
     {
         "id": 22,
-        "name": "בגד לברית",
-        "category": "בגדים",
+        "name": "בגד לברית (דגם 6)",
+        "category": "ברית",
         "price": 0,
         "image": "../images/products/ברית5.jpg"
-    }
-        ,
+    },
     {
         "id": 23,
-        "name": "בגד לברית",
-        "category": "בגדים",
+        "name": "בגד לברית (דגם 7)",
+        "category": "ברית",
         "price": 0,
         "image": "../images/products/ברית6.jpg"
-    }
-        ,
+    },
     {
         "id": 24,
-        "name": "בגד לברית",
-        "category": "בגדים",
+        "name": "בגד לברית (דגם 8)",
+        "category": "ברית",
         "price": 0,
         "image": "../images/products/ברית7.jpg"
-    }
-        ,
+    },
     {
         "id": 25,
-        "name": "בגד לברית",
-        "category": "בגדים",
+        "name": "בגד לברית (דגם 9)",
+        "category": "ברית",
         "price": 0,
         "image": "../images/products/ברית8.jpg"
-    }
-        ,
+    },
     {
         "id": 26,
-        "name": "בגד לברית",
-        "category": "בגדים",
+        "name": "בגד לברית (דגם 10)",
+        "category": "ברית",
         "price": 0,
         "image": "../images/products/ברית9.jpg"
-    }
-        ,
+    },
     {
         "id": 27,
-        "name": "בגד לברית",
-        "category": "בגדים",
+        "name": "בגד לברית (דגם 11)",
+        "category": "ברית",
         "price": 0,
         "image": "../images/products/ברית10.jpg"
-    }
-        ,
+    },
     {
         "id": 28,
         "name": "קערת חינה",
-        "category": "בגדים",
+        "category": "חינה",
         "price": 5,
         "image": "../images/products/קערת-חינה.jpg"
-    }
-        ,
+    },
     {
         "id": 29,
         "name": "קשת פרחים",
-        "category": "בגדים",
+        "category": "אירועים",
         "price": 10,
         "image": "../images/products/קשת-פרחים.jpg"
-    }
-        ,
+    },
     {
         "id": 30,
         "name": "מגש נחושת",
-        "category": "בגדים",
+        "category": "אירועים",
         "price": 0,
         "image": "../images/products/מגש-נחושת.jpg"
-    }
-        ,
+    },
     {
         "id": 31,
         "name": "כדורי פרחים",
-        "category": "עיצוב",
+        "category": "אירועים",
         "price": 8,
         "image": "../images/products/פרחים.jpg"
-    }
-        ,
+    },
     {
         "id": 32,
         "name": "כיסוי לכיסא לבן",
-        "category": "בגדים",
+        "category": "אירועים",
         "price": 2,
         "image": "../images/products/כיסוי-לכיסא.jpg"
-    }
-    ,
+    },
     {
         "id": 33,
         "name": "כיסוי לכיסא שחור",
-        "category": "בגדים",
+        "category": "אירועים",
         "price": 2,
         "image": "../images/products/כיסוי-כיסא-שחור.jpg"
-    }
-        ,
+    },
     {
         "id": 34,
         "name": "פמוט נחושת קטן",
-        "category": "עיצוב",
+        "category": "אירועים",
         "price": 5,
         "image": "../images/products/פמוט-נחושת-קטן.jpg"
-    }
-        ,
+    },
     {
         "id": 35,
-        "name": "עיגול עלים",
-        "category": "בגדים",
+        "name": "עיגול עלים (לעיצוב)",
+        "category": "אירועים",
         "price": 5,
         "image": "../images/products/עיגול-עלים.jpg"
-    }
-        ,
+    },
     {
         "id": 36,
         "name": "מטפחת ריקוד",
-        "category": "בגדים",
+        "category": "אירועים",
         "price": 2,
         "image": "../images/products/מטבחת ריקוד1.jpg"
-    }
-        ,
+    },
     {
         "id": 37,
         "name": "מטפחת ריקוד",
-        "category": "בגדים",
+        "category": "אירועים",
         "price": 2,
         "image": "../images/products/מטפחת ריקוד2.jpg"
-    }
-        ,
+    },
     {
         "id": 38,
         "name": "כפתן כלה",
-        "category": "בגדים",
+        "category": "אירועים",
         "price": 10,
         "image": "../images/products/כפתן-כלה.jpg"
-    }
-        ,
+    },
     {
         "id": 39,
         "name": "סלסלה קטנה",
-        "category": "בגדים",
+        "category": "אירועים",
         "price": 5,
         "image": "../images/products/סלסלאות.jpg"
-    }
-        ,
+    },
     {
         "id": 40,
         "name": "סלסלה גדולה / מפוארת",
-        "category": "בגדים",
+        "category": "אירועים",
         "price": 10,
         "image": "../images/products/סלסלאות.jpg"
-    }
-        ,
+    },
     {
         "id": 41,
         "name": "אגרטל",
-        "category": "בגדים",
+        "category": "אירועים",
         "price": 4,
         "image": "../images/products/אגרטל.jpg"
-    }
-        ,
+    },
     {
         "id": 42,
         "name": "דלי קרח",
-        "category": "בגדים",
+        "category": "אירועים",
         "price": 4,
         "image": "../images/products/דלי-קרח.jpg"
-    }
-        ,
+    },
     {
         "id": 43,
         "name": "מבחר מפות",
-        "category": "בגדים",
+        "category": "אירועים",
         "price": 5,
         "image": "../images/products/מבחר מפות.jpg"
-    }
-        ,
+    },
     {
         "id": 44,
         "name": "סלסלה לעיצוב שולחן",
-        "category": "בגדים",
+        "category": "אירועים",
         "price": 5,
         "image": "../images/products/סלסלה לעיצוב שולחן.jpg"
-    }
-        ,
+    },
     {
         "id": 45,
         "name": "כפתן לחתן",
-        "category": "בגדים",
+        "category": "אירועים",
         "price": 10,
         "image": "../images/products/כפתן-לחתן.jpg"
+    },
+    {
+        "id": 46,
+        "name": "מארז בסיס לאיפור (חסר תמונה)",
+        "category": "איפור",
+        "price": 0,
+        "image": "../images/products/default.png"
+    },
+    {
+        "id": 47,
+        "name": "סט עטיפת ספרים (חופשת הקיץ)",
+        "category": "עטיפת ספרים",
+        "price": 0,
+        "image": "../images/products/default.png"
     }
 ]
