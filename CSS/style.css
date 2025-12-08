@@ -6,9 +6,6 @@ body {
     padding: 0;
     direction: rtl;
     color: #333;
-    /* *** תיקון רספונסיביות גלובלי *** */
-    overflow-x: hidden; /* מונע גלילה אופקית לא רצויה בגוף העמוד כולו */
-    /* ***************************** */
 }
 
 /* Header ו-Footer - רקע כחול כהה */
@@ -131,14 +128,16 @@ nav a:hover {
 }
 
 /* ------------------------------------------- */
-/* עיצוב גריד וכרטיסי מוצר (דסקטופ) */
+/* עיצוב גריד וכרטיסי מוצר (דסקטופ) - עודכן! */
 /* ------------------------------------------- */
 
+/* שינוי עיצוב זה עקב מעבר להצגה לפי קטגוריות */
 #products-container {
+    /* שינוי לבסיס Flex/Grid עבור קיבוץ קטגוריות */
     display: flex; 
     flex-wrap: wrap; 
-    flex-direction: column;
-    gap: 0;
+    flex-direction: column; /* גורם לכותרות הקטגוריה להיות מוצגות מעל הקבוצות שלהן */
+    gap: 0; /* מרווחים נשלטים ע"י ה-category-group */
     
     max-width: 1200px;
     margin: 0 auto; 
@@ -147,14 +146,16 @@ nav a:hover {
 }
 
 .category-group {
+    /* מיכל עבור כרטיסי המוצרים בתוך כל קטגוריה */
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 40px; /* מרווח בין קבוצות קטגוריות */
 }
 
 .product-card {
+    /* .product-card נשאר דומה אך ה-Flex/Grid שלו נשלט ע"י .category-group */
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15); 
@@ -175,12 +176,12 @@ nav a:hover {
 .product-image-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: contain; /* שמירה על פרופורציות התמונה */
     object-position: center; 
     border-radius: 0; 
 }
 
-.product-card h4 {
+.product-card h4 { /* שונה מ-h3 ל-h4 ב-JS */
     margin: 10px 0 5px;
     font-size: 18px;
     color: #00509e;
@@ -191,7 +192,7 @@ nav a:hover {
     font-size: 14px;
 }
 
-.product-category-name {
+.product-category-name { /* סגנון למידע קטגוריה בתוך הכרטיס */
     font-size: 0.9em;
     color: #777;
     margin: 5px 0;
@@ -400,7 +401,7 @@ footer a:hover {
 }
 
 /* ------------------------------------------- */
-/* סגנונות חדשים לסינון קטגוריות ומידע תרומות */
+/* סגנונות חדשים לסינון קטגוריות ומידע תרומות - חדש! */
 /* ------------------------------------------- */
 
 .category-and-info-container {
@@ -500,7 +501,7 @@ footer a:hover {
 
 
 /* ------------------------------------------- */
-/* רספונסיביות לטאבלט ומובייל - עדכון קריטי לכפתורים! */
+/* רספונסיביות לטאבלט ומובייל - עדכון קיים וחדש */
 /* ------------------------------------------- */
 
 @media (max-width: 900px) {
@@ -540,7 +541,7 @@ footer a:hover {
     }
 
     .category-button {
-        width: auto;
+        width: auto; /* מאפשר לחיצים להיות ברוחב התוכן */
     }
     
     #donations-info {
@@ -633,7 +634,7 @@ footer a:hover {
     }
     
     .category-group {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fill, minminmax(150px, 1fr)); /* 2-3 כרטיסים בשורה */
     }
     
     #responsive-logo {
@@ -712,22 +713,16 @@ footer a:hover {
         border-bottom: 2px solid #eee;
         padding-bottom: 10px;
         
-        /* *** התיקון הקריטי: גלילה אופקית ורוחב מינימלי *** */
-        overflow-x: auto; 
-        white-space: nowrap; 
+        /* *** הוספת שינוי מרכזי: גלילה אופקית (Scroll) במובייל *** */
+        overflow-x: auto; /* מאפשר גלילה אופקית */
+        white-space: nowrap; /* מונע מעבר שורה של הכפתורים */
         gap: 8px; 
         padding-top: 5px;
-        
-        /* *** נוסף כברירת מחדל לשיפור הגלילה (אופציונלי אך מומלץ) *** */
-        -webkit-overflow-scrolling: touch; 
     }
     
     .category-button {
         width: auto;
-        flex-shrink: 0;
-        min-width: 80px; /* מוודא שיש רוחב מינימלי לכפתור */
-        /* *** שיפור ויזואלי להפרדה בתצוגת גלילה *** */
-        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        flex-shrink: 0; /* מונע התכווצות יתר של הכפתורים */
     }
     
     .category-header {
