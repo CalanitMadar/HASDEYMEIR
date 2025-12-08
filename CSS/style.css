@@ -532,7 +532,7 @@ footer a:hover {
 
     #category-filter-nav {
         flex-direction: row; /* שורה של כפתורים */
-        flex-wrap: wrap;
+        flex-wrap: wrap; /* מאפשר גלישה לשורה הבאה בטאבלט (מעל 768px) */
         width: 100%;
         border-left: none;
         border-bottom: 2px solid #eee; /* קו הפרדה תחתון */
@@ -634,7 +634,7 @@ footer a:hover {
     }
     
     .category-group {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* 2-3 כרטיסים בשורה */
+        grid-template-columns: repeat(auto-fill, minminmax(150px, 1fr)); /* 2-3 כרטיסים בשורה */
     }
     
     #responsive-logo {
@@ -712,10 +712,17 @@ footer a:hover {
         width: 100%;
         border-bottom: 2px solid #eee;
         padding-bottom: 10px;
+        
+        /* *** הוספת שינוי מרכזי: גלילה אופקית (Scroll) במובייל *** */
+        overflow-x: auto; /* מאפשר גלילה אופקית */
+        white-space: nowrap; /* מונע מעבר שורה של הכפתורים */
+        gap: 8px; 
+        padding-top: 5px;
     }
     
     .category-button {
         width: auto;
+        flex-shrink: 0; /* מונע התכווצות יתר של הכפתורים */
     }
     
     .category-header {
