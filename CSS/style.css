@@ -1,208 +1,61 @@
-/* הגדרות גלובליות ורקעים - כחול בהיר וניגודיות */
+/* ========================================================= */
+/* 1. הגדרות בסיס (MOBILE FIRST) */
+/* ========================================================= */
+
+* {
+    box-sizing: border-box; /* מונע גלישה אופקית מ-padding/border */
+}
+
 body {
     font-family: Arial, sans-serif;
-    background: #f0f8ff; /* רקע בהיר המתאים לכחול */
+    background: #f0f8ff; 
     margin: 0;
     padding: 0;
     direction: rtl;
     color: #333;
+    overflow-x: hidden; /* **תיקון קריטי: מונע גלילת דף אופקית** */
 }
 
-/* Header ו-Footer - רקע כחול כהה */
+/* Header ו-Footer */
 header, footer {
-    background: #c0daf5; /* כחול כהה */
+    background: #c0daf5;
     color: #FFFFFF;
     text-align: center;
     padding: 1rem;
 }
 
 /* ------------------------------------------- */
-/* עיצוב Header - סידור לוגו, ניווט וחיפוש (דסקטופ) */
+/* 2. Header וניווט (מובייל) */
 /* ------------------------------------------- */
 
 header {
     display: flex;
-    justify-content: space-between; /* מרווח בין האלמנטים */
-    align-items: center; /* ממורכז אנכית */
-    padding: 1rem 2rem;
-    flex-wrap: wrap; 
-    position: sticky; 
-    top: 0; 
+    flex-direction: column; /* ברירת מחדל: עמודה במובייל */
+    align-items: center;
+    padding: 1rem 15px; /* מרווח קטן יותר במובייל */
+    position: sticky;
+    top: 0;
     z-index: 1000;
-    /* ודא שהוא בשורה בדסקטופ */
-    flex-direction: row; 
 }
 
-/* קונטיינר עטיפה ללוגו והמבורגר - מוסתר בדסקטופ */
+/* סידור השורה העליונה במובייל (לוגו + המבורגר) */
 .header-top-row {
-    display: none; 
+    display: flex; 
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    /* *ה-logo וה-hamburger-menu צריכים להיות מחוץ ל-header-top-row כדי לעבוד עם ה-flex-direction: column של ה-header* */
+    /* ***הערה: נשאר ריק ב-HTML, אבל ההגדרות הבאות נכונות לפי ה-HTML שלך*** */
 }
 
-/* לוגו - הגדרת גודל בסיס רספונסיבי */
 #responsive-logo {
-    max-width: 120px;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
+    max-width: 100px; /* קטן יותר במובייל */
+    order: 1; 
 }
-
-#responsive-logo:hover {
-    transform: scale(1.05);
-}
-
-.logo img {
-    max-width: 100%;
-    height: auto;
-}
-
-
-/* ניווט - קישורים */
-nav {
-    display: flex;
-    gap: 25px;
-}
-
-nav a {
-    color: #3b392c;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1em;
-    padding: 5px 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease;
-    display: inline-block;
-}
-
-nav a:hover {
-    color: #FFFFFF;
-    background-color: #00509e;
-    transform: scale(1.1);
-}
-
-/* ------------------------------------------- */
-/* סרגל חיפוש - דסקטופ */
-/* ------------------------------------------- */
-
-.search-bar {
-    display: flex;
-    position: relative;
-    width: 250px; /* רוחב קבוע בדסקטופ */
-}
-
-/* תיבת הקלט */
-.search-bar input {
-    padding: 8px 15px;
-    padding-left: 45px; 
-    width: 100%;
-    border: 1px solid #00509e;
-    border-radius: 20px;
-    font-size: 14px;
-    direction: rtl;
-    box-sizing: border-box;
-}
-
-/* כפתור/אייקון החיפוש - ממוקם על הגבול השמאלי */
-#search-button {
-    position: absolute;
-    left: 0; 
-    top: 50%;
-    transform: translateY(-50%);
-    
-    background: none;
-    border: none;
-    padding: 8px 10px;
-    cursor: pointer;
-    z-index: 10;
-    transition: transform 0.2s ease;
-}
-
-#search-button:hover {
-    background: none;
-    transform: translateY(-50%) scale(1.1);
-}
-
-#search-icon {
-    width: 20px;
-    height: 20px;
-    display: block;
-}
-
-/* ------------------------------------------- */
-/* עיצוב גריד וכרטיסי מוצר (דסקטופ) */
-/* ------------------------------------------- */
-
-#products-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    /* ************* עדכון: רוחב מקסימלי, מרכוז ומרווח 70px ************* */
-    max-width: 1200px;
-    margin: 0 auto; 
-    padding: 20px 70px; 
-    box-sizing: border-box;
-    /* ***************************************************************** */
-}
-
-.product-card {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15); 
-    padding: 15px;
-    text-align: center;
-    border-top: 5px solid #00509e; 
-}
-
-.product-image-wrapper {
-    height: 180px; 
-    width: 100%; 
-    overflow: hidden; 
-    margin-bottom: 10px;
-    position: relative; 
-    border-radius: 8px;
-}
-
-.product-image-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* שמירה על פרופורציות התמונה */
-    object-position: center; 
-    border-radius: 0; 
-}
-
-.product-card h3 {
-    margin: 10px 0 5px;
-    font-size: 18px;
-    color: #00509e;
-}
-
-.product-card p {
-    margin: 5px 0;
-    font-size: 14px;
-}
-
-/* ------------------------------------------- */
-/* עיצוב Footer - קישורים */
-/* ------------------------------------------- */
-
-footer a {
-    color: #FFD700;
-    text-decoration: none;
-    font-weight: bold;
-    transition: transform 0.3s ease-in-out;
-    display: inline-block;
-}
-
-footer a:hover {
-    color: #FFFFFF;
-    transform: scale(1.05);
-}
-
-/* ------------------------------------------- */
-/* כפתור המבורגר - מוסתר בדסקטופ */
-/* ------------------------------------------- */
 
 #hamburger-menu {
-    display: none; 
+    display: block; /* גלוי במובייל */
+    order: 2;
     width: 30px;
     height: 30px;
     position: relative;
@@ -210,7 +63,6 @@ footer a:hover {
     background: none;
     border: none;
     padding: 0;
-    z-index: 1001; 
 }
 
 #hamburger-menu span {
@@ -223,356 +75,315 @@ footer a:hover {
     transition: all 0.3s ease-in-out;
 }
 
-/* ------------------------------------------- */
-/* רספונסיביות - מסכים קטנים (עד 768px) - קוד זה עבר שינוי! */
-/* ------------------------------------------- */
-
-/* סרגל החיפוש והניווט משתנה למוביל - הקוד המקורי שלך */
-
-@media (max-width: 768px) {
-    
-    /* הופך את ההאדר לעמודה במובייל */
-    header {
-        flex-direction: column; 
-        align-items: center; 
-        padding: 1rem;
-    }
-
-    /* מציג את קונטיינר הלוגו/המבורגר ומארגן אותם בשורה אחת */
-    .header-top-row {
-        display: flex; /* מציג את ה-div רק במובייל */
-        justify-content: space-between;
-        width: 100%;
-        align-items: center;
-        margin-bottom: 15px;
-        order: 1; 
-    }
-    
-    /* הופך את כפתור ההמבורגר לגלוי רק במובייל */
-    #hamburger-menu {
-        display: block;
-    }
-
-    /* הניווט הראשי */
-    nav {
-        order: 3; 
-        flex-direction: column;
-        background: #c0daf5;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        width: 100%;
-        max-height: 0; /* מוסתר כברירת מחדל */
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
-        padding: 0;
-        z-index: 999;
-    }
-
-    /* פתיחת התפריט ע"י קלאס JS */
-    nav.open {
-        max-height: 300px; 
-        padding: 10px 0;
-    }
-    
-    nav a {
-        display: block;
-        padding: 10px 20px;
-        text-align: center;
-        width: auto;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        color: #3b392c;
-    }
-
-    /* שינוי ההמבורגר למצב סגור X */
-    #hamburger-menu.open span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-    #hamburger-menu.open span:nth-child(2) {
-        opacity: 0;
-    }
-    #hamburger-menu.open span:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
-    
-    /* סרגל החיפוש */
-    .search-bar {
-        order: 2; /* סרגל החיפוש מגיע שני */
-        width: 100%; 
-        padding: 0 10px; 
-        box-sizing: border-box; 
-        margin-bottom: 15px;
-    }
-    
-    .search-bar input {
-        width: 100%;
-    }
-    
-    /* רספונסיביות כרטיסי המוצר */
-    #products-container {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        /* ************* עדכון: מרווח קטן יותר במובייל ************* */
-        padding: 20px 15px; 
-        /* ********************************************************* */
-    }
-    
-    #responsive-logo {
-        max-width: 100px;
-    }
-
+/* סרגל החיפוש במובייל */
+.search-bar {
+    order: 3;
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin-top: 10px; 
+    margin-bottom: 10px;
 }
-/* סוף קטע המובייל המקורי */
 
+.search-bar input {
+    width: 100%;
+    padding: 8px 15px;
+    padding-left: 45px;
+    border: 1px solid #00509e;
+    border-radius: 20px;
+    font-size: 14px;
+    direction: rtl;
+}
+
+#search-button {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    padding: 8px 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* ניווט (מוסתר כברירת מחדל במובייל) */
+#main-nav {
+    order: 4;
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    background: #c0daf5;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+#main-nav.open {
+    max-height: 300px;
+}
+
+#main-nav a {
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #3b392c;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
 
 /* ------------------------------------------- */
-/* עיצוב קטע הזיכרון למאיר ז"ל - עודכן כאן! */
+/* 3. קטע זיכרון וכותרות (מובייל) */
 /* ------------------------------------------- */
 
-.memorial-section {
+.memorial-section, .products-header {
     max-width: 1200px;
-    margin: 40px auto;
-    /* ************* עדכון: מרווח 70px מהצדדים בדסקטופ ************* */
-    padding: 0 70px; 
-    box-sizing: border-box;
-    /* ********************************************************* */
+    margin: 20px auto;
+    padding: 0 15px; /* מרווח קטן במובייל */
 }
 
 .memorial-container {
     display: flex;
-    /* ************* עדכון: הופך את הסדר (תמונה מימין, טקסט משמאל) ************* */
-    flex-direction: row-reverse; 
-    /* ******************************************************************* */
-    gap: 30px;
-    align-items: stretch; /* מותח את שני הצדדים לאותו גובה */
+    flex-direction: column; /* עמודה במובייל */
+    gap: 20px;
+    padding: 25px 15px;
     background: linear-gradient(135deg, #ffffff 0%, #f0f8ff 100%);
-    border-radius: 20px;
-    padding: 40px;
-    box-shadow: 0 8px 30px rgba(0, 80, 158, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 80, 158, 0.1);
     border: 2px solid #c0daf5;
-    position: relative;
-    overflow: hidden;
 }
 
-.memorial-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 5px;
-    background: linear-gradient(90deg, #FFD700 0%, #00509e 50%, #FFD700 100%);
-}
-
-/* התמונה - 50% מהרוחב */
 .memorial-image {
-    flex: 1; /* תופס חצי מהמקום */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    width: 100%;
 }
 
 .memorial-image img {
     width: 100%;
-    height: auto;
-    max-height: 500px;
+    max-height: 350px;
     object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 51, 102, 0.3);
+    border-radius: 10px;
     border: 4px solid #FFD700;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.memorial-image img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 30px rgba(0, 51, 102, 0.4);
-}
-
-.image-caption {
-    margin-top: 15px;
-    font-size: 1.05em;
-    color: #003366;
-    font-weight: bold;
-    padding: 12px;
-    background: #e6f7ff;
-    border-radius: 8px;
-    border-right: 4px solid #00509e;
-    box-shadow: 0 2px 5px rgba(0, 80, 158, 0.1);
-    width: 100%;
-    text-align: center;
-}
-
-/* הטקסט - 50% מהרוחב */
-.memorial-text {
-    flex: 1; /* תופס חצי מהמקום */
-    color: #444;
-    line-height: 1.85;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.memorial-title {
-    color: #00509e;
-    font-size: 1.65em;
-    margin-top: 0;
-    margin-bottom: 25px;
-    text-align: center;
-    border-bottom: 3px solid #FFD700;
-    padding-bottom: 12px;
-    text-shadow: 1px 1px 2px rgba(0, 80, 158, 0.1);
-}
-
-.memorial-text p {
-    margin-bottom: 18px;
-    text-align: justify;
-    font-size: 1.02em;
-    line-height: 1.8;
-    color: #333;
-}
-
-.memorial-closing {
-    font-size: 1.12em;
-    color: #00509e;
-    font-weight: 600;
-    text-align: center;
-    margin-top: 25px;
-    padding: 18px 20px;
-    background: linear-gradient(135deg, #e6f7ff 0%, #f0f8ff 100%);
-    border-radius: 12px;
-    border: 2px dashed #00509e;
-    box-shadow: 0 3px 10px rgba(0, 80, 158, 0.1);
-}
-
-.memorial-closing strong {
-    color: #003366;
-    font-size: 1.15em;
-}
-
-.memorial-dedication {
-    text-align: center;
-    font-size: 1.25em;
-    color: #003366;
-    font-weight: bold;
-    margin-top: 20px;
-    padding: 15px 20px;
-    background: linear-gradient(135deg, #FFD700 0%, #FFF4CC 100%);
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
-    border: 2px solid #FFD700;
-}
-
-/* ------------------------------------------- */
-/* כותרת המוצרים - עודכן כאן! */
-/* ------------------------------------------- */
-
-.products-header {
-    max-width: 1200px;
-    margin: 60px auto 30px;
-    /* ************* עדכון: מרווח 70px מהצדדים בדסקטופ ************* */
-    padding: 0 70px; 
-    box-sizing: border-box;
-    /* ********************************************************* */
-    text-align: center;
 }
 
 .products-header h2 {
+    font-size: 1.8em;
     color: #00509e;
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    border-bottom: 4px solid #FFD700;
     display: inline-block;
-    padding-bottom: 10px;
-}
-
-.products-header p {
-    color: #666;
-    font-size: 1.2em;
-    margin-top: 15px;
+    border-bottom: 3px solid #FFD700;
+    padding-bottom: 5px;
 }
 
 /* ------------------------------------------- */
-/* רספונסיביות לטאבלט */
+/* 4. קטגוריות ותרומות (תיקון קריטי למובייל) */
 /* ------------------------------------------- */
 
-@media (max-width: 900px) {
-    .memorial-container {
+.category-and-info-container {
+    display: flex;
+    flex-direction: column; /* עמודה במובייל */
+    gap: 20px;
+    padding: 10px 15px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#donations-info {
+    order: 1; /* מידע תרומות מופיע ראשון */
+    padding: 15px;
+    background-color: #fffde7;
+    border: 1px solid #FFD700;
+    border-radius: 8px;
+    flex-shrink: 0; /* מונע התכווצות */
+}
+
+/* סרגל הקטגוריות - הופך לסרגל גלילה אופקי */
+#category-filter-nav {
+    order: 2; 
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    
+    /* **התיקון המרכזי:** גלילה אופקית + מניעת מעבר שורה */
+    overflow-x: auto; 
+    white-space: nowrap; 
+    gap: 8px; 
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    
+    /* הסתרת פס הגלילה לטובת חווית מובייל טבעית (Swipe) */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+#category-filter-nav::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+.category-button {
+    background-color: #f8f8f8;
+    color: #00509e;
+    border: 1px solid #ddd;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+    
+    flex-shrink: 0; /* **תיקון קריטי: מונע מהכפתורים להתכווץ** */
+    width: auto;
+}
+
+/* ------------------------------------------- */
+/* 5. כרטיסי מוצר וגריד (מובייל) */
+/* ------------------------------------------- */
+
+#products-container {
+    padding: 20px 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-group {
+    display: grid;
+    /* 2 כרטיסים בשורה (למסך קטן) */
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); 
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.category-header {
+    width: 100%;
+    font-size: 1.5em;
+    color: #00509e;
+    margin: 20px 0 10px;
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 5px;
+}
+
+.product-card {
+    /* עיצוב כרטיס בסיסי */
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    padding: 10px;
+    text-align: center;
+    border-top: 3px solid #00509e; 
+}
+
+
+/* ========================================================= */
+/* 6. רספונסיביות - דסקטופ (MIN-WIDTH: 769px) */
+/* ========================================================= */
+
+@media (min-width: 769px) {
+    
+    /* שינוי Header לדסקטופ */
+    header {
+        flex-direction: row; /* שורה בדסקטופ */
+        justify-content: space-between;
+        padding: 1rem 40px;
+    }
+    
+    .header-top-row, #hamburger-menu {
+        display: none; /* הסתרת אלמנטים של מובייל */
+    }
+    
+    #responsive-logo {
+        max-width: 120px;
+    }
+
+    /* ניווט פתוח תמיד בדסקטופ */
+    #main-nav {
+        flex-direction: row;
+        width: auto;
+        max-height: none; 
+        overflow: visible;
+        position: static;
+        background: none;
+    }
+    
+    #main-nav a {
+        border-bottom: none;
+        padding: 5px 10px;
         gap: 25px;
-        padding: 30px;
     }
-    
-    .memorial-title {
-        font-size: 1.5em;
-    }
-    
-    .memorial-text p {
-        font-size: 0.98em;
-    }
-    
-    .products-header h2 {
-        font-size: 2.2em;
-    }
-}
 
-/* ------------------------------------------- */
-/* רספונסיביות למובייל - עדכון מרווחים! */
-/* ------------------------------------------- */
-
-@media (max-width: 768px) {
-    .memorial-section {
-        margin: 20px auto;
-        /* ************* עדכון: מרווח קטן יותר במובייל ************* */
-        padding: 0 15px; 
-        /* ********************************************************* */
+    .search-bar {
+        width: 250px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    /* שינוי קטע זיכרון ומוצרים לדסקטופ */
+    .memorial-section, .products-header {
+        margin: 40px auto;
+        padding: 0 40px; 
     }
     
     .memorial-container {
-        flex-direction: column; /* רק במובייל עובר לעמודה (מקורי) */
-        gap: 25px;
-        padding: 25px 15px;
+        flex-direction: row-reverse; /* חזרה לפריסה רוחבית (תמונה מימין, טקסט משמאל) */
+        padding: 40px;
     }
     
-    .memorial-image {
-        width: 100%;
+    /* שינוי פריסת קטגוריות ותרומות לדסקטופ */
+    .category-and-info-container {
+        flex-direction: row; /* חזרה לפריסה רוחבית */
+        padding: 20px 40px;
+        align-items: flex-start;
+    }
+
+    #donations-info {
+        order: 2; /* מידע תרומות הופך להיות משני */
+        width: 300px;
+        flex-shrink: 0;
+    }
+
+    #category-filter-nav {
+        order: 1; /* סרגל הקטגוריות חוזר להיות ראשי */
+        flex-direction: column; /* חזרה לעמודה */
+        width: 200px; 
+        border-left: 2px solid #eee;
+        padding-left: 20px;
+        padding-bottom: 0;
+        overflow-x: visible; 
+        white-space: normal;
+        flex-shrink: 0;
     }
     
-    .memorial-image img {
-        max-height: 350px;
+    .category-button {
+        width: 100%; /* כפתור ברוחב מלא בטור */
+        text-align: right;
     }
     
-    .memorial-title {
-        font-size: 1.35em;
-        margin-bottom: 20px;
+    /* שינוי גריד לדסקטופ */
+    .category-group {
+        /* 3-4 כרטיסים בשורה בדסקטופ */
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 20px;
     }
     
-    .memorial-text p {
-        font-size: 0.95em;
-        margin-bottom: 15px;
-        line-height: 1.7;
+    #products-container {
+        padding: 20px 40px; 
+    }
+
+}
+
+/* ------------------------------------------- */
+/* 7. רספונסיביות - מסך גדול (MIN-WIDTH: 1024px) */
+/* ------------------------------------------- */
+
+@media (min-width: 1024px) {
+    /* מרכוז כללי של העמודים */
+    .memorial-section, .products-header, .category-and-info-container, #products-container {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    #products-container {
+         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
     
-    .memorial-closing {
-        font-size: 1em;
-        padding: 15px;
-    }
-    
-    .memorial-dedication {
-        font-size: 1.1em;
-        padding: 12px 15px;
-    }
-    
-    .products-header {
-        margin: 40px auto 20px;
-        /* ************* עדכון: מרווח קטן יותר במובייל ************* */
-        padding: 0 15px; 
-        /* ********************************************************* */
-    }
-    
-    .products-header h2 {
-        font-size: 1.8em;
-    }
-    
-    .products-header p {
-        font-size: 1em;
-    }
 }
