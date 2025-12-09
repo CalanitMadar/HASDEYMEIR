@@ -6,6 +6,8 @@ body {
     padding: 0;
     direction: rtl;
     color: #333;
+    overflow-x: hidden; /* מונע גלילה אופקית */
+    width: 100%;
 }
 
 /* Header ו-Footer - רקע כחול כהה */
@@ -571,6 +573,9 @@ footer a:hover {
         flex-direction: column; 
         align-items: center; 
         padding: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
     }
 
     #hamburger-menu {
@@ -618,7 +623,8 @@ footer a:hover {
     
     .search-bar {
         order: 2; 
-        width: 100%; 
+        width: calc(100% - 20px);
+        max-width: 100%;
         padding: 0 10px; 
         box-sizing: border-box; 
         margin-bottom: 15px;
@@ -630,11 +636,13 @@ footer a:hover {
     
     /* רספונסיביות כרטיסי המוצר */
     #products-container {
-        padding: 20px 15px; 
+        padding: 20px 15px;
+        width: 100%;
+        overflow-x: hidden;
     }
     
     .category-group {
-        grid-template-columns: repeat(auto-fill, minminmax(150px, 1fr)); /* 2-3 כרטיסים בשורה */
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* 2-3 כרטיסים בשורה */
     }
     
     #responsive-logo {
@@ -644,7 +652,9 @@ footer a:hover {
     /* רספונסיביות לזיכרון ולכותרות - קיים */
     .memorial-section {
         margin: 20px auto;
-        padding: 0 15px; 
+        padding: 0 15px;
+        width: 100%;
+        overflow-x: hidden;
     }
     
     .memorial-container {
@@ -684,7 +694,9 @@ footer a:hover {
     
     .products-header {
         margin: 40px auto 20px;
-        padding: 0 15px; 
+        padding: 0 15px;
+        width: 100%;
+        overflow-x: hidden;
     }
     
     .products-header h2 {
@@ -700,34 +712,59 @@ footer a:hover {
         padding: 20px 15px;
         flex-direction: column;
         gap: 20px;
+        width: 100%;
+        overflow-x: hidden;
     }
     
     #donations-info {
-        order: 1; 
+        order: 1;
+        width: 100%;
+        box-sizing: border-box;
     }
     
     #category-filter-nav {
         order: 2;
         flex-direction: row;
         width: 100%;
+        border-left: none;
         border-bottom: 2px solid #eee;
+        padding-left: 0;
         padding-bottom: 10px;
         
-        /* *** הוספת שינוי מרכזי: גלילה אופקית (Scroll) במובייל *** */
-        overflow-x: auto; /* מאפשר גלילה אופקית */
-        white-space: nowrap; /* מונע מעבר שורה של הכפתורים */
-        gap: 8px; 
-        padding-top: 5px;
+        /* שינוי מרכזי - במקום גלילה אופקית, מעבר שורה */
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 10px 5px;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
     }
     
     .category-button {
         width: auto;
-        flex-shrink: 0; /* מונע התכווצות יתר של הכפתורים */
+        flex-shrink: 0;
+        font-size: 0.9em;
+        padding: 6px 12px;
+        white-space: nowrap;
     }
     
     .category-header {
         font-size: 1.5em;
         margin-top: 20px;
         margin-bottom: 10px;
+    }
+}
+
+/* תיקון כללי נוסף למובייל */
+@media (max-width: 768px) {
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
     }
 }
