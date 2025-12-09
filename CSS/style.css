@@ -713,7 +713,7 @@ footer a:hover {
         flex-direction: column;
         gap: 20px;
         width: 100%;
-        overflow-x: hidden;
+        overflow: visible; /* שינוי מ-hidden כדי לא לחתוך את הכפתורים */
     }
     
     #donations-info {
@@ -729,24 +729,37 @@ footer a:hover {
         border-left: none;
         border-bottom: 2px solid #eee;
         padding-left: 0;
-        padding-bottom: 10px;
         
-        /* שינוי מרכזי - במקום גלילה אופקית, מעבר שורה */
+        /* תיקון - גלילה אופקית עם גובה מלא */
         display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        padding: 10px 5px;
+        flex-wrap: nowrap;
+        gap: 10px;
+        padding: 15px 10px; /* padding גדול יותר מלמעלה ומלמטה */
         max-width: 100%;
         box-sizing: border-box;
-        overflow-x: hidden;
+        overflow-x: auto;
+        overflow-y: visible; /* שינוי ל-visible כדי לא לחתוך */
+        -webkit-overflow-scrolling: touch;
+        
+        /* הסתרת סרגל הגלילה */
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    
+    /* הסתרת סרגל הגלילה ב-Chrome/Safari */
+    #category-filter-nav::-webkit-scrollbar {
+        display: none;
     }
     
     .category-button {
         width: auto;
         flex-shrink: 0;
-        font-size: 0.9em;
-        padding: 6px 12px;
+        font-size: 0.95em;
+        padding: 10px 18px; /* padding גדול יותר */
         white-space: nowrap;
+        min-width: fit-content;
+        height: auto; /* ודא שהגובה אוטומטי */
+        line-height: 1.4; /* גובה שורה טוב יותר */
     }
     
     .category-header {
