@@ -6,7 +6,7 @@ body {
     padding: 0;
     direction: rtl;
     color: #333;
-    overflow-x: hidden; /* מונע גלילה אופקית */
+    overflow-x: hidden; /* מונע גלילה אופקית כללית */
     width: 100%;
 }
 
@@ -28,8 +28,7 @@ header {
     align-items: center; /* ממורכז אנכית */
     padding: 1rem 2rem;
     flex-wrap: wrap; 
-    position: relative; 
-    overflow-x: hidden;
+    position: sticky; 
     top: 0; 
     z-index: 1000;
     /* ודא שהוא בשורה בדסקטופ */
@@ -577,10 +576,13 @@ footer a:hover {
         width: 100%;
         box-sizing: border-box;
         overflow-x: hidden;
+        position: relative; /* **תיקון חיוני:** עבור מיקום נכון של nav absolute */
+        z-index: 1000;
     }
 
     #hamburger-menu {
         display: block;
+        z-index: 1002; /* **תיקון חיוני:** ודא שהכפתור לחיץ (מעל nav) */
     }
 
     nav {
@@ -588,15 +590,15 @@ footer a:hover {
         flex-direction: column;
         background: #c0daf5;
         position: absolute;
-        top: 100%; /* מתחיל בדיוק מתחת להאדר */
+        top: 100%;
         right: 0;
         width: 100%;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
         padding: 0;
-        z-index: 1001; /* חובה: ודא ש-nav מעל ה-header (שהוא 1000) */
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1); /* הוספת צל קל לניגודיות */
+        z-index: 1001; /* מעל ה-header */
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1); /* הוספת צל קל */
     }
 
     nav.open {
@@ -709,19 +711,20 @@ footer a:hover {
         font-size: 1em;
     }
     
-    /* קטגוריות ותרומות במובייל - סרגל הקטגוריות מתחת למידע על תרומות */
+    /* **תיקון סרגל הקטגוריות:** */
     .category-and-info-container {
-        padding: 20px 15px;
+        padding: 20px 0; /* הורדת padding אופקי מפה */
         flex-direction: column;
         gap: 20px;
         width: 100%;
-        overflow: visible; /* שינוי מ-hidden כדי לא לחתוך את הכפתורים */
+        overflow: visible; 
     }
     
     #donations-info {
         order: 1;
         width: 100%;
         box-sizing: border-box;
+        padding: 20px 15px; /* החזרת padding למידע על תרומות */
     }
     
     #category-filter-nav {
@@ -732,15 +735,15 @@ footer a:hover {
         border-bottom: 2px solid #eee;
         padding-left: 0;
         
-        /* תיקון - גלילה אופקית עם גובה מלא */
+        /* גלילה אופקית מובטחת */
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: nowrap; 
         gap: 10px;
-        padding: 15px 10px; /* padding גדול יותר מלמעלה ומלמטה */
+        padding: 15px 15px; /* padding אופקי עבור גלילה */
         max-width: 100%;
         box-sizing: border-box;
-        overflow-x: auto;
-        overflow-y: visible; /* שינוי ל-visible כדי לא לחתוך */
+        overflow-x: auto; 
+        overflow-y: hidden; /* מונע גלילה אנכית מיותרת */
         -webkit-overflow-scrolling: touch;
         
         /* הסתרת סרגל הגלילה */
@@ -755,13 +758,13 @@ footer a:hover {
     
     .category-button {
         width: auto;
-        flex-shrink: 0;
+        flex-shrink: 0; 
         font-size: 0.95em;
-        padding: 10px 18px; /* padding גדול יותר */
+        padding: 10px 18px; 
         white-space: nowrap;
         min-width: fit-content;
-        height: auto; /* ודא שהגובה אוטומטי */
-        line-height: 1.4; /* גובה שורה טוב יותר */
+        height: auto; 
+        line-height: 1.4; 
     }
     
     .category-header {
@@ -769,10 +772,8 @@ footer a:hover {
         margin-top: 20px;
         margin-bottom: 10px;
     }
-}
-
-/* תיקון כללי נוסף למובייל */
-@media (max-width: 768px) {
+    
+    /* תיקון כללי נוסף למובייל - חיוני לתיקון רוחב יתר */
     * {
         max-width: 100%;
         box-sizing: border-box;
@@ -781,5 +782,10 @@ footer a:hover {
     img {
         max-width: 100%;
         height: auto;
+    }
+
+    /* ודא שגם הקונטיינרים הראשיים כמו memorial-section מקבלים את ה-padding הנכון */
+    .memorial-section, .products-header {
+        padding: 0 15px;
     }
 }
