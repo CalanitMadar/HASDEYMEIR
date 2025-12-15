@@ -20,13 +20,16 @@
             min-height: 100vh;
         }
 
-        /* עטיפה ראשית - מרכוז דף "בבנייה" */
+        /* עטיפה ראשית - מרכוז דף "בבנייה" - מוסתר במצב זה */
         .page-center-wrapper {
-            display: flex;
+            display: none; /* הוסתר כברירת מחדל */
+            /* אם תרצה להחזיר:
+            display: flex; 
             justify-content: center;
             align-items: center;
-            padding: 50px 20px 0; /* מרווח למטה כדי לפנות מקום לגלריה */
-            min-height: 50vh; 
+            padding: 50px 20px 0;
+            min-height: 50vh;
+            */
         }
 
         /* מכולה ראשית (הבלוק הלבן) */
@@ -84,18 +87,24 @@
         /* עיצוב גלריית המוצרים (החלק הדינמי) */
         /* ---------------------------------------------------- */
 
+        .gallery-section {
+            padding-top: 40px; /* מרווח עליון כאשר ה-"בנייה" מוסתר */
+        }
+        
         .gallery-header {
             max-width: 900px;
-            margin: 40px auto 30px;
+            margin: 0px auto 30px; /* הוסר המרווח העליון שהיה מיותר */
             padding: 0 20px;
         }
 
         .gallery-header h2 {
-            color: #00509e;
-            font-size: 2em;
-            border-bottom: 3px solid #FFD700;
+            /* השתמשתי בצבעים מהעיצוב הקודם שלך כדי ליצור מראה ייחודי */
+            color: #4A148C; /* סגול כהה - מה-CSS הקודם שלך */
+            font-size: 2.5em;
+            border-bottom: 3px solid #CC0000; /* אדום - מה-CSS הקודם שלך */
             display: inline-block;
             padding-bottom: 5px;
+            font-weight: 900;
         }
         
         .product-gallery {
@@ -116,19 +125,19 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
             border-bottom: 5px solid #c0daf5;
-            text-align: right; /* יישור הטקסט בתוך הכרטיס */
+            text-align: right; 
         }
 
         .gallery-item:hover {
             transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 8px 25px rgba(0, 80, 158, 0.3);
-            border-bottom-color: #00509e;
+            box-shadow: 0 0 0 5px #FF6F00; /* הבלטת הכרטיס עם צבע ה-pulse */
+            border-bottom-color: #4A148C;
         }
 
         .gallery-item img {
             width: 100%;
-            height: 200px; /* גובה קבוע לתמונה */
-            object-fit: cover; /* חותך את התמונה אך שומר על כיסוי מלא */
+            height: 200px; 
+            object-fit: cover; 
             display: block;
         }
         
@@ -137,16 +146,40 @@
         }
 
         .item-info h3 {
-            margin: 0;
+            margin: 0 0 5px 0;
             color: #00509e;
             font-size: 1.15em;
-            margin-bottom: 5px;
         }
         
         .item-info p {
-            margin: 5px 0;
-            font-size: 0.95em;
+             /* הסתרת הפסקאות המיותרות כמו קטגוריה ומחיר */
+            display: none; 
         }
+        
+        /* סגנון לטקסט המידע הנוסף שהוספתי */
+        .info-panel {
+            max-width: 900px;
+            margin: 0 auto 30px;
+            padding: 20px;
+            background-color: #fff3e0; /* רקע עדין */
+            border-right: 5px solid #FF6F00;
+            border-radius: 0 8px 8px 0;
+            text-align: right;
+            line-height: 1.8;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .info-panel h3 {
+            color: #4A148C; 
+            margin-top: 0;
+        }
+        
+        .info-panel p {
+            margin: 0;
+            font-size: 1em;
+            color: #666;
+        }
+
 
         /* אנימציה */
         @keyframes pulse {
@@ -157,23 +190,24 @@
         /* רספונסיביות */
         @media (max-width: 600px) {
             h1 { font-size: 2em; }
-            .page-center-wrapper { padding: 30px 10px; }
             .product-gallery {
                 grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
             }
             .gallery-item img {
                 height: 150px;
             }
+            .gallery-header h2 {
+                 font-size: 2em;
+            }
         }
     </style>
 </head>
 <body>
 
-    <div class="page-center-wrapper">
+    <div class="page-center-wrapper"> 
         <div class="container">
             <span class="icon">🏗️</span> 
             <h1>הגלריה בשיפוץ!</h1>
-            
             <p>
                 אנו עובדים במרץ על עדכון ושיפור גלריית המוצרים של חסדי מאיר.
                 <br>
@@ -181,14 +215,19 @@
                 <br>
                 תודה על הסבלנות!
             </p>
-            
             <a href="../index.html" class="admin-link">חזרה לדף הבית</a>
         </div>
     </div>
     
     <section class="gallery-section">
         <div class="gallery-header">
-            <h2>✨ הצצה לקטלוג המלא ✨</h2>
+            <h2>📷 רגעים נבחרים מאירועי החסד שלנו 📷</h2>
+        </div>
+
+        <div class="info-panel">
+            <h3>🤝 כך נראה הציוד של "חסדי מאיר" בפעולה!</h3>
+            <p>התמונות המרגשות הללו הן רק הצצה קטנה לציוד המושכר ולפריטים הנתרמים, כפי שצולמו באירועים קודמים. ניתן לראות כאן דוגמאות לכיסאות כלה, סטים לחינה, ריהוט וציוד לימודי.</p>
+            <p><strong>לשאלות בנוגע לפריטים ספציפיים, אנא צרו קשר ישירות במספר המופיע באתר.</strong></p>
         </div>
 
         <div class="product-gallery" id="gallery-products-container">
@@ -197,74 +236,25 @@
     
     <script>
         const productsData = [
-            {
-                "id": 1,
-                "name": "סלסלת צדפה",
-                "category": "כלי הגשה",
-                "price": 15,
-                "image": "../images/products/tzdafa.jpg"
-            },
-            {
-                "id": 2,
-                "name": "מטריה",
-                "category": "כללי",
-                "price": 15,
-                "image": "../images/products/umbrella.jpg"
-            },
-            {
-                "id": 3,
-                "name": "שמלת ערב",
-                "category": "שמלות ערב",
-                "price": 15,
-                "image": "../images/products/dress1.jpg"
-            },
-            {
-                "id": 4,
-                "name": "כפתן גברים",
-                "category": "בגדים",
-                "price": 15,
-                "image": "../images/products/ciftan_man.jpg"
-            },
-            {
-                "id": 5,
-                "name": "כפתן נשים",
-                "category": "בגדים",
-                "price": 15,
-                "image": "../images/products/ciftan_women.jpg"
-            },
-            {
-                "id": 6,
-                "name": "עיצוב שולחן (פמוטים)",
-                "category": "אביזרים",
-                "price": 15,
-                "image": "../images/products/pamotim.jpg"
-            },
-            {
-                "id": 7,
-                "name": "עיצוב שולחן (מאזניים)",
-                "category": "אביזרים",
-                "price": 15,
-                "image": "../images/products/moznaim.jpg"
-            },
-            {
-                "id": 8,
-                "name": "שמלת ילדה",
-                "category": "בגדים",
-                "price": 15,
-                "image": "../images/products/dress_girl.jpg"
-            }
+            { "id": 1, "name": "תמונת אירוע 1", "image": "../images/galleryFromEvent/img1.jpg" },
+            { "id": 2, "name": "תמונת אירוע 2", "image": "../images/galleryFromEvent/img2.jpg" },
+            { "id": 3, "name": "תמונת אירוע 3", "image": "../images/galleryFromEvent/img3.jpg" },
+            { "id": 4, "name": "תמונת אירוע 4", "image": "../images/galleryFromEvent/img4.jpg" },
+            { "id": 5, "name": "תמונת אירוע 5", "image": "../images/galleryFromEvent/img5.jpg" },
+            // ניתן להוסיף עוד תמונות בקלות:
+            // { "id": 6, "name": "תמונת אירוע 6", "image": "../images/galleryFromEvent/img6.jpg" }
         ];
 
         const defaultImage = "../images/default.png"; // נתיב לתמונת ברירת המחדל
 
         function displayProducts(productsToDisplay) {
             const container = document.getElementById('gallery-products-container');
-            if (!container) return; // יציאה אם האלמנט לא קיים
+            if (!container) return; 
             
             container.innerHTML = '';
             
             if (productsToDisplay.length === 0) {
-                container.innerHTML = '<p style="text-align: center; color: #b03a5b; font-size: 1.2em;">לא נמצאו מוצרים.</p>';
+                container.innerHTML = '<p style="text-align: center; color: #b03a5b; font-size: 1.2em;">לא נמצאו תמונות בגלריה זו.</p>';
                 return;
             }
 
@@ -272,24 +262,19 @@
                 const card = document.createElement('div');
                 card.className = "gallery-item"; 
 
-                // הנתיב: אם ריק, משתמשים בברירת מחדל
                 const imageUrl = product.image && product.image.trim() !== '' ? product.image : defaultImage;
 
                 card.innerHTML = `
                     <img src="${imageUrl}" alt="${product.name}" onerror="this.onerror=null; this.src='${defaultImage}'">
                     <div class="item-info">
                         <h3>${product.name}</h3>
-                        <p><strong>קטגוריה:</strong> ${product.category}</p>
-                        <p class="product-price"><strong>תרומה מומלצת:</strong> ${product.price} ₪</p> 
-                    </div>
+                        </div>
                 `;
                 container.appendChild(card);
             });
         }
 
-        // טוען את המוצרים ברגע שהדף נטען במלואו
         document.addEventListener('DOMContentLoaded', () => {
-            // טוען את המערך המוכן (במקום fetch לקובץ חיצוני)
             displayProducts(productsData); 
         });
     </script> 
