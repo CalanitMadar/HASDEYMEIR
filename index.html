@@ -100,5 +100,23 @@
 
     <script src="./scripts/products.js"></script> 
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger-menu');
+            const nav = document.getElementById('main-nav');
+
+            if (hamburger && nav) {
+                hamburger.addEventListener('click', function() {
+                    // הוספה/הסרה של המחלקה 'open' עבור ההמבורגר (לצורך סיבוב)
+                    hamburger.classList.toggle('open');
+                    
+                    // הוספה/הסרה של המחלקה 'open' עבור הניווט (לצורך פתיחה/סגירה)
+                    nav.classList.toggle('open');
+                });
+            }
+        });
+    </script>
+
+
 </body>
 </html>
