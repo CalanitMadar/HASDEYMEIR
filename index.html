@@ -99,23 +99,6 @@
     </footer>
 
     <script src="./scripts/products.js"></script> 
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburger = document.getElementById('hamburger-menu');
-            const nav = document.getElementById('main-nav');
-
-            if (hamburger && nav) {
-                hamburger.addEventListener('click', function() {
-                    console.log('Hamburger clicked!'); // בדיקה לניפוי באגים
-                    hamburger.classList.toggle('open');
-                    nav.classList.toggle('open');
-                });
-            } else {
-                console.error('Error: Hamburger or Nav element not found!');
-            }
-        });
-    </script>
 
 </body>
 </html>
