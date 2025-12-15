@@ -569,37 +569,40 @@ footer a:hover {
     }
     
     /* רספונסיביות של ההאדר */
-    header {
+     header {
         flex-direction: column; 
         align-items: center; 
         padding: 1rem;
         width: 100%;
         box-sizing: border-box;
-        overflow: visible; /* שינוי חשוב */
-        position: relative;
+        overflow: visible;
+        position: sticky; /* שומר על sticky */
+        top: 0;
+        z-index: 1000;
     }
 
     #hamburger-menu {
         display: block;
     }
 
-    /* *** תפריט הניווט במובייל - פתרון סופי *** */
+
     nav {
         order: 3; 
         display: flex;
         flex-direction: column;
         background: #c0daf5;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
+        
+        /* שינוי מ-absolute ל-relative */
+        position: relative; /* זה השינוי המרכזי! */
         width: 100%;
+        
         overflow: hidden;
         z-index: 999;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        margin-top: 0;
     }
     
-    nav a {
+   nav a {
         display: block;
         padding: 15px 20px;
         text-align: center;
@@ -608,10 +611,11 @@ footer a:hover {
         color: #3b392c;
         font-size: 1.1em;
         box-sizing: border-box;
+        background: #c0daf5;
     }
 
     nav a:hover {
-        background-color: rgba(0, 80, 158, 0.1);
+        background-color: rgba(0, 80, 158, 0.2);
     }
 
     /* אנימציה של כפתור ההמבורגר */
@@ -624,7 +628,7 @@ footer a:hover {
     #hamburger-menu.open span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
     }
-    
+
     .search-bar {
         order: 2; 
         width: calc(100% - 20px);
@@ -726,25 +730,32 @@ footer a:hover {
         box-sizing: border-box;
     }
     
+
     #category-filter-nav {
-        order: 2;
-        flex-direction: row;
-        width: 100%;
-        border-left: none;
-        border-bottom: 2px solid #eee;
-        padding-left: 0;
-        display: flex;
-        flex-wrap: nowrap;
-        gap: 10px;
-        padding: 15px 10px;
-        max-width: 100%;
-        box-sizing: border-box;
-        overflow-x: auto;
-        overflow-y: visible;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-    }
+    order: 2;  /* סדר התצוגה - מופיע שני אחרי donations-info */
+    
+    flex-direction: row;  /* כפתורים בשורה (לא עמודה) */
+    width: 100%;  /* תופס את כל הרוחב */
+    
+    border-left: none;  /* ביטול גבול שמאלי */
+    border-bottom: 2px solid #eee;  /* קו מפריד תחתון */
+    padding-left: 0;  /* אין ריווח משמאל */
+    
+    display: flex;  /* מאפשר flexbox */
+    flex-wrap: nowrap;  /* כפתורים לא עוברים שורה - נשארים בשורה אחת */
+    gap: 10px;  /* רווח של 10px בין כפתורים */
+    
+    padding: 15px 10px;  /* ריווח פנימי - 15px למעלה/למטה, 10px ימין/שמאל */
+    max-width: 100%;  /* לא יעבור את רוחב המסך */
+    box-sizing: border-box;  /* padding נספר בתוך הרוחב */
+    
+    overflow-x: auto;  /* אפשר גלילה אופקית (שמאלה-ימינה) */
+    overflow-y: visible;  /* לא חותך אנכית */
+    
+    -webkit-overflow-scrolling: touch;  /* גלילה חלקה באייפון */
+    scrollbar-width: none;  /* מסתיר את סרגל הגלילה בפיירפוקס */
+    -ms-overflow-style: none;  /* מסתיר סרגל גלילה ב-IE */
+}
     
     #category-filter-nav::-webkit-scrollbar {
         display: none;
