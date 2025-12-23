@@ -261,7 +261,7 @@
     {
         "id": 38,
         "name": "כפתן כלה",
-        "category": "אירועים",
+        "category": "חינה",
         "price": 10,
         "image": "../images/products/כפתן-כלה.jpg"
     },
@@ -310,7 +310,7 @@
     {
         "id": 45,
         "name": "כפתן לחתן",
-        "category": "אירועים",
+        "category": "חינה",
         "price": 10,
         "image": "../images/products/כפתן-לחתן.jpg"
     },
