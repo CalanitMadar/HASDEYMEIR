@@ -23,14 +23,14 @@
     {
         "id": 4,
         "name": "כפתן גברים",
-        "category": "אירועים",
+        "category": "חינה",
         "price": 8,
         "image": "../images/products/ciftan_man.jpg"
     },
     {
         "id": 5,
         "name": "כפתן נשים",
-        "category": "אירועים",
+        "category": "חינה",
         "price": 8,
         "image": "../images/products/ciftan_women.jpg"
     },
