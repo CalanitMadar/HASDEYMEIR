@@ -844,3 +844,106 @@ footer a:hover {
         font-size: 1em;
     }
 }
+
+/* ------------------------------------------- */
+/* עיצוב קטע קביעת המזוזה */
+/* ------------------------------------------- */
+
+.mezuzah-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 70px;
+    box-sizing: border-box;
+}
+
+.mezuzah-container {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 3px solid #FFD700; /* מסגרת זהב */
+    position: relative;
+}
+
+.mezuzah-content {
+    display: flex;
+    flex-direction: row; /* תמונה בצד אחד, טקסט בשני */
+    align-items: center;
+    min-height: 350px;
+}
+
+.mezuzah-image-wrapper {
+    flex: 1.2;
+    height: 100%;
+    overflow: hidden;
+}
+
+.mezuzah-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.mezuzah-container:hover .mezuzah-image-wrapper img {
+    transform: scale(1.05);
+}
+
+.mezuzah-text-overlay {
+    flex: 1;
+    padding: 40px;
+    background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+    text-align: right;
+}
+
+.mezuzah-title {
+    color: #4A148C; /* הסגול מהעיצוב הקודם שלך */
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.mezuzah-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 3px;
+    background: #FFD700;
+}
+
+.mezuzah-description {
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+/* רספונסיביות למובייל */
+@media (max-width: 768px) {
+    .mezuzah-section {
+        padding: 0 15px;
+    }
+    
+    .mezuzah-content {
+        flex-direction: column; /* תמונה מעל הטקסט */
+    }
+    
+    .mezuzah-image-wrapper {
+        width: 100%;
+        height: 250px;
+    }
+    
+    .mezuzah-text-overlay {
+        padding: 25px;
+        text-align: center;
+    }
+    
+    .mezuzah-title::after {
+        right: 50%;
+        transform: translateX(50%);
+    }
+}
