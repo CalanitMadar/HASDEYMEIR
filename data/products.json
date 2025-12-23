@@ -247,15 +247,15 @@
     {
         "id": 36,
         "name": "מטפחת ריקוד",
-        "category": "אירועים",
+        "category": "חינה",
         "price": 2,
         "image": "../images/products/מטבחת ריקוד1.jpg"
     },
     {
         "id": 37,
         "name": "מטפחת ריקוד",
-        "category": "אירועים",
-        "price": 2,
+        "category": "חינה",
+        "price": 5,
         "image": "../images/products/מטפחת ריקוד2.jpg"
     },
     {
@@ -316,10 +316,10 @@
     },
     {
         "id": 46,
-        "name": "מארז בסיס לאיפור (חסר תמונה)",
+        "name": "מארז בסיס לאיפור ",
         "category": "איפור",
         "price": 0,
-        "image": "../images/products/default.png"
+        "image": "../images/products/כלה נערה בת מצווה.jpeg"
     },
     {
         "id": 47,
@@ -327,5 +327,43 @@
         "category": "עטיפת ספרים",
         "price": 5,
         "image": "../images/products/default.png"
+    },
+    {
+        "id": 48,
+        "name": "מצנח צבעוני",
+        "category": "שונות",
+        "price": 5,
+        "image": "../images/products/מצנח צבעוני.jpeg"
+    },
+    {
+        "id": 49,
+        "name": "כפתן בת מצווה",
+        "category": "אירועים",
+        "price": 10,
+        "image": "../images/products/כפתן בת מצווה.jpeg"
+    }
+    ,
+    {
+        "id": 50,
+        "name": "אגרטל מעוצב",
+        "category": "אירועים",
+        "price": 2,
+        "image": "../images/products/אגרטל.jpeg"
+    }
+    ,
+    {
+        "id": 51,
+        "name": "כרית לעיצוב חינה",
+        "category": "חינה",
+        "price": 5,
+        "image": "../images/products/כרית.jpeg"
+    }    
+    ,
+    {
+        "id": 52,
+        "name": "מגש חינה",
+        "category": "חינה",
+        "price": 5,
+        "image": "../images/products/מגש חינה.jpeg"
     }
 ]
