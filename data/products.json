@@ -318,10 +318,7 @@
         "id": 46,
         "name": "מארז בסיס לאיפור ",
         "category": "איפור",
-        "price": {
-            "min": 50,
-            "max": 100
-        },
+       "price": 100,
         "image": "../images/products/כלה נערה בת מצווה.jpeg"
     },
     {
