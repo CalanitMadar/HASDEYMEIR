@@ -365,5 +365,71 @@
         "category": "חינה",
         "price": 5,
         "image": "../images/products/מגש חינה.jpeg"
+    },
+    {
+        "id": 53,
+        "name": "פמוט",
+        "category": "אירועים",
+        "price": 1,
+        "image": "../images/products/pamot.jpeg"
+    },
+    {
+        "id": 54,
+        "name": "מעמד לעוגות ",
+        "category": "אירועים",
+        "price": 15,
+        "image": "../images/products/מעמד לעוגות.jpeg"
+    },
+    {
+        "id": 55,
+        "name": "מגש עץ 1 ",
+        "category": "אירועים",
+        "price": 8,
+        "image": "../images/products/מגש עץ 1.jpeg"
+    },
+    {
+        "id": 57,
+        "name": "מגש עץ 3 ",
+        "category": "אירועים",
+        "price": 8,
+        "image": "../images/products/מגש עץ 3.jpeg"
+    },
+    {
+        "id": 58,
+        "name": "קייאק ",
+        "category": "אירועים",
+        "price": 8,
+        "image": "../images/products/קייאק.jpeg"
+    },
+    {
+        "id": 59,
+        "name": "פרחים",
+        "category": "אירועים",
+        "price": 1,
+        "image": "../images/products/פרחים1.jpeg"
+    },
+    {
+        "id": 60,
+        "name": "פרחים",
+        "category": "אירועים",
+        "price": 1,
+        "image": "../images/products/פרחים2.jpeg"
     }
+    ,
+    {
+        "id": 61,
+        "name": "פרחים",
+        "category": "אירועים",
+        "price": 1,
+        "image": "../images/products/פרחים3.jpeg"
+    }
+       ,
+    {
+        "id": 62,
+        "name": "עיגול פרחים לפמוט",
+        "category": "אירועים",
+        "price": 3,
+        "image": "../images/products/עיגול פרחים לפמוט.jpeg"
+    }
+    
 ]
