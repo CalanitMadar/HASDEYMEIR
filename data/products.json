@@ -430,6 +430,13 @@
         "category": "אירועים",
         "price": 3,
         "image": "../images/products/עיגול פרחים לפמוט.jpeg"
+    },
+    {
+        "id": 63,
+        "name": "מפות",
+        "category": "אירועים",
+        "price": 8,
+        "image": "../images/products/maps.jpeg"
     }
     
 ]
