@@ -78,7 +78,7 @@
     },
     {
         "id": 12,
-        "name": "מפה צבע לבן",
+        "name": "מפה צבע לבן 180 ס״מ",
         "category": "אירועים",
         "price": 5,
         "image": "../images/products/map3.jpg"
@@ -433,10 +433,17 @@
     },
     {
         "id": 63,
-        "name": "מפות 3 מטר",
+        "name": "מפות מרובעות 3 מטר",
         "category": "אירועים",
-        "price": 8,
+        "price": 10,
         "image": "../images/products/maps.jpeg"
     }
-    
+    ,
+    {
+        "id": 64,
+        "name": "כיסא כלה  / חינה",
+        "category": "אירועים",
+        "price": 150,
+        "image": "../images/products/כיסא חינה.jpeg"
+    }
 ]
