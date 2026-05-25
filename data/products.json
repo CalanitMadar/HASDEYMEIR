@@ -64,14 +64,14 @@
     },
     {
         "id": 10,
-        "name": "מפה צבע אפור",
+        "name": "מפה צבע אפםור 180 ס״מ",
         "category": "אירועים",
         "price": 5,
         "image": "../images/products/map1.jpg"
     },
     {
         "id": 11,
-        "name": "מפה צבע בז׳",
+        "name": "מפה צבע בז׳ 180 ס״מ",
         "category": "אירועים",
         "price": 5,
         "image": "../images/products/map2.jpg"
@@ -433,7 +433,7 @@
     },
     {
         "id": 63,
-        "name": "מפות מרובעות 3 מטר",
+        "name": "מפות מרובעות",
         "category": "אירועים",
         "price": 10,
         "image": "../images/products/maps.jpeg"
@@ -445,5 +445,19 @@
         "category": "אירועים",
         "price": 150,
         "image": "../images/products/כיסא חינה.jpeg"
+    },
+    {
+        "id": 65,
+        "name": "מפה צבע לבן 220 ס״מ",
+        "category": "אירועים",
+        "price": 8,
+        "image": "../images/products/map3.jpg"
+    },
+    {
+        "id": 66,
+        "name": "מפה צבע לבן 300 ס״מ",
+        "category": "אירועים",
+        "price": 10,
+        "image": "../images/products/map3.jpg"
     }
 ]
