@@ -467,5 +467,12 @@
         "category": "שונות",
         "price": 2,
         "image": "../images/products/קשת לפמוט.jpeg"
+    },
+    {
+        "id": 68,
+        "name": "מפה כחולה",
+        "category": "שונות",
+        "price": 8,
+        "image": "../images/products/קשת לפמוט.jpeg"
     }
 ]
