@@ -473,6 +473,28 @@
         "name": "מפה כחולה",
         "category": "שונות",
         "price": 8,
-        "image": "../images/products/קשת לפמוט.jpeg"
+        "image": "../images/products/מפה כחולה.jpeg"
+    },
+    {
+        "id": 69,
+        "name": "כד עץ",
+        "category": "שונות",
+        "price": 8,
+        "image": "../images/products/כד עץ.jpeg"
+    }
+    ,
+    {
+        "id": 70,
+        "name": "מטרית בד סרטים",
+        "category": "שונות",
+        "price": 8,
+        "image": "../images/products/מטרית סרט.jpeg"
+    },
+    {
+        "id": 71,
+        "name": "ענף נצנצים",
+        "category": "שונות",
+        "price": 8,
+        "image": "../images/products/ענף נצנצים.jpeg"
     }
 ]
