@@ -1,500 +1,74 @@
 [
-    {
-        "id": 1,
-        "name": "סלסלת צדפה",
-        "category": "אירועים",
-        "price": 30,
-        "image": "../images/products/tzdafa.jpg"
-    },
-    {
-        "id": 2,
-        "name": "מטריה",
-        "category": "שונות",
-        "price": 5,
-        "image": "../images/products/umbrella.jpg"
-    },
-    {
-        "id": 3,
-        "name": "שמלת ערב",
-        "category": "אירועים",
-        "price": 30,
-        "image": "../images/products/dress1.jpg"
-    },
+    { "id": 1, "name": "סלסלת צדפה", "category": "אירועים", "price": 30, "image": "../images/products/tzdafa.jpg" },
+    { "id": 2, "name": "מטריה", "category": "שונות", "price": 5, "image": "../images/products/umbrella.jpg" },
+    { "id": 3, "name": "שמלת ערב", "category": "אירועים", "price": 30, "image": "../images/products/dress1.jpg" },
     {
         "id": 4,
-        "name": "כפתן גברים",
+        "name": "כפתנים (גברים, נשים, כלה, חתן, בת מצווה)",
         "category": "חינה",
         "price": 8,
-        "image": "../images/products/ciftan_man.jpg"
-    },
-    {
-        "id": 5,
-        "name": "כפתן נשים",
-        "category": "חינה",
-        "price": 8,
-        "image": "../images/products/ciftan_women.jpg"
-    },
-    {
-        "id": 6,
-        "name": "פמוט גדול",
-        "category": "אירועים",
-        "price": 10,
-        "image": "../images/products/pamotim.jpg"
-    },
-    {
-        "id": 7,
-        "name": "עיצוב שולחן",
-        "category": "אירועים",
-        "price": 15,
-        "image": "../images/products/moznaim.jpg"
-    },
-    {
-        "id": 8,
-        "name": "שמלה לקטנטנות",
-        "category": "אירועים",
-        "price": 15,
-        "image": "../images/products/dress_girl.jpg"
-    },
-    {
-        "id": 9,
-        "name": "טרבוש",
-        "category": "חינה",
-        "price": 3,
-        "image": "../images/products/tarbush.jpg"
-    },
-    {
-        "id": 10,
-        "name": "מפה צבע אפםור 180 ס״מ",
-        "category": "אירועים",
-        "price": 5,
-        "image": "../images/products/map1.jpg"
-    },
-    {
-        "id": 11,
-        "name": "מפה צבע בז׳ 180 ס״מ",
-        "category": "אירועים",
-        "price": 5,
-        "image": "../images/products/map2.jpg"
-    },
-    {
-        "id": 12,
-        "name": "מפה צבע לבן 180 ס״מ",
-        "category": "אירועים",
-        "price": 5,
-        "image": "../images/products/map3.jpg"
-    },
-    {
-        "id": 13,
-        "name": "מפה צבע בז׳ (דוגמה אחרת)",
-        "category": "אירועים",
-        "price": 5,
-        "image": "../images/products/map4.jpg"
-    },
-    {
-        "id": 14,
-        "name": "מגוון כפתנים לחינה",
-        "category": "חינה",
-        "price": 8,
+        "description": "כפתן גברים, נשים ומגוון כפתנים לחינה - 8 ₪. כפתן כלה, חתן ובת מצווה - 10 ₪.",
         "image": "../images/products/שמלות-חינה-מפוארות.jpg"
     },
-    {
-        "id": 15,
-        "name": "עציץ ירוק",
-        "category": "אירועים",
-        "price": 4,
-        "image": "../images/products/עציץ-ירוק.jpg"
-    },
-    {
-        "id": 16,
-        "name": "מגש זהב פלסטיק",
-        "category": "אירועים",
-        "price": 2,
-        "image": "../images/products/מגש-זהב-פלסטיק.jpg"
-    },
-    {
-        "id": 17,
-        "name": "בגד לברית (דגם 1)",
-        "category": "ברית",
-        "price": 0,
-        "image": "../images/products/בגד-לברית.jpg"
-    },
-    {
-        "id": 18,
-        "name": "בגד לברית (דגם 2)",
-        "category": "ברית",
-        "price": 0,
-        "image": "../images/products/ברית1.jpg"
-    },
-    {
-        "id": 19,
-        "name": "בגד לברית (דגם 3)",
-        "category": "ברית",
-        "price": 0,
-        "image": "../images/products/ברית2.jpg"
-    },
-    {
-        "id": 20,
-        "name": "בגד לברית (דגם 4)",
-        "category": "ברית",
-        "price": 0,
-        "image": "../images/products/ברית3.jpg"
-    },
-    {
-        "id": 21,
-        "name": "בגד לברית (דגם 5)",
-        "category": "ברית",
-        "price": 0,
-        "image": "../images/products/ברית4.jpg"
-    },
-    {
-        "id": 22,
-        "name": "בגד לברית (דגם 6)",
-        "category": "ברית",
-        "price": 0,
-        "image": "../images/products/ברית5.jpg"
-    },
-    {
-        "id": 23,
-        "name": "בגד לברית (דגם 7)",
-        "category": "ברית",
-        "price": 0,
-        "image": "../images/products/ברית6.jpg"
-    },
-    {
-        "id": 24,
-        "name": "בגד לברית (דגם 8)",
-        "category": "ברית",
-        "price": 0,
-        "image": "../images/products/ברית7.jpg"
-    },
-    {
-        "id": 25,
-        "name": "בגד לברית (דגם 9)",
-        "category": "ברית",
-        "price": 0,
-        "image": "../images/products/ברית8.jpg"
-    },
-    {
-        "id": 26,
-        "name": "כרית לברית",
-        "category": "ברית",
-        "price": 0,
-        "image": "../images/products/ברית9.jpg"
-    },
-    {
-        "id": 27,
-        "name": "בגד לברית (דגם 11)",
-        "category": "ברית",
-        "price": 0,
-        "image": "../images/products/ברית10.jpg"
-    },
-    {
-        "id": 28,
-        "name": "קערת חינה",
-        "category": "חינה",
-        "price": 5,
-        "image": "../images/products/קערת-חינה.jpg"
-    },
-    {
-        "id": 29,
-        "name": "קשת פרחים",
-        "category": "אירועים",
-        "price": 10,
-        "image": "../images/products/קשת-פרחים.jpg"
-    },
-    {
-        "id": 30,
-        "name": "מגש נחושת",
-        "category": "אירועים",
-        "price": 5,
-        "image": "../images/products/מגש-נחושת.jpg"
-    },
-    {
-        "id": 31,
-        "name": "כדורי פרחים",
-        "category": "אירועים",
-        "price": 8,
-        "image": "../images/products/פרחים.jpg"
-    },
-    {
-        "id": 32,
-        "name": "כיסוי לכיסא לבן",
-        "category": "אירועים",
-        "price": 2,
-        "image": "../images/products/כיסוי-לכיסא.jpg"
-    },
-    {
-        "id": 33,
-        "name": "כיסוי לכיסא שחור",
-        "category": "אירועים",
-        "price": 2,
-        "image": "../images/products/כיסוי-כיסא-שחור.jpg"
-    },
-    {
-        "id": 34,
-        "name": "פמוט נחושת קטן",
-        "category": "אירועים",
-        "price": 5,
-        "image": "../images/products/פמוט-נחושת-קטן.jpg"
-    },
-    {
-        "id": 35,
-        "name": "עיגול עלים (לעיצוב)",
-        "category": "אירועים",
-        "price": 5,
-        "image": "../images/products/עיגול-עלים.jpg"
-    },
-    {
-        "id": 36,
-        "name": "מטפחת ריקוד",
-        "category": "חינה",
-        "price": 2,
-        "image": "../images/products/מטבחת ריקוד1.jpg"
-    },
-    {
-        "id": 37,
-        "name": "מטפחת ריקוד",
-        "category": "חינה",
-        "price": 2,
-        "image": "../images/products/מטפחת ריקוד2.jpg"
-    },
-    {
-        "id": 38,
-        "name": "כפתן כלה",
-        "category": "חינה",
-        "price": 10,
-        "image": "../images/products/כפתן-כלה.jpg"
-    },
-    {
-        "id": 39,
-        "name": "סלסלה קטנה",
-        "category": "אירועים",
-        "price": 5,
-        "image": "../images/products/סלסלאות.jpg"
-    },
-    {
-        "id": 40,
-        "name": "סלסלה גדולה / מפוארת",
-        "category": "אירועים",
-        "price": 10,
-        "image": "../images/products/סלסלאות.jpg"
-    },
-    {
-        "id": 41,
-        "name": "אגרטל",
-        "category": "אירועים",
-        "price": 4,
-        "image": "../images/products/אגרטל.jpg"
-    },
-    {
-        "id": 42,
-        "name": "דלי קרח",
-        "category": "אירועים",
-        "price": 4,
-        "image": "../images/products/דלי-קרח.jpg"
-    },
-    {
-        "id": 43,
-        "name": "מבחר מפות",
-        "category": "אירועים",
-        "price": 5,
-        "image": "../images/products/מבחר מפות.jpg"
-    },
-    {
-        "id": 44,
-        "name": "סלסלה לעיצוב שולחן",
-        "category": "אירועים",
-        "price": 5,
-        "image": "../images/products/סלסלה לעיצוב שולחן.jpg"
-    },
-    {
-        "id": 45,
-        "name": "כפתן לחתן",
-        "category": "חינה",
-        "price": 10,
-        "image": "../images/products/כפתן-לחתן.jpg"
-    },
-    {
-        "id": 46,
-        "name": " גמח איפור ",
-        "category": "איפור",
-       "price": 100,
-        "image": "../images/products/כלה נערה בת מצווה.jpeg"
-    },
-    {
-        "id": 47,
-        "name": "סט עטיפת ספרים (חופשת הקיץ)",
-        "category": "עטיפת ספרים",
-        "price": 5,
-        "image": "../images/products/default.png"
-    },
-    {
-        "id": 48,
-        "name": "מצנח צבעוני",
-        "category": "שונות",
-        "price": 5,
-        "image": "../images/products/מצנח צבעוני.jpeg"
-    },
-    {
-        "id": 49,
-        "name": "כפתן בת מצווה",
-        "category": "אירועים",
-        "price": 10,
-        "image": "../images/products/כפתן בת מצווה.jpeg"
-    }
-    ,
-    {
-        "id": 50,
-        "name": "אגרטל מעוצב",
-        "category": "אירועים",
-        "price": 2,
-        "image": "../images/products/אגרטל.jpeg"
-    }
-    ,
-    {
-        "id": 51,
-        "name": "כרית לעיצוב חינה",
-        "category": "חינה",
-        "price": 5,
-        "image": "../images/products/כרית.jpeg"
-    }    
-    ,
-    {
-        "id": 52,
-        "name": "מגש חינה",
-        "category": "חינה",
-        "price": 5,
-        "image": "../images/products/מגש חינה.jpeg"
-    },
-    {
-        "id": 53,
-        "name": "פמוט",
-        "category": "אירועים",
-        "price": 1,
-        "image": "../images/products/pamot.jpeg"
-    },
-    {
-        "id": 54,
-        "name": "מעמד לעוגות ",
-        "category": "אירועים",
-        "price": 15,
-        "image": "../images/products/מעמד לעוגות.jpeg"
-    },
-    {
-        "id": 55,
-        "name": "מגש עץ 1 ",
-        "category": "אירועים",
-        "price": 8,
-        "image": "../images/products/מגש עץ 1.jpeg"
-    },
-    {
-        "id": 57,
-        "name": "מגש עץ 3 ",
-        "category": "אירועים",
-        "price": 8,
-        "image": "../images/products/מגש עץ 3.jpeg"
-    },
-    {
-        "id": 58,
-        "name": "קייאק ",
-        "category": "אירועים",
-        "price": 8,
-        "image": "../images/products/קייאק.jpeg"
-    },
-    {
-        "id": 59,
-        "name": "פרחים",
-        "category": "אירועים",
-        "price": 1,
-        "image": "../images/products/פרחים1.jpeg"
-    },
-    {
-        "id": 60,
-        "name": "פרחים",
-        "category": "אירועים",
-        "price": 1,
-        "image": "../images/products/פרחים2.jpeg"
-    }
-    ,
-    {
-        "id": 61,
-        "name": "פרחים",
-        "category": "אירועים",
-        "price": 1,
-        "image": "../images/products/פרחים3.jpeg"
-    }
-       ,
-    {
-        "id": 62,
-        "name": "עיגול פרחים לפמוט",
-        "category": "אירועים",
-        "price": 3,
-        "image": "../images/products/עיגול פרחים לפמוט.jpeg"
-    },
-    {
-        "id": 63,
-        "name": "מפות מרובעות",
-        "category": "אירועים",
-        "price": 10,
-        "image": "../images/products/maps.jpeg"
-    }
-    ,
-    {
-        "id": 64,
-        "name": "כיסא כלה  / חינה",
-        "category": "אירועים",
-        "price": 150,
-        "image": "../images/products/כיסא חינה.jpeg"
-    },
-    {
-        "id": 65,
-        "name": "מפה צבע לבן 220 ס״מ",
-        "category": "אירועים",
-        "price": 8,
-        "image": "../images/products/map3.jpg"
-    },
-    {
-        "id": 66,
-        "name": "מפה צבע לבן 300 ס״מ",
-        "category": "אירועים",
-        "price": 10,
-        "image": "../images/products/map3.jpg"
-    }
-    ,
-    {
-        "id": 67,
-        "name": "קשת לפמוט",
-        "category": "שונות",
-        "price": 2,
-        "image": "../images/products/קשת לפמוט.jpeg"
-    },
-    {
-        "id": 68,
-        "name": "מפה כחולה",
-        "category": "שונות",
-        "price": 8,
-        "image": "../images/products/מפה כחולה.jpeg"
-    },
-    {
-        "id": 69,
-        "name": "כד עץ",
-        "category": "שונות",
-        "price": 8,
-        "image": "../images/products/כד עץ.jpeg"
-    }
-    ,
-    {
-        "id": 70,
-        "name": "מטרית בד סרטים",
-        "category": "שונות",
-        "price": 8,
-        "image": "../images/products/מטרית סרט.jpeg"
-    },
-    {
-        "id": 71,
-        "name": "ענף נצנצים",
-        "category": "שונות",
-        "price": 8,
-        "image": "../images/products/ענף נצנצים.jpeg"
-    }
+    { "id": 5, "name": "פמוט גדול", "category": "אירועים", "price": 10, "image": "../images/products/pamotim.jpg" },
+    { "id": 6, "name": "עיצוב שולחן", "category": "אירועים", "price": 15, "image": "../images/products/moznaim.jpg" },
+    { "id": 7, "name": "שמלה לקטנטנות", "category": "אירועים", "price": 15, "image": "../images/products/dress_girl.jpg" },
+    { "id": 8, "name": "טרבוש", "category": "חינה", "price": 3, "image": "../images/products/tarbush.jpg" },
+    { "id": 9, "name": "מפה צבע אפםור 180 ס״מ", "category": "אירועים", "price": 5, "image": "../images/products/map1.jpg" },
+    { "id": 10, "name": "מפה צבע בז׳ 180 ס״מ", "category": "אירועים", "price": 5, "image": "../images/products/map2.jpg" },
+    { "id": 11, "name": "מפה צבע לבן 180 ס״מ", "category": "אירועים", "price": 5, "image": "../images/products/map3.jpg" },
+    { "id": 12, "name": "מפה צבע בז׳ (דוגמה אחרת)", "category": "אירועים", "price": 5, "image": "../images/products/map4.jpg" },
+    { "id": 13, "name": "עציץ ירוק", "category": "אירועים", "price": 4, "image": "../images/products/עציץ-ירוק.jpg" },
+    { "id": 14, "name": "מגש זהב פלסטיק", "category": "אירועים", "price": 2, "image": "../images/products/מגש-זהב-פלסטיק.jpg" },
+    { "id": 15, "name": "בגד לברית (דגם 1)", "category": "ברית", "price": 0, "image": "../images/products/בגד-לברית.jpg" },
+    { "id": 16, "name": "בגד לברית (דגם 2)", "category": "ברית", "price": 0, "image": "../images/products/ברית1.jpg" },
+    { "id": 17, "name": "בגד לברית (דגם 3)", "category": "ברית", "price": 0, "image": "../images/products/ברית2.jpg" },
+    { "id": 18, "name": "בגד לברית (דגם 4)", "category": "ברית", "price": 0, "image": "../images/products/ברית3.jpg" },
+    { "id": 19, "name": "בגד לברית (דגם 5)", "category": "ברית", "price": 0, "image": "../images/products/ברית4.jpg" },
+    { "id": 20, "name": "בגד לברית (דגם 6)", "category": "ברית", "price": 0, "image": "../images/products/ברית5.jpg" },
+    { "id": 21, "name": "בגד לברית (דגם 7)", "category": "ברית", "price": 0, "image": "../images/products/ברית6.jpg" },
+    { "id": 22, "name": "בגד לברית (דגם 8)", "category": "ברית", "price": 0, "image": "../images/products/ברית7.jpg" },
+    { "id": 23, "name": "בגד לברית (דגם 9)", "category": "ברית", "price": 0, "image": "../images/products/ברית8.jpg" },
+    { "id": 24, "name": "כרית לברית", "category": "ברית", "price": 0, "image": "../images/products/ברית9.jpg" },
+    { "id": 25, "name": "בגד לברית (דגם 11)", "category": "ברית", "price": 0, "image": "../images/products/ברית10.jpg" },
+    { "id": 26, "name": "קערת חינה", "category": "חינה", "price": 5, "image": "../images/products/קערת-חינה.jpg" },
+    { "id": 27, "name": "קשת פרחים", "category": "אירועים", "price": 10, "image": "../images/products/קשת-פרחים.jpg" },
+    { "id": 28, "name": "מגש נחושת", "category": "אירועים", "price": 5, "image": "../images/products/מגש-נחושת.jpg" },
+    { "id": 29, "name": "כדורי פרחים", "category": "אירועים", "price": 8, "image": "../images/products/פרחים.jpg" },
+    { "id": 30, "name": "כיסוי לכיסא לבן", "category": "אירועים", "price": 2, "image": "../images/products/כיסוי-לכיסא.jpg" },
+    { "id": 31, "name": "כיסוי לכיסא שחור", "category": "אירועים", "price": 2, "image": "../images/products/כיסוי-כיסא-שחור.jpg" },
+    { "id": 32, "name": "פמוט נחושת קטן", "category": "אירועים", "price": 5, "image": "../images/products/פמוט-נחושת-קטן.jpg" },
+    { "id": 33, "name": "עיגול עלים (לעיצוב)", "category": "אירועים", "price": 5, "image": "../images/products/עיגול-עלים.jpg" },
+    { "id": 34, "name": "מטפחת ריקוד", "category": "חינה", "price": 2, "image": "../images/products/מטבחת ריקוד1.jpg" },
+    { "id": 35, "name": "מטפחת ריקוד", "category": "חינה", "price": 2, "image": "../images/products/מטפחת ריקוד2.jpg" },
+    { "id": 36, "name": "סלסלה קטנה", "category": "אירועים", "price": 5, "image": "../images/products/סלסלאות.jpg" },
+    { "id": 37, "name": "סלסלה גדולה / מפוארת", "category": "אירועים", "price": 10, "image": "../images/products/סלסלאות.jpg" },
+    { "id": 38, "name": "אגרטל", "category": "אירועים", "price": 4, "image": "../images/products/אגרטל.jpg" },
+    { "id": 39, "name": "דלי קרח", "category": "אירועים", "price": 4, "image": "../images/products/דלי-קרח.jpg" },
+    { "id": 40, "name": "מבחר מפות", "category": "אירועים", "price": 5, "image": "../images/products/מבחר מפות.jpg" },
+    { "id": 41, "name": "סלסלה לעיצוב שולחן", "category": "אירועים", "price": 5, "image": "../images/products/סלסלה לעיצוב שולחן.jpg" },
+    { "id": 42, "name": " גמח איפור ", "category": "איפור", "price": 100, "image": "../images/products/כלה נערה בת מצווה.jpeg" },
+    { "id": 43, "name": "סט עטיפת ספרים (חופשת הקיץ)", "category": "עטיפת ספרים", "price": 5, "image": "../images/products/default.png" },
+    { "id": 44, "name": "מצנח צבעוני", "category": "שונות", "price": 5, "image": "../images/products/מצנח צבעוני.jpeg" },
+    { "id": 45, "name": "אגרטל מעוצב", "category": "אירועים", "price": 2, "image": "../images/products/אגרטל.jpeg" },
+    { "id": 46, "name": "כרית לעיצוב חינה", "category": "חינה", "price": 5, "image": "../images/products/כרית.jpeg" },
+    { "id": 47, "name": "מגש חינה", "category": "חינה", "price": 5, "image": "../images/products/מגש חינה.jpeg" },
+    { "id": 48, "name": "פמוט", "category": "אירועים", "price": 1, "image": "../images/products/pamot.jpeg" },
+    { "id": 49, "name": "מעמד לעוגות ", "category": "אירועים", "price": 15, "image": "../images/products/מעמד לעוגות.jpeg" },
+    { "id": 50, "name": "מגש עץ 1 ", "category": "אירועים", "price": 8, "image": "../images/products/מגש עץ 1.jpeg" },
+    { "id": 51, "name": "מגש עץ 3 ", "category": "אירועים", "price": 8, "image": "../images/products/מגש עץ 3.jpeg" },
+    { "id": 52, "name": "קייאק ", "category": "אירועים", "price": 8, "image": "../images/products/קייאק.jpeg" },
+    { "id": 53, "name": "פרחים", "category": "אירועים", "price": 1, "image": "../images/products/פרחים1.jpeg" },
+    { "id": 54, "name": "פרחים", "category": "אירועים", "price": 1, "image": "../images/products/פרחים2.jpeg" },
+    { "id": 55, "name": "פרחים", "category": "אירועים", "price": 1, "image": "../images/products/פרחים3.jpeg" },
+    { "id": 56, "name": "עיגול פרחים לפמוט", "category": "אירועים", "price": 3, "image": "../images/products/עיגול פרחים לפמוט.jpeg" },
+    { "id": 57, "name": "מפות מרובעות", "category": "אירועים", "price": 10, "image": "../images/products/maps.jpeg" },
+    { "id": 58, "name": "כיסא כלה  / חינה", "category": "אירועים", "price": 150, "image": "../images/products/כיסא חינה.jpeg" },
+    { "id": 59, "name": "מפה צבע לבן 220 ס״מ", "category": "אירועים", "price": 8, "image": "../images/products/map3.jpg" },
+    { "id": 60, "name": "מפה צבע לבן 300 ס״מ", "category": "אירועים", "price": 10, "image": "../images/products/map3.jpg" },
+    { "id": 61, "name": "קשת לפמוט", "category": "שונות", "price": 2, "image": "../images/products/קשת לפמוט.jpeg" },
+    { "id": 62, "name": "מפה כחולה", "category": "שונות", "price": 8, "image": "../images/products/מפה כחולה.jpeg" },
+    { "id": 63, "name": "כד עץ", "category": "שונות", "price": 8, "image": "../images/products/כד עץ.jpeg" },
+    { "id": 64, "name": "מטרית בד סרטים", "category": "שונות", "price": 8, "image": "../images/products/מטרית סרט.jpeg" },
+    { "id": 65, "name": "ענף נצנצים", "category": "שונות", "price": 8, "image": "../images/products/ענף נצנצים.jpeg" }
 ]
