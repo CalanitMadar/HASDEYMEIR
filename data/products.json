@@ -45,7 +45,7 @@
     { "id": 37, "name": "סלסלה גדולה / מפוארת", "category": "אירועים", "price": 10, "image": "../images/products/סלסלאות.jpg" },
     { "id": 38, "name": "אגרטל", "category": "אירועים", "price": 4, "image": "../images/products/אגרטל.jpg" },
     { "id": 39, "name": "דלי קרח", "category": "אירועים", "price": 4, "image": "../images/products/דלי-קרח.jpg" },
-    { "id": 40, "name": "מבחר מפות", "category": "אירועים", "price": 5, "image": "../images/products/מבחר מפות.jpg" },
+    { "id": 40, "name": "מבחר מפות", "category": "אירועים", "price": "5-10", "image": "../images/products/מבחר מפות.jpg" },
     { "id": 41, "name": "סלסלה לעיצוב שולחן", "category": "אירועים", "price": 5, "image": "../images/products/סלסלה לעיצוב שולחן.jpg" },
     { "id": 42, "name": " גמח איפור ", "category": "איפור", "price": 100, "image": "../images/products/כלה נערה בת מצווה.jpeg" },
     { "id": 43, "name": "סט עטיפת ספרים (חופשת הקיץ)", "category": "עטיפת ספרים", "price": 5, "image": "../images/products/default.png" },
@@ -70,5 +70,7 @@
     { "id": 62, "name": "מפה כחולה", "category": "שונות", "price": 8, "image": "../images/products/מפה כחולה.jpeg" },
     { "id": 63, "name": "כד עץ", "category": "שונות", "price": 8, "image": "../images/products/כד עץ.jpeg" },
     { "id": 64, "name": "מטרית בד סרטים", "category": "שונות", "price": 8, "image": "../images/products/מטרית סרט.jpeg" },
-    { "id": 65, "name": "ענף נצנצים", "category": "שונות", "price": 8, "image": "../images/products/ענף נצנצים.jpeg" }
+    { "id": 65, "name": "ענף נצנצים", "category": "שונות", "price": 8, "image": "../images/products/ענף נצנצים.jpeg" },
+    { "id": 66, "name": "מפית בד", "category": "שונות", "price": 1, "image": "../images/products/מפית בד.jpeg" }
+
 ]
