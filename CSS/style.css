@@ -591,15 +591,23 @@ footer a:hover {
         display: flex;
         flex-direction: column;
         background: #c0daf5;
-        
-        /* שינוי מ-absolute ל-relative */
-        position: relative; /* זה השינוי המרכזי! */
+        position: relative;
         width: 100%;
-        
-        overflow: hidden;
         z-index: 999;
         box-shadow: 0 4px 6px rgba(0,0,0,0.2);
         margin-top: 0;
+
+        /* סגור כברירת מחדל - נפתח ע"י המחלקה .open (מוחלפת ב-products.js) */
+        max-height: 0;
+        padding: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+    }
+
+    nav.open {
+        max-height: 500px;
+        padding: 15px 0;
+        border-top: 2px solid #00509e;
     }
     
    nav a {
@@ -732,30 +740,30 @@ footer a:hover {
     
 
     #category-filter-nav {
-    order: 2;  /* סדר התצוגה - מופיע שני אחרי donations-info */
-    
-    flex-direction: row;  /* כפתורים בשורה (לא עמודה) */
-    width: 100%;  /* תופס את כל הרוחב */
-    
-    border-left: none;  /* ביטול גבול שמאלי */
-    border-bottom: 2px solid #eee;  /* קו מפריד תחתון */
-    padding-left: 0;  /* אין ריווח משמאל */
-    
-    display: flex;  /* מאפשר flexbox */
-    flex-wrap: nowrap;  /* כפתורים לא עוברים שורה - נשארים בשורה אחת */
-    gap: 10px;  /* רווח של 10px בין כפתורים */
-    
-    padding: 15px 10px;  /* ריווח פנימי - 15px למעלה/למטה, 10px ימין/שמאל */
-    max-width: 100%;  /* לא יעבור את רוחב המסך */
-    box-sizing: border-box;  /* padding נספר בתוך הרוחב */
-    
-    overflow-x: auto;  /* אפשר גלילה אופקית (שמאלה-ימינה) */
-    overflow-y: visible;  /* לא חותך אנכית */
-    
-    -webkit-overflow-scrolling: touch;  /* גלילה חלקה באייפון */
-    scrollbar-width: none;  /* מסתיר את סרגל הגלילה בפיירפוקס */
-    -ms-overflow-style: none;  /* מסתיר סרגל גלילה ב-IE */
-}
+        order: 2;  /* סדר התצוגה - מופיע שני אחרי donations-info */
+
+        flex-direction: row;  /* כפתורים בשורה (לא עמודה) */
+        width: 100%;  /* תופס את כל הרוחב */
+
+        border-left: none;  /* ביטול גבול שמאלי */
+        border-bottom: 2px solid #eee;  /* קו מפריד תחתון */
+        padding-left: 0;  /* אין ריווח משמאל */
+
+        display: flex;  /* מאפשר flexbox */
+        flex-wrap: nowrap;  /* כפתורים לא עוברים שורה - נשארים בשורה אחת */
+        gap: 10px;  /* רווח של 10px בין כפתורים */
+
+        padding: 15px 10px;  /* ריווח פנימי - 15px למעלה/למטה, 10px ימין/שמאל */
+        max-width: 100%;  /* לא יעבור את רוחב המסך */
+        box-sizing: border-box;  /* padding נספר בתוך הרוחב */
+
+        overflow-x: auto;  /* אפשר גלילה אופקית (שמאלה-ימינה) */
+        overflow-y: visible;  /* לא חותך אנכית */
+
+        -webkit-overflow-scrolling: touch;  /* גלילה חלקה באייפון */
+        scrollbar-width: none;  /* מסתיר את סרגל הגלילה בפיירפוקס */
+        -ms-overflow-style: none;  /* מסתיר סרגל גלילה ב-IE */
+    }
     
     #category-filter-nav::-webkit-scrollbar {
         display: none;

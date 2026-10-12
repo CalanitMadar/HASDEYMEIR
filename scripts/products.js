@@ -3,48 +3,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const nav = document.getElementById('main-nav');
 
     if (hamburger && nav) {
-        console.log('✅ מצאתי את ההמבורגר והניווט');
-
-        // אתחול - ודא שהתפריט סגור בהתחלה
-        nav.style.maxHeight = '0';
-        nav.style.overflow = 'hidden';
-        nav.style.transition = 'max-height 0.4s ease-in-out';
+        // כל העיצוב (מוסתר/פתוח) נמצא ב-CSS. כאן רק מחליפים את המחלקה "open".
+        function setMenu(open) {
+            hamburger.classList.toggle('open', open);
+            nav.classList.toggle('open', open);
+            hamburger.setAttribute('aria-expanded', String(open));
+        }
 
         hamburger.addEventListener('click', (e) => {
             e.preventDefault();
-            e.stopPropagation();
-
-            const isOpen = hamburger.classList.contains('open');
-
-            if (isOpen) {
-                // סגירה
-                hamburger.classList.remove('open');
-                nav.classList.remove('open');
-                nav.style.maxHeight = '0';
-                nav.style.padding = '0';
-                console.log('🔴 סוגר תפריט');
-            } else {
-                // פתיחה - כופים את הסגנון ישירות!
-                hamburger.classList.add('open');
-                nav.classList.add('open');
-                nav.style.maxHeight = '500px'; // גבוה מספיק
-                nav.style.padding = '15px 0';
-                nav.style.borderTop = '2px solid #00509e';
-                console.log('🟢 פותח תפריט');
-                console.log('גובה התפריט אחרי:', nav.style.maxHeight);
-            }
+            setMenu(!nav.classList.contains('open'));
         });
 
         // סגירה בלחיצה על קישור
-        const navLinks = nav.querySelectorAll('a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('open');
-                nav.classList.remove('open');
-                nav.style.maxHeight = '0';
-                nav.style.padding = '0';
-                console.log('🔗 נלחץ קישור - סוגר תפריט');
-            });
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => setMenu(false));
+        });
+
+        // מעבר לדסקטופ (מעל 768px) - סוגר את מצב ה"פתוח" של המובייל
+        window.matchMedia('(min-width: 769px)').addEventListener('change', (e) => {
+            if (e.matches) setMenu(false);
         });
     } else {
         console.error('❌ לא מצאתי:', {
