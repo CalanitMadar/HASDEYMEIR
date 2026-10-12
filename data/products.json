@@ -14,7 +14,7 @@
     { "id": 6, "name": "עיצוב שולחן", "category": "אירועים", "price": 15, "image": "../images/products/moznaim.jpg" },
     { "id": 7, "name": "שמלה לקטנטנות", "category": "אירועים", "price": 15, "image": "../images/products/dress_girl.jpg" },
     { "id": 8, "name": "טרבוש", "category": "חינה", "price": 3, "image": "../images/products/tarbush.jpg" },
-    { "id": 9, "name": "מפה צבע אפםור 180 ס״מ", "category": "אירועים", "price": 5, "image": "../images/products/map1.jpg" },
+    { "id": 9, "name": "מפה צבע אפור 180 ס״מ", "category": "אירועים", "price": 5, "image": "../images/products/map1.jpg" },
     { "id": 10, "name": "מפה צבע בז׳ 180 ס״מ", "category": "אירועים", "price": 5, "image": "../images/products/map2.jpg" },
     { "id": 11, "name": "מפה צבע לבן 180 ס״מ", "category": "אירועים", "price": 5, "image": "../images/products/map3.jpg" },
     { "id": 12, "name": "מפה צבע בז׳ (דוגמה אחרת)", "category": "אירועים", "price": 5, "image": "../images/products/map4.jpg" },

@@ -1,23 +1,21 @@
-// החליפי את חלק ההמבורגר ב-products.js (שורות 1-40) בזה:
-
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger-menu');
     const nav = document.getElementById('main-nav');
 
     if (hamburger && nav) {
         console.log('✅ מצאתי את ההמבורגר והניווט');
-        
+
         // אתחול - ודא שהתפריט סגור בהתחלה
         nav.style.maxHeight = '0';
         nav.style.overflow = 'hidden';
         nav.style.transition = 'max-height 0.4s ease-in-out';
-        
+
         hamburger.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
-            
+
             const isOpen = hamburger.classList.contains('open');
-            
+
             if (isOpen) {
                 // סגירה
                 hamburger.classList.remove('open');
@@ -36,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log('גובה התפריט אחרי:', nav.style.maxHeight);
             }
         });
-        
+
         // סגירה בלחיצה על קישור
         const navLinks = nav.querySelectorAll('a');
         navLinks.forEach(link => {
@@ -57,25 +55,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // ----------------------------------------------------
-    // שאר הקוד שלך (מוצרים וכו')
+    // מוצרים
     // ----------------------------------------------------
     const productsContainer = document.getElementById('products-container');
     const searchInput = document.getElementById('search-input');
     const categoryFilterNav = document.getElementById('category-filter-nav');
 
     const JSON_PATH = "../data/products.json";
-    const defaultImage = "../images/default.png"; 
+    const defaultImage = "../images/default.png";
 
     let allProducts = [];
 
+    // מחזיר מספר למיון: 8 -> 8, "8-10" -> 8
+    function getNumericPrice(price) {
+        if (typeof price === 'number') return price;
+        return parseFloat(price) || 0;
+    }
+
+    // מחזיר טקסט להצגה: 8 -> "8 ₪", "8-10" -> "8-10 ₪", 0 -> "ללא תשלום"
+    function formatPrice(price) {
+        if (typeof price === 'string' && price.trim() !== '') {
+            return `${price} ₪`;
+        }
+        return price > 0 ? `${price} ₪` : 'ללא תשלום';
+    }
+
     async function loadProducts() {
         try {
-            const response = await fetch(JSON_PATH); 
-            
+            const response = await fetch(JSON_PATH);
+
             if (!response.ok) {
                 throw new Error(`שגיאת HTTP: ${response.status}`);
             }
-            
+
             allProducts = await response.json();
             displayProducts(allProducts);
 
@@ -95,9 +107,9 @@ document.addEventListener('DOMContentLoaded', () => {
         productsToDisplay.sort((a, b) => {
             if (a.category < b.category) return -1;
             if (a.category > b.category) return 1;
-            return b.price - a.price;
+            return getNumericPrice(b.price) - getNumericPrice(a.price);
         });
-        
+
         let currentCategory = '';
         productsToDisplay.forEach(product => {
             if (product.category !== currentCategory) {
@@ -112,13 +124,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 categoryGroup.id = `group-${currentCategory.replace(/\s/g, '-')}`;
                 productsContainer.appendChild(categoryGroup);
             }
-            
+
             const categoryGroup = productsContainer.lastElementChild;
             const card = document.createElement('div');
             card.className = "product-card";
 
             const imageUrl = product.image && product.image.trim() !== '' ? product.image : defaultImage;
-            const priceText = product.price > 0 ? `${product.price} ₪` : 'ללא תשלום';
+            const priceText = formatPrice(product.price);
 
             card.innerHTML = `
                 <div class="product-image-wrapper"> 
@@ -155,10 +167,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (event.target.classList.contains('category-button')) {
             document.querySelectorAll('.category-button').forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
-            
+
             const category = event.target.dataset.category;
             searchInput.value = '';
-            
+
             if (category === 'כל המוצרים') {
                 displayProducts(allProducts);
             } else {
