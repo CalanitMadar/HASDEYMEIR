@@ -66,7 +66,7 @@
     { "id": 58, "name": "כיסא כלה  / חינה", "category": "אירועים", "price": 150, "image": "../images/products/כיסא חינה.jpeg" },
     { "id": 59, "name": "מפה צבע לבן 220 ס״מ", "category": "אירועים", "price": 8, "image": "../images/products/map3.jpg" },
     { "id": 60, "name": "מפה צבע לבן 300 ס״מ", "category": "אירועים", "price": 10, "image": "../images/products/map3.jpg" },
-    { "id": 61, "name": "קשת לפמוט", "category": "שונות", "price": 2, "image": "../images/products/קשת לפמוט.jpeg" },
+    { "id": 61, "name": "קשת לפמוט", "category": "אירועים", "price": 2, "image": "../images/products/קשת לפמוט.jpeg" },
     { "id": 62, "name": "מפה כחולה", "category": "שונות", "price": 8, "image": "../images/products/מפה כחולה.jpeg" },
     { "id": 63, "name": "כד עץ", "category": "שונות", "price": 8, "image": "../images/products/כד עץ.jpeg" },
     { "id": 64, "name": "מטרית בד סרטים", "category": "שונות", "price": 8, "image": "../images/products/מטרית סרט.jpeg" },
