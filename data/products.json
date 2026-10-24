@@ -73,5 +73,7 @@
     { "id": 65, "name": "ענף נצנצים", "category": "אירועים", "price": 2, "image": "../images/products/ענף נצנצים.jpeg" },
     { "id": 66, "name": "מפית בד", "category": "אירועים", "price": 1, "image": "../images/products/מפית בד.jpeg" },
     { "id": 67, "name": "נעליים לחינה", "category": "חינה", "price": 5, "image": "../images/products/נעליים לחינה.jpeg" },
-    { "id": 68, "name": "nek nxhcv", "category": "אירועים", "price": 1, "image": "../images/products/מקל מסיבה.jpeg" }
+    { "id": 68, "name": "מקל מסיבה", "category": "אירועים", "price": 1, "image": "../images/products/מקל מסיבה.jpeg" },
+    { "id": 69, "name": "מפית סאטן לבן", "category": "אירועים", "price": 1, "image": "../images/products/smallMap.jpeg" }
+
    ]
