@@ -4,331 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>יצירת קשר - גמ"ח אירועים</title>
-    
-    <style>
-        /* ------------------------------------------- */
-        /* CSS גלובלי ושל Header/Footer - כחול וזהב */
-        /* ------------------------------------------- */
-        body {
-            font-family: Arial, sans-serif;
-            background: #f0f8ff; /* רקע בהיר המתאים לכחול */
-            margin: 0;
-            padding: 0;
-            direction: rtl;
-            color: #333;
-        }
-        
-        header, footer {
-            background: #c0daf5; /* כחול כהה */
-            color: #FFFFFF;
-            text-align: center;
-            padding: 1rem;
-        }
-        
-        header {
-            display: flex;
-            justify-content: space-between; /* מרווח שווה בין האלמנטים */
-            align-items: center;
-            padding: 1rem 2rem;
-            flex-wrap: wrap; 
-            position: sticky;  /* הפך להדר דביק */
-            top: 0;    
-            z-index: 1000;
-        }
-
-        /* לוגו - הגדרת גודל בסיס רספונסיבי */
-        #responsive-logo {
-            max-width: 120px;
-            height: auto;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-
-        #responsive-logo:hover {
-            transform: scale(1.05);
-        }
-
-        /* ניווט - קישורים וצבעי זהב */
-        nav {
-            display: flex;
-            gap: 25px;
-        }
-
-        nav a {
-            color: #3b392c; /* צבע טקסט זהב */
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
-            padding: 5px 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease;
-            display: inline-block;
-        }
-
-        nav a:hover {
-            color: #FFFFFF; /* טקסט לבן במעבר עכבר */
-            background-color: #00509e; /* כחול ביניים ברקע */
-            transform: scale(1.1);
-        }
-
-        /* סרגל חיפוש - מיקום רספונסיבי ונקי */
-        .search-bar {
-            display: flex;
-            position: relative;
-            width: 250px;
-        }
-
-        .search-bar input {
-            padding: 8px 15px;
-            padding-left: 45px; /* מרווח משמאל לאייקון */
-            width: 100%;
-            border: 1px solid #00509e;
-            border-radius: 20px;
-            font-size: 14px;
-            direction: rtl;
-            box-sizing: border-box;
-        }
-
-        #search-button {
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            background: none;
-            border: none;
-            padding: 8px 10px;
-            cursor: pointer;
-            z-index: 10;
-            transition: transform 0.2s ease;
-        }
-
-        #search-button:hover {
-            background: none;
-            transform: translateY(-50%) scale(1.1);
-        }
-
-        #search-icon {
-            width: 20px;
-            height: 20px;
-            display: block;
-        }
-
-        footer a {
-            color: #FFD700;
-            text-decoration: none;
-            font-weight: bold;
-            transition: transform 0.3s ease-in-out;
-            display: inline-block;
-        }
-
-        footer a:hover {
-            color: #FFFFFF;
-            transform: scale(1.05);
-        }
-
-        /* ------------------------------------------- */
-        /* CSS ספציפי לדף יצירת קשר (Contact Page) */
-        /* ------------------------------------------- */
-        .contact-section {
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 30px;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        .contact-section h2, .contact-section h3 {
-            color: #00509e;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .contact-details {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .contact-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-            border-radius: 12px;
-            background: #f0f8ff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            flex-basis: 30%;
-            min-width: 200px;
-            margin: 10px;
-            box-sizing: border-box;
-            border: 1px solid #c0daf5;
-        }
-
-        .contact-item a {
-            color: #00509e;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .contact-item .contact-note {
-            color: #00509e;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        .contact-icon {
-            width: 40px;
-            height: 40px;
-            margin-bottom: 10px;
-        }
-
-        .contact-form {
-            display: grid;
-            gap: 15px;
-        }
-
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #c0daf5;
-            border-radius: 8px;
-            font-family: inherit;
-            font-size: 16px;
-            box-sizing: border-box;
-            transition: border-color 0.3s;
-        }
-
-        .contact-form input:focus,
-        .contact-form textarea:focus {
-            border-color: #00509e;
-            outline: none;
-        }
-
-        .contact-form button {
-            background: #FFD700;
-            color: #003366;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        .contact-form button:hover {
-            background: #00509e;
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        .map-container {
-            overflow: hidden;
-            padding-bottom: 56.25%; 
-            position: relative;
-            height: 0;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            margin-top: 30px;
-        }
-
-        .map-container iframe {
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            border: 0;
-        }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                padding: 1rem;
-            }
-
-            .logo {
-                order: 1;
-                margin-bottom: 15px;
-            }
-
-            nav {
-                order: 2;
-                margin-bottom: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .search-bar {
-                order: 3;
-                width: 100%;
-                margin: 0;
-                padding: 0 20px;
-            }
-
-            .search-bar input {
-                width: 100%;
-            }
-
-            #responsive-logo {
-                max-width: 100px;
-            }
-            
-            .contact-details {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            
-            .contact-item {
-                flex-basis: 100%;
-                margin: 10px 0;
-            }
-        }
-    </style>
+    <meta name="description" content="יצירת קשר עם גמ״ח חסדי מאיר - כתובת, טלפון, שעות פעילות ומפת הגעה. מצליח מזוז 8, באר שבע.">
+    <meta name="theme-color" content="#142e6e">
+    <link rel="icon" href="../images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700&family=Heebo:wght@400;500;700;800&display=swap">
+    <link rel="stylesheet" href="../CSS/style.css">
 </head>
-<body>
+<body data-page="contact">
 
-    
+    <script src="../scripts/layout.js"></script>
 
-    <main class="contact-section">
-        <h2>נשמח לשמוע מכם!</h2>
-        <p style="text-align: center; color: #555;">לכל שאלה, בקשה או תיאום איסוף ציוד, אתם מוזמנים ליצור איתנו קשר.</p>
+    <section class="page-hero">
+        <span class="eyebrow">יצירת קשר</span>
+        <h1>נשמח לשמוע מכם!</h1>
+        <p>לכל שאלה, בקשה או תיאום איסוף ציוד, אתם מוזמנים ליצור איתנו קשר.</p>
+    </section>
+
+    <main class="contact-section" id="main-content">
 
         <div class="contact-details">
             <div class="contact-item">
-                <img src="../images/icons/location.png" alt="מיקום" class="contact-icon"> 
+                <img src="../images/icons/location.png" alt="" class="contact-icon">
                 <h3>כתובת</h3>
                 <p>מצליח מזוז 8, באר שבע</p>
-                <p class="contact-note">***שימו לב <br/> ניתן לקחת את האביזרים בתאום מראש בלבד***</p>
+                <p class="contact-note">שימו לב: ניתן לקחת את האביזרים בתיאום מראש בלבד</p>
             </div>
             <div class="contact-item">
-                <img src="../images/icons/phone.png" alt="טלפון" class="contact-icon"> 
+                <img src="../images/icons/phone.png" alt="" class="contact-icon">
                 <h3>טלפון</h3>
                 <p><a href="tel:0556856292">055-685-6292</a></p>
-                <h3>בניסטי מרים</h3>
+                <p class="contact-name">בניסטי מרים</p>
             </div>
             <div class="contact-item">
-                <img src="../images/icons/email.png" alt="דואל" class="contact-icon"> 
+                <img src="../images/icons/email.png" alt="" class="contact-icon">
                 <h3>דוא"ל</h3>
                 <p><a href="mailto:Kerenb46@gmail.com">Kerenb46@gmail.com</a></p>
             </div>
         </div>
-        
-        <hr>
-
-        <h3>שעות פעילות</h3>
-        <div class="hours-of-operation" style="text-align: center;">
-            <p>ימים א'-ה' בוקר: 10:00 - 12:00</p>
-            <p>ימים א'-ה' ערב: 16:00 - 19:00</p>
-            <p>בתיאום מראש</p>
-            <p>שבת: סגור</p>
-        </div>
-
-        <hr>
 
         <!-- <h2>שלחו לנו הודעה</h2>
         <form class="contact-form" action="#" method="post">
@@ -339,19 +53,26 @@
             <button type="submit">שלח</button>
         </form> -->
 
-        <h2>מיקום על המפה</h2>
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.248316132223!2d34.7820463!3d31.2582736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502422c5e533c39%3A0x8e8b8b8b8b8b8b8b!2z15jXktek16Qg16bXqdeRIDEwLCDXktek16Qg15jXktek16Q!5e0!3m2!1siw!2sil!4v1627916500000!5m2!1siw!2sil" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="contact-panels">
+            <div class="card hours-card">
+                <h2>🕒 שעות פעילות</h2>
+                <ul class="hours-of-operation">
+                    <li><span>ימים א'-ה' בוקר</span><span>10:00 - 12:00</span></li>
+                    <li><span>ימים א'-ה' ערב</span><span>16:00 - 19:00</span></li>
+                    <li><span>שבת</span><span class="closed">סגור</span></li>
+                </ul>
+                <p class="hours-note">בתיאום מראש</p>
+            </div>
+
+            <div class="card map-card">
+                <h2>📍 מיקום על המפה</h2>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3391.248316132223!2d34.7820463!3d31.2582736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1502422c5e533c39%3A0x8e8b8b8b8b8b8b8b!2z15jXktek16Qg16bXqdeRIDEwLCDXktek16Qg15jXktek16Q!5e0!3m2!1siw!2sil!4v1627916500000!5m2!1siw!2sil" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="מפת הגעה לגמ״ח חסדי מאיר"></iframe>
+                </div>
+            </div>
         </div>
 
     </main>
-
-    <footer>
-        <p>
-            © כל הזכויות שמורות. <a href="https://www.calanitwebcode.com/" target="_blank">האתר אופיין, עוצב ונבנה על ידי כלנית מדר</a>
-            <br>📍 כתובת: מצליח מזוז 8, באר שבע | ☎️ 055-685-6292
-        </p>
-    </footer>
 
 </body>
 </html>

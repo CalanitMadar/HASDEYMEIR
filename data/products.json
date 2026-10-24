@@ -45,7 +45,7 @@
     { "id": 37, "name": "סלסלה גדולה / מפוארת", "category": "אירועים", "price": 10, "image": "../images/products/סלסלאות.jpg" },
     { "id": 38, "name": "אגרטל", "category": "אירועים", "price": 4, "image": "../images/products/אגרטל.jpg" },
     { "id": 39, "name": "דלי קרח", "category": "אירועים", "price": 4, "image": "../images/products/דלי-קרח.jpg" },
-    { "id": 40, "name": "מבחר מפות", "category": "אירועים", "price": "5-10", "image": "../images/products/מבחר מפות.jpg" },
+    { "id": 40, "name": "מבחר מפות", "category": "אירועים", "price": "10", "image": "../images/products/מבחר מפות.jpg" },
     { "id": 41, "name": "סלסלה לעיצוב שולחן", "category": "אירועים", "price": 5, "image": "../images/products/סלסלה לעיצוב שולחן.jpg" },
     { "id": 42, "name": " גמח איפור ", "category": "איפור", "price": 100, "image": "../images/products/כלה נערה בת מצווה.jpeg" },
     { "id": 43, "name": "סט עטיפת ספרים (חופשת הקיץ)", "category": "עטיפת ספרים", "price": 5, "image": "../images/products/default.png" },

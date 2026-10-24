@@ -2,215 +2,50 @@
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>אודות - חסדי מאיר</title>
+    <meta name="description" content="הסיפור של גמ״ח חסדי מאיר - גמ״ח ציוד לאירועים שהוקם לעילוי נשמת מאיר בן חסיבה ז״ל.">
+    <meta name="theme-color" content="#142e6e">
+    <link rel="icon" href="../images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700&family=Heebo:wght@400;500;700;800&display=swap">
     <link rel="stylesheet" href="../CSS/style.css">
-    
-    <style>
-        /* ------------------------------------------- */
-        /* CSS ספציפי לדף אודות (About Page) */
-        /* ------------------------------------------- */
-
-        /* קונטיינר מרכזי */
-        .about-section {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 40px; /* הגדלתי מעט את הריווח בדסקטופ */
-            background: #fff;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .about-section h2 {
-            color: #003366;
-            text-align: center;
-            margin-bottom: 25px;
-            font-size: 2.5em; /* הגדלתי מעט */
-            border-bottom: 3px solid #FFD700;
-            padding-bottom: 10px;
-            display: inline-block;
-            width: auto;
-        }
-
-        /* פסקה פותחת מודגשת */
-        .intro-paragraph {
-            text-align: center;
-            font-size: 1.25em; /* הדגשתי מעט */
-            color: #00509e;
-            margin-bottom: 40px;
-            font-weight: bold;
-            padding: 0 10px; /* הוספת ריווח קטן בצדדים למניעת הדבקות */
-        }
-
-        /* מבנה הסיפור */
-        .story-container {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-            line-height: 1.8;
-            color: #444;
-            width: 100%;
-            padding: 0 10px;
-        }
-
-        .story-point {
-            background: #f0f8ff;
-            padding: 20px;
-            border-radius: 10px;
-            border-right: 5px solid #00509e;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
-
-        .story-point h3 {
-            color: #00509e; /* שינוי: כותרת כחולה עם קו זהב */
-            font-size: 1.4em;
-            margin-top: 0;
-            border-bottom: 2px solid #FFD700;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-        }
-
-        /* הדגשת נשמה ומטרה */
-        .leiluy-nishmat {
-            text-align: center;
-            margin-top: 40px;
-            padding: 25px;
-            border: 2px dashed #00509e;
-            border-radius: 10px;
-            background: #e6f7ff;
-            width: 100%;
-            box-sizing: border-box; /* חשוב לשמירה על הרוחב */
-        }
-
-        .leiluy-nishmat strong {
-            color: #003366;
-            font-size: 1.3em;
-            display: block;
-            margin-top: 10px;
-        }
-        
-        /* עיצוב כפתור החזרה */
-        .back-to-home {
-            display: block;
-            width: 220px; /* הגדלתי מעט */
-            text-align: center;
-            margin: 40px auto 10px auto; 
-            background-color: #FFD700; 
-            color: #003366;
-            padding: 15px 30px; /* הגדלתי את הריווח הפנימי */
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-            box-shadow: 0 3px 5px rgba(0, 51, 102, 0.2); /* הוספתי צל קטן */
-        }
-
-        .back-to-home:hover {
-            background-color: #00509e;
-            color: #FFFFFF;
-            transform: scale(1.05);
-        }
-
-        /* ------------------------------------------- */
-        /* רספונסיביות לטאבלט (עד 900px) */
-        /* ------------------------------------------- */
-        @media (max-width: 900px) {
-            .about-section {
-                max-width: 95%; /* שימוש ברוחב יחסי במקום קבוע */
-                padding: 30px 20px;
-                margin: 20px auto;
-            }
-            
-            .about-section h2 {
-                font-size: 2.2em;
-            }
-        }
-
-        /* ------------------------------------------- */
-        /* רספונסיביות למובייל (עד 600px) */
-        /* ------------------------------------------- */
-        @media (max-width: 600px) {
-            .about-section {
-                padding: 20px 10px; /* צמצום ריווח פנימי במובייל */
-                margin: 15px auto;
-            }
-            
-            .about-section h2 {
-                font-size: 1.8em;
-                width: 90%; /* הכותרת תתפוס יותר רוחב */
-            }
-            
-            .intro-paragraph {
-                font-size: 1.1em;
-                margin-bottom: 30px;
-            }
-
-            .story-container {
-                gap: 15px; /* צמצום ריווח בין הסיפורים */
-                padding: 0;
-            }
-            
-            .story-point {
-                padding: 15px; /* צמצום ריווח פנימי בבלוק הסיפור */
-            }
-            
-            .story-point h3 {
-                font-size: 1.3em;
-            }
-            
-            .leiluy-nishmat {
-                padding: 20px 10px;
-                margin-top: 30px;
-            }
-            
-            .leiluy-nishmat p, .leiluy-nishmat strong {
-                font-size: 1em;
-            }
-
-            .back-to-home {
-                width: 90%; 
-                padding: 12px 20px;
-                font-size: 1em;
-                margin-top: 30px;
-            }
-        }
-    </style>
 </head>
-<body>
+<body data-page="about">
 
-    <div data-include-html="../components/header.html"></div> 
+    <script src="../scripts/layout.js"></script>
 
-    <main class="about-section">
-        <a href="../index.html" class="back-to-home">חזרה לדף הבית</a>
-        <h2>אודות גמ"ח חסדי מאיר - לזכרו של מאיר ז"ל</h2>
-        
+    <section class="page-hero">
+        <span class="eyebrow">הסיפור שלנו</span>
+        <h1>אודות גמ"ח חסדי מאיר</h1>
+        <p>לזכרו של מאיר ז"ל – חסד שממשיך להתגלגל</p>
+    </section>
+
+    <main class="about-section" id="main-content">
         <p class="intro-paragraph">
-            ברוכים הבאים לגמ"ח "חסדי מאיר", שהוקם מתוך שליחות ורצון להאיר את העולם בחסד, ולהנציח את נשמתו הטהורה של אהובנו **מאיר בן חסיבה ז"ל**. 🕊️
+            ברוכים הבאים לגמ"ח "חסדי מאיר", שהוקם מתוך שליחות ורצון להאיר את העולם בחסד, ולהנציח את נשמתו הטהורה של אהובנו <strong>מאיר בן חסיבה ז"ל</strong>. 🕊️
         </p>
 
         <div class="story-container">
-            <div class="story-point">
+            <div class="story-point" data-icon="🕯️">
                 <h3>המייסד וההשראה</h3>
                 <p>
                     גמ"ח זה אינו רק מחסן ציוד, אלא פרויקט חי של חסד, שהחל כשנה לפני פטירתו של מאיר ז"ל.
                     משפחתו וחבריו מבקשים להמשיך את דרכו הטובה, דרך שהיא כולה נתינה לעם ישראל.
-                    רצוננו להיות שם עבורכם בשמחות ורגעים מיוחדים בחיים.                
+                    רצוננו להיות שם עבורכם בשמחות ורגעים מיוחדים בחיים.
                 </p>
             </div>
-            
-            <div class="story-point">
+
+            <div class="story-point" data-icon="🎉">
                 <h3>החזון שלנו: אירועים לכל כיס</h3>
                 <p>
                     החזון של גמ"ח "חסדי מאיר" הוא לסייע בעיצוב וחגיגת אירועים משמחים, מברית ועד חתונה, מבלי לשאת בהוצאות גדולות.
-                    אנו מאמינים בחסד להקל על האחר. לשם כך אנו מעמידים לרשות הקהילה מגוון רחב של מוצרי אירועים איכותיים.                
+                    אנו מאמינים בחסד להקל על האחר. לשם כך אנו מעמידים לרשות הקהילה מגוון רחב של מוצרי אירועים איכותיים.
                 </p>
             </div>
-            
-            <div class="story-point">
+
+            <div class="story-point" data-icon="🤝">
                 <h3>שיטת הפעולה: השאלה בסכום סמלי</h3>
                 <p>
                     כדי להבטיח את המשך פעילות הגמ"ח ואת תחזוקת הציוד ברמה גבוהה, המשאיל תורם סכום סמלי עבור ההשאלה.
@@ -221,46 +56,18 @@
         </div>
 
         <div class="leiluy-nishmat">
-            "וְצֶדֶק לְעוֹלָם תִּזְכֹּר" (תהילים קיב:ו)
+            <div class="verse">"וְצֶדֶק לְעוֹלָם תִּזְכֹּר" (תהילים קיב:ו)</div>
             <p>
-                כל אירוע שנערך, כל חיוך וכל רגע של שמחה שמתאפשר בזכות הציוד שלנו, נזקף **לעילוי נשמת מאיר בן חסיבה ז"ל**. הנתינה שלכם היא ההמשך של חייו. תודה שאתם שותפים לחסד הגדול הזה.
+                כל אירוע שנערך, כל חיוך וכל רגע של שמחה שמתאפשר בזכות הציוד שלנו, נזקף <strong>לעילוי נשמת מאיר בן חסיבה ז"ל</strong>. הנתינה שלכם היא ההמשך של חייו. תודה שאתם שותפים לחסד הגדול הזה.
             </p>
             <strong>
                 בזכותכם, החסד ממשיך להתגלגל. 🙏
             </strong>
         </div>
-        
-        <a href="../index.html" class="back-to-home">חזרה לדף הבית</a>
+
+        <a href="../index.html" class="back-to-home btn btn-primary">חזרה לדף הבית</a>
 
     </main>
 
-    <div data-include-html="../components/footer.html"></div>
-    
-    <script>
-        function includeHTML() {
-            var z, i, elmnt, file, xhttp;
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                file = elmnt.getAttribute("data-include-html");
-                if (file) {
-                    xhttp = new XMLHttpRequest();
-                    xhttp.onreadystatechange = function() {
-                        if (this.readyState == 4) {
-                            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                            elmnt.removeAttribute("data-include-html");
-                            includeHTML();
-                        }
-                    }
-                    xhttp.open("GET", file, true);
-                    xhttp.send();
-                    return;
-                }
-            }
-        };
-        includeHTML();
-    </script>
-    
 </body>
 </html>

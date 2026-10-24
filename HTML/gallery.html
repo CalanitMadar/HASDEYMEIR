@@ -5,204 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>גלריית מוצרים | חסדי מאיר</title>
     
-    <style>
-        /* ---------------------------------------------------- */
-        /* סגנון כללי */
-        /* ---------------------------------------------------- */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f8ff; /* כחול בהיר */
-            color: #333;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            direction: rtl;
-            min-height: 100vh;
-        }
-
-        /* עטיפה ראשית - מרכוז דף "בבנייה" - מוסתר במצב זה */
-        .page-center-wrapper {
-            display: none; /* הוסתר כברירת מחדל */
-            /* אם תרצה להחזיר:
-            display: flex; 
-            justify-content: center;
-            align-items: center;
-            padding: 50px 20px 0;
-            min-height: 50vh;
-            */
-        }
-
-        /* מכולה ראשית (הבלוק הלבן) */
-        .container {
-            background: #ffffff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 80, 158, 0.2); 
-            max-width: 600px;
-            width: 90%;
-            border-top: 8px solid #00509e; 
-        }
-
-        /* כותרת */
-        h1 {
-            color: #00509e; 
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            animation: pulse 1.5s infinite alternate; 
-        }
-
-        /* טקסט */
-        p {
-            font-size: 1.1em;
-            color: #666;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-
-        .icon {
-            font-size: 4em;
-            color: #c0daf5; 
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        /* קישור לדף הבית */
-        .admin-link {
-            display: inline-block;
-            margin-top: 15px;
-            color: #ffffff;
-            background-color: #00509e;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-            font-weight: bold;
-        }
-
-        .admin-link:hover {
-            background-color: #003366;
-        }
-        
-        /* ---------------------------------------------------- */
-        /* עיצוב גלריית המוצרים (החלק הדינמי) */
-        /* ---------------------------------------------------- */
-
-        .gallery-section {
-            padding-top: 40px; /* מרווח עליון כאשר ה-"בנייה" מוסתר */
-        }
-        
-        .gallery-header {
-            max-width: 900px;
-            margin: 0px auto 30px; /* הוסר המרווח העליון שהיה מיותר */
-            padding: 0 20px;
-        }
-
-        .gallery-header h2 {
-            /* השתמשתי בצבעים מהעיצוב הקודם שלך כדי ליצור מראה ייחודי */
-            color: #4A148C; /* סגול כהה - מה-CSS הקודם שלך */
-            font-size: 2.5em;
-            border-bottom: 3px solid #CC0000; /* אדום - מה-CSS הקודם שלך */
-            display: inline-block;
-            padding-bottom: 5px;
-            font-weight: 900;
-        }
-        
-        .product-gallery {
-            display: grid;
-            /* גריד רספונסיבי: 2-3 עמודות */
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
-            gap: 20px;
-            max-width: 1100px;
-            margin: 0 auto 50px;
-            padding: 0 20px;
-        }
-
-        .gallery-item {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-            border-bottom: 5px solid #c0daf5;
-            text-align: right; 
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 0 0 5px #FF6F00; /* הבלטת הכרטיס עם צבע ה-pulse */
-            border-bottom-color: #4A148C;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 200px; 
-            object-fit: cover; 
-            display: block;
-        }
-        
-        .item-info {
-            padding: 15px 10px;
-        }
-
-        .item-info h3 {
-            margin: 0 0 5px 0;
-            color: #00509e;
-            font-size: 1.15em;
-        }
-        
-        .item-info p {
-             /* הסתרת הפסקאות המיותרות כמו קטגוריה ומחיר */
-            display: none; 
-        }
-        
-        /* סגנון לטקסט המידע הנוסף שהוספתי */
-        .info-panel {
-            max-width: 900px;
-            margin: 0 auto 30px;
-            padding: 20px;
-            background-color: #fff3e0; /* רקע עדין */
-            border-right: 5px solid #FF6F00;
-            border-radius: 0 8px 8px 0;
-            text-align: right;
-            line-height: 1.8;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        
-        .info-panel h3 {
-            color: #4A148C; 
-            margin-top: 0;
-        }
-        
-        .info-panel p {
-            margin: 0;
-            font-size: 1em;
-            color: #666;
-        }
-
-
-        /* אנימציה */
-        @keyframes pulse {
-            from { transform: scale(1); }
-            to { transform: scale(1.05); }
-        }
-        
-        /* רספונסיביות */
-        @media (max-width: 600px) {
-            h1 { font-size: 2em; }
-            .product-gallery {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            }
-            .gallery-item img {
-                height: 150px;
-            }
-            .gallery-header h2 {
-                 font-size: 2em;
-            }
-        }
-    </style>
+    <meta name="description" content="גלריית תמונות מאירועים עם הציוד של גמ״ח חסדי מאיר.">
+    <meta name="theme-color" content="#142e6e">
+    <link rel="icon" href="../images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700&family=Heebo:wght@400;500;700;800&display=swap">
+    <link rel="stylesheet" href="../CSS/style.css">
 </head>
-<body>
+<body data-page="gallery">
+
+    <script src="../scripts/layout.js"></script>
 
     <div class="page-center-wrapper"> 
         <div class="container">
@@ -219,20 +32,27 @@
         </div>
     </div>
     
-    <section class="gallery-section">
-        <div class="gallery-header">
-            <h2>📷 רגעים נבחרים מאירועי החסד שלנו 📷</h2>
-        </div>
+    <section class="page-hero">
+        <span class="eyebrow">גלריה</span>
+        <h1>רגעים נבחרים מאירועי החסד שלנו</h1>
+        <p>הצצה לציוד של "חסדי מאיר" בפעולה – באירועים, בחינות ובשמחות של הקהילה.</p>
+    </section>
 
+    <main class="gallery-section" id="main-content">
         <div class="info-panel">
             <h3>🤝 כך נראה הציוד של "חסדי מאיר" בפעולה!</h3>
-            <p>התמונות המרגשות הללו הן רק הצצה קטנה לציוד המושכר ולפריטים הנתרמים, כפי שצולמו באירועים קודמים. ....</p>
-            <p><strong>לשאלות בנוגע לפריטים ספציפיים, אנא צרו קשר ישירות במספר המופיע באתר.</strong></p>
+            <p>התמונות המרגשות הללו הן רק הצצה קטנה לציוד המושכר ולפריטים הנתרמים, כפי שצולמו באירועים קודמים.</p>
+            <p><strong>לשאלות בנוגע לפריטים ספציפיים, אנא <a href="contact.html">צרו קשר</a> ישירות במספר המופיע באתר.</strong></p>
         </div>
 
         <div class="product-gallery" id="gallery-products-container">
             </div>
-    </section>
+    </main>
+
+    <dialog class="lightbox" id="gallery-lightbox" aria-label="תצוגה מוגדלת">
+        <button type="button" class="lightbox-close" aria-label="סגירה">&times;</button>
+        <img alt="">
+    </dialog>
     
     <script>
         const productsData = [
@@ -279,7 +99,7 @@
                 const imageUrl = product.image && product.image.trim() !== '' ? product.image : defaultImage;
 
                 card.innerHTML = `
-                    <img src="${imageUrl}" alt="${product.name}" onerror="this.onerror=null; this.src='${defaultImage}'">
+                    <img src="${imageUrl}" alt="${product.name}" loading="lazy" onerror="this.onerror=null; this.src='${defaultImage}'">
                     <div class="item-info">
                         <h3>${product.name}</h3>
                         </div>
@@ -290,6 +110,49 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             displayProducts(productsData); 
+        });
+
+        // ----------------------------------------------------
+        // תצוגה מוגדלת של תמונה בלחיצה (Lightbox)
+        // ----------------------------------------------------
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('gallery-products-container');
+            const lightbox = document.getElementById('gallery-lightbox');
+            if (!container || !lightbox || typeof lightbox.showModal !== 'function') return;
+
+            const lightboxImg = lightbox.querySelector('img');
+
+            container.querySelectorAll('.gallery-item').forEach(item => {
+                item.tabIndex = 0;
+                item.setAttribute('role', 'button');
+                item.setAttribute('aria-label', 'הגדלת ' + item.querySelector('img').alt);
+            });
+
+            function openItem(item) {
+                const img = item.querySelector('img');
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.showModal();
+            }
+
+            container.addEventListener('click', (e) => {
+                const item = e.target.closest('.gallery-item');
+                if (item) openItem(item);
+            });
+
+            container.addEventListener('keydown', (e) => {
+                const item = e.target.closest('.gallery-item');
+                if (item && (e.key === 'Enter' || e.key === ' ')) {
+                    e.preventDefault();
+                    openItem(item);
+                }
+            });
+
+            lightbox.querySelector('.lightbox-close').addEventListener('click', () => lightbox.close());
+            // לחיצה מחוץ לתמונה סוגרת
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) lightbox.close();
+            });
         });
     </script> 
 </body>

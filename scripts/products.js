@@ -1,36 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.getElementById('hamburger-menu');
-    const nav = document.getElementById('main-nav');
-
-    if (hamburger && nav) {
-        // כל העיצוב (מוסתר/פתוח) נמצא ב-CSS. כאן רק מחליפים את המחלקה "open".
-        function setMenu(open) {
-            hamburger.classList.toggle('open', open);
-            nav.classList.toggle('open', open);
-            hamburger.setAttribute('aria-expanded', String(open));
-        }
-
-        hamburger.addEventListener('click', (e) => {
-            e.preventDefault();
-            setMenu(!nav.classList.contains('open'));
-        });
-
-        // סגירה בלחיצה על קישור
-        nav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => setMenu(false));
-        });
-
-        // מעבר לדסקטופ (מעל 768px) - סוגר את מצב ה"פתוח" של המובייל
-        window.matchMedia('(min-width: 769px)').addEventListener('change', (e) => {
-            if (e.matches) setMenu(false);
-        });
-    } else {
-        console.error('❌ לא מצאתי:', {
-            hamburger: !!hamburger,
-            nav: !!nav
-        });
-    }
-
+    // תפריט ההמבורגר מנוהל ב-scripts/layout.js (Header משותף)
 
     // ----------------------------------------------------
     // מוצרים
@@ -112,11 +81,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             card.innerHTML = `
                 <div class="product-image-wrapper"> 
-                    <img src="${imageUrl}" alt="${product.name}">
+                    <img src="${imageUrl}" alt="${product.name}" loading="lazy">
                 </div>
-                <h4>${product.name}</h4>
-                <p class="product-category-name">קטגוריה: ${product.category}</p>
-                <p class="product-price">מחיר: ${priceText}</p> 
+                <div class="product-body">
+                    <p class="product-category-name">${product.category}</p>
+                    <h4>${product.name}</h4>
+                    <p class="product-price"><span class="price-label">מחיר השאלה</span> <strong>${priceText}</strong></p>
+                    <a class="btn btn-primary product-cta" href="HTML/contact.html">לתיאום השאלה</a>
+                </div>
             `;
             categoryGroup.appendChild(card);
         });
