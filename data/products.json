@@ -1,6 +1,6 @@
 [
     { "id": 1, "name": "סלסלת צדפה", "category": "אירועים", "price": 30, "image": "../images/products/tzdafa.jpg" },
-    { "id": 2, "name": "מטריה", "category": "שונות", "price": 5, "image": "../images/products/umbrella.jpg" },
+    { "id": 2, "name": "מטריה", "category": "אירועים", "price": 5, "image": "../images/products/umbrella.jpg" },
     { "id": 3, "name": "שמלת ערב", "category": "אירועים", "price": 30, "image": "../images/products/dress1.jpg" },
     {
         "id": 4,
@@ -49,7 +49,7 @@
     { "id": 41, "name": "סלסלה לעיצוב שולחן", "category": "אירועים", "price": 5, "image": "../images/products/סלסלה לעיצוב שולחן.jpg" },
     { "id": 42, "name": " גמח איפור ", "category": "איפור", "price": 100, "image": "../images/products/כלה נערה בת מצווה.jpeg" },
     { "id": 43, "name": "סט עטיפת ספרים (חופשת הקיץ)", "category": "עטיפת ספרים", "price": 5, "image": "../images/products/default.png" },
-    { "id": 44, "name": "מצנח צבעוני", "category": "שונות", "price": 5, "image": "../images/products/מצנח צבעוני.jpeg" },
+    { "id": 44, "name": "מצנח צבעוני", "category": "אירועים", "price": 5, "image": "../images/products/מצנח צבעוני.jpeg" },
     { "id": 45, "name": "אגרטל מעוצב", "category": "אירועים", "price": 2, "image": "../images/products/אגרטל.jpeg" },
     { "id": 46, "name": "כרית לעיצוב חינה", "category": "חינה", "price": 5, "image": "../images/products/כרית.jpeg" },
     { "id": 47, "name": "מגש חינה", "category": "חינה", "price": 5, "image": "../images/products/מגש חינה.jpeg" },
@@ -67,11 +67,11 @@
     { "id": 59, "name": "מפה צבע לבן 220 ס״מ", "category": "אירועים", "price": 8, "image": "../images/products/map3.jpg" },
     { "id": 60, "name": "מפה צבע לבן 300 ס״מ", "category": "אירועים", "price": 10, "image": "../images/products/map3.jpg" },
     { "id": 61, "name": "קשת לפמוט", "category": "אירועים", "price": 2, "image": "../images/products/קשת לפמוט.jpeg" },
-    { "id": 62, "name": "מפה כחולה", "category": "שונות", "price": 8, "image": "../images/products/מפה כחולה.jpeg" },
-    { "id": 63, "name": "כד עץ", "category": "שונות", "price": 8, "image": "../images/products/כד עץ.jpeg" },
-    { "id": 64, "name": "מטרית בד סרטים", "category": "שונות", "price": 8, "image": "../images/products/מטרית סרט.jpeg" },
-    { "id": 65, "name": "ענף נצנצים", "category": "שונות", "price": 2, "image": "../images/products/ענף נצנצים.jpeg" },
-    { "id": 66, "name": "מפית בד", "category": "שונות", "price": 1, "image": "../images/products/מפית בד.jpeg" },
+    { "id": 62, "name": "מפה כחולה", "category": "אירועים", "price": 8, "image": "../images/products/מפה כחולה.jpeg" },
+    { "id": 63, "name": "כד עץ", "category": "אירועים", "price": 8, "image": "../images/products/כד עץ.jpeg" },
+    { "id": 64, "name": "מטרית בד סרטים", "category": "אירועים", "price": 8, "image": "../images/products/מטרית סרט.jpeg" },
+    { "id": 65, "name": "ענף נצנצים", "category": "אירועים", "price": 2, "image": "../images/products/ענף נצנצים.jpeg" },
+    { "id": 66, "name": "מפית בד", "category": "אירועים", "price": 1, "image": "../images/products/מפית בד.jpeg" },
     { "id": 67, "name": "נעליים לחינה", "category": "חינה", "price": 5, "image": "../images/products/נעליים לחינה.jpeg" },
-    { "id": 68, "name": "nek nxhcv", "category": "שונות", "price": 1, "image": "../images/products/מקל מסיבה.jpeg" }
+    { "id": 68, "name": "nek nxhcv", "category": "אירועים", "price": 1, "image": "../images/products/מקל מסיבה.jpeg" }
    ]
