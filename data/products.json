@@ -60,28 +60,28 @@
     {
       "name": "מפה צבע אפור 180 ס״מ",
       "category": "אירועים",
-      "price": "5",
+      "price": "10",
       "image": "/images/products/map1.jpg",
       "hidden": false
     },
     {
       "name": "מפה צבע בז׳ 180 ס״מ",
       "category": "אירועים",
-      "price": "5",
+      "price": "10",
       "image": "/images/products/map2.jpg",
       "hidden": false
     },
     {
       "name": "מפה צבע לבן 180 ס״מ",
       "category": "אירועים",
-      "price": "5",
+      "price": "10",
       "image": "/images/products/map3.jpg",
       "hidden": false
     },
     {
       "name": "מפה צבע בז׳ (דוגמה אחרת)",
       "category": "אירועים",
-      "price": "5",
+      "price": "10",
       "image": "/images/products/map4.jpg",
       "hidden": false
     },
@@ -312,7 +312,7 @@
     {
       "name": "אגרטל מעוצב",
       "category": "אירועים",
-      "price": "2",
+      "price": "3",
       "image": "/images/products/אגרטל.jpeg",
       "hidden": false
     },
@@ -410,7 +410,7 @@
     {
       "name": "מפה צבע לבן 220 ס״מ",
       "category": "אירועים",
-      "price": "8",
+      "price": "10",
       "image": "/images/products/map3.jpg",
       "hidden": false
     },
@@ -431,7 +431,7 @@
     {
       "name": "מפה כחולה",
       "category": "אירועים",
-      "price": "8",
+      "price": "10",
       "image": "/images/products/מפה כחולה.jpeg",
       "hidden": false
     },
