@@ -1,0 +1,25 @@
+{
+  "redirects": [
+    { "source": "/admin", "destination": "/", "permanent": false },
+    { "source": "/admin/", "destination": "/", "permanent": false },
+    { "source": "/admin/index.html", "destination": "/", "permanent": false },
+    { "source": "/admin/admin.html", "destination": "/", "permanent": false }
+  ],
+  "rewrites": [
+    { "source": "/nihul-hasdey-meir", "destination": "/admin/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/nihul-hasdey-meir",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    },
+    {
+      "source": "/admin/(.*)",
+      "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }]
+    },
+    {
+      "source": "/data/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }]
+    }
+  ]
+}

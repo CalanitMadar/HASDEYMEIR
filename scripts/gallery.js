@@ -45,7 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error(`שגיאת HTTP: ${response.status}`);
             }
             
-            allProducts = await response.json();
+            const data = await response.json();
+            // תמיכה גם בפורמט הישן (מערך) וגם בחדש ({ products: [...] })
+            allProducts = (Array.isArray(data) ? data : (data.products || [])).filter(p => !p.hidden);
             
             // הצגה ראשונית של כל המוצרים
             displayProducts(allProducts);

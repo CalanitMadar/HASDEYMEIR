@@ -1,0 +1,61 @@
+/* התאמת פאנל הניהול (Decap CMS) לעברית ולצבעי האתר - כחול מלכותי וזהב */
+/* Decap מוסיף לשמות המחלקות את שם הרכיב (למשל css-xxxx-ControlHint), ולכן הבחירה היא לפי [class*=] */
+
+body,
+button,
+input,
+textarea,
+select {
+    font-family: 'Heebo', 'Segoe UI', Arial, sans-serif !important;
+}
+
+body {
+    background: #fbf8f2 !important;
+}
+
+/* אזור העריכה כולו מימין לשמאל (רשימת האוספים כבר מוצגת RTL בעברית) */
+[class*="-ControlPaneContainer"],
+[class*="-NestedObjectLabel"] {
+    direction: rtl;
+    text-align: right;
+}
+
+[class*="-ControlHint"] {
+    text-align: right;
+    font-size: 0.85rem;
+}
+
+/* כרטיסי המוצרים ברשימה - מרווחים ונעימים יותר */
+[class*="-ListItem-listControlItem"] {
+    border-radius: 12px;
+}
+
+[class*="-NestedObjectLabel"] {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #142e6e;
+}
+
+/* כפתורים בצבעי המותג */
+[class*="LoginButton"],
+[class*="-AddButton-button"] {
+    background-color: #1f45a0 !important;
+    color: #fff !important;
+}
+
+[class*="LoginButton"] {
+    padding: 0.7rem 2.5rem !important;
+    font-size: 1rem !important;
+    border-radius: 999px !important;
+}
+
+[class*="-AddButton-button"] svg path {
+    fill: #fff;
+}
+
+/* לוגו קטן יותר במסך ההתחברות */
+[class*="CustomLogoIcon"] img,
+[class*="CustomIconWrapper"] img {
+    max-width: 180px;
+    max-height: 180px;
+}
