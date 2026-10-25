@@ -5,14 +5,33 @@
  * כל שמירה בפאנל יוצרת commit בריפו ב-GitHub, ו-Vercel מעלה את האתר
  * מחדש אוטומטית (בערך דקה-שתיים עד שהשינוי מופיע באתר).
  *
- * ההתחברות נעשית עם חשבון GitHub שיש לו הרשאת כתיבה לריפו.
- * הקבצים api/auth.js ו-api/callback.js מטפלים בהתחברות.
+ * שתי דרכי התחברות:
+ * 1. קישור אישי למנהלת (?k=...): api/link-login.js בודק את המפתח ומחזיר
+ *    טוקן GitHub מוגבל לריפו הזה, והפאנל נכנס בלי מסך התחברות.
+ * 2. התחברות עם חשבון GitHub שיש לו הרשאת כתיבה (api/auth.js, api/callback.js).
  *
  * בהרצה מקומית (localhost) הפאנל עובד מול הקבצים במחשב
  * דרך `npx decap-server`, בלי GitHub.
  */
-(function () {
+(async function () {
     const isLocal = ['localhost', '127.0.0.1'].includes(location.hostname);
+
+    // כניסה בקישור האישי: שומרים את הטוקן כמשתמש מחובר לפני שהפאנל עולה.
+    // המפתח נשאר בכתובת, כך שהקישור השמור במועדפים תמיד מחדש את הטוקן.
+    const linkKey = new URLSearchParams(location.search).get('k');
+    if (linkKey && !isLocal) {
+        try {
+            const response = await fetch('/api/link-login?k=' + encodeURIComponent(linkKey), { cache: 'no-store' });
+            if (response.ok) {
+                const { token } = await response.json();
+                localStorage.setItem('decap-cms-user', JSON.stringify({ token, backendName: 'github' }));
+            } else {
+                alert('הקישור לפאנל הניהול לא תקין או שפג תוקפו. פני לכלנית לקבלת קישור חדש.');
+            }
+        } catch (error) {
+            console.error('שגיאה בכניסה עם הקישור:', error);
+        }
+    }
 
     const categoryField = {
         name: 'category',
