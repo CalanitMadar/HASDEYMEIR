@@ -476,13 +476,6 @@
       "price": "1",
       "image": "/images/products/מקל מסיבה.jpeg",
       "hidden": false
-    },
-    {
-      "name": "מפית סאטן לבן",
-      "category": "אירועים",
-      "price": "1",
-      "image": "/images/products/smallMap.jpeg",
-      "hidden": false
     }
   ]
 }
