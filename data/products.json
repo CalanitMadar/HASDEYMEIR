@@ -396,7 +396,7 @@
     {
       "name": "מפות מרובעות",
       "category": "אירועים",
-      "price": "10",
+      "price": "15",
       "image": "/images/products/maps.jpeg",
       "hidden": false
     },
@@ -433,13 +433,6 @@
       "category": "אירועים",
       "price": "10",
       "image": "/images/products/מפה כחולה.jpeg",
-      "hidden": false
-    },
-    {
-      "name": "כד עץ",
-      "category": "אירועים",
-      "price": "8",
-      "image": "/images/products/כד עץ.jpeg",
       "hidden": false
     },
     {
